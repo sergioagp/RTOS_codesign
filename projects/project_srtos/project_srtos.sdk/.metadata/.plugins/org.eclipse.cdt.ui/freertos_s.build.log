@@ -1,0 +1,70 @@
+17:51:45 **** Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj
+Building dependecy for src/xtime_l.c
+Building dependecy for src/timers.c
+Building dependecy for src/tasks.c
+Building dependecy for src/stream_buffer.c
+Building dependecy for src/queue.c
+Building dependecy for src/portASM.S
+Building dependecy for src/port.c
+Building dependecy for src/main.c
+Building dependecy for src/list.c
+Building dependecy for src/heap_4.c
+Building dependecy for src/FreeRTOS_tick_config.c
+Building dependecy for src/FreeRTOS_asm_vectors.S
+Building dependecy for src/event_groups.c
+Building dependecy for src/croutine.c
+Building dependecy for src/boot.S
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Compiling source src/boot.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/boot.S -o src/obj/boot.o
+Compiling source src/croutine.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/croutine.c -o src/obj/croutine.o
+Compiling source src/event_groups.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/event_groups.c -o src/obj/event_groups.o
+Compiling source src/FreeRTOS_asm_vectors.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_asm_vectors.S -o src/obj/FreeRTOS_asm_vectors.o
+Compiling source src/FreeRTOS_tick_config.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
+Compiling source src/heap_4.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/heap_4.c -o src/obj/heap_4.o
+Compiling source src/list.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/list.c -o src/obj/list.o
+Compiling source src/main.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/main.c -o src/obj/main.o
+src/main.c: In function 'prvSetupHardware':
+src/main.c:198:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  volatile uint32_t* ICCICR = 0xf8f00100;
+                              ^~~~~~~~~~
+Compiling source src/port.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/port.c -o src/obj/port.o
+src/port.c:116:1: warning: multi-line comment [-Wcomment]
+ // #define portCPU_IRQ_DISABLE()          \
+ ^
+src/port.c:121:1: warning: multi-line comment [-Wcomment]
+ // #define portCPU_IRQ_ENABLE()          \
+ ^
+src/port.c: In function 'vPortTaskUsesFPU':
+src/port.c:485:11: warning: unused variable 'ulInitialFPSCR' [-Wunused-variable]
+  uint32_t ulInitialFPSCR = 0;
+           ^~~~~~~~~~~~~~
+Compiling source src/portASM.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/portASM.S -o src/obj/portASM.o
+Compiling source src/queue.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/queue.c -o src/obj/queue.o
+Compiling source src/stream_buffer.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/stream_buffer.c -o src/obj/stream_buffer.o
+Compiling source src/tasks.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
+Compiling source src/timers.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/timers.c -o src/obj/timers.o
+Compiling source src/xtime_l.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../baremetal_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/xtime_l.c -o src/obj/xtime_l.o
+Linking freertos.elf
+Generating binary freertos.bin
+
+17:51:49 Build Finished (took 4s.111ms)
+
