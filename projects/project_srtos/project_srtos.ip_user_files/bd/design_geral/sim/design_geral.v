@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Wed Jul 11 00:32:54 2018
+//Date        : Thu Jul 12 00:35:39 2018
 //Host        : ASUS-K556URK running 64-bit major release  (build 9200)
 //Command     : generate_target design_geral.bd
 //Design      : design_geral
@@ -187,7 +187,8 @@ module design_geral
        (.CLK(xlconcat_0_dout),
         .Q(c_counter_binary_0_Q));
   design_geral_processing_system7_0_0 processing_system7_0
-       (.DDR_Addr(DDR_addr[14:0]),
+       (.Core0_nFIQ(axi_timer_0_interrupt),
+        .DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
         .DDR_CAS_n(DDR_cas_n),
         .DDR_CKE(DDR_cke),
@@ -206,7 +207,6 @@ module design_geral
         .DDR_WEB(DDR_we_n),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
-        .IRQ_F2P(xlconcat_0_dout),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),

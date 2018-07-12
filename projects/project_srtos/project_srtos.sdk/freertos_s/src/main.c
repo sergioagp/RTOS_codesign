@@ -117,7 +117,7 @@ void mytask(void* args){
 	int i;
 
 	while(1){
-		xil_printf("SFRERTOS: task 1\r\n");
+		xil_printf("SFREERTOS: task 1\r\n");
 //		vTaskDelay( 2000 / portTICK_PERIOD_MS);
 		for(i = 0; i < 999999; i++);
 	}
@@ -130,7 +130,7 @@ void mytask2(void* args){
 	int i;
 
 	while(1){
-		xil_printf("SFRERTOS: task 2\r\n");
+		xil_printf("SFREERTOS: task 2\r\n");
 //		vTaskDelay( 2000 / portTICK_PERIOD_MS);
 		for(i = 0; i < 999999; i++);
 	}

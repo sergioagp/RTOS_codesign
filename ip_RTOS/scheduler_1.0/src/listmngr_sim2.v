@@ -55,7 +55,7 @@ initial begin
 	
 #250	createTask_in <= 'b1;
 		id_task_in = 'h0;
-		tcb_task_in = 'hAAAAAAAA;
+		tcb_task_in = 'h01234567;
 		pri_task_in = 'h02;
 #10		createTask_in <= 'b0;
 
@@ -90,24 +90,27 @@ end
 	lists_manager mngr_list (
 		.aclk(aclk),
 		.aresetn(aresetn),
-		.createTask_in(createTask_in),
-		.addrTCB_in(tcb_task_in),
+		.insnew_rdylist_in(createTask_in),
+		.addrtcb_in(tcb_task_in),
 		.priority_in(pri_task_in),
-		.resumeTask_in(resume_in),
-		.suspendTask_in(suspend_cmd),
-		.delayTask_in(ins_dlylist_in),
-		.idTask_in(id_task_in),
-		.valueDelay_in(valuedelay_in),
+		.ins_rdylist_in(resume_in),
+		.susp_rdylist_in(suspend_cmd),
+		//.del_rdylist_in(0),
+		.ins_dlylist_in(ins_dlylist_in),
+		.idtask_in(id_task_in),
+		.valdelay_in(valuedelay_in),
 		.resume_tasktimer_in(0),
 		.idtasktimer_in(0),
 		.suspend_semaphoretask_in(0),
 		.resume_semaphoretask_in(0),
 		.id_semaphoretask_in(0),
 		.tickval_in(tickval_in),
-		.highpriTask_out(ptr_hpritask_out),
-		.next_hpriTask_out(ptr_nexttask_out),
-		.idTask_read_in(addr_read_in),
-		.addrTCB_out(tcb_read_out)
+		.highpriority_out(),
+		.ptr_hpritask_out(ptr_hpritask_out),
+		.ptr_nexttask_out(ptr_nexttask_out),
+		.addr_read_in(addr_read_in),
+		.tcb_read_out(tcb_read_out),
+		.id_task_out()
 	);
 	
 	scheduler schdlr(

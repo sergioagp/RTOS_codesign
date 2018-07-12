@@ -1,4 +1,4 @@
-17:37:21 **** Auto Build of configuration Debug for project baremetal ****
+23:14:05 **** Auto Build of configuration Debug for project baremetal ****
 make all 
 'Building target: baremetal.elf'
 'Invoking: ARM v7 gcc linker'
@@ -8,5 +8,5 @@ C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\proj
 collect2.exe: error: ld returned 1 exit status
 make: *** [baremetal.elf] Error 1
 
-17:37:21 Build Finished (took 299ms)
+23:14:05 Build Finished (took 247ms)
 

@@ -63,11 +63,11 @@ module mem_commandlist (
 );
 
 input wire [3 : 0] a;
-input wire [41 : 0] d;
+input wire [48 : 0] d;
 input wire [3 : 0] dpra;
 input wire clk;
 input wire we;
-output wire [41 : 0] dpo;
+output wire [48 : 0] dpo;
 
   dist_mem_gen_v8_0_12 #(
     .C_FAMILY("zynq"),
@@ -100,7 +100,7 @@ output wire [41 : 0] dpo;
     .C_REG_A_D_INPUTS(0),
     .C_REG_DPRA_INPUT(0),
     .C_SYNC_ENABLE(1),
-    .C_WIDTH(42),
+    .C_WIDTH(49),
     .C_PARSER_TYPE(1)
   ) inst (
     .a(a),

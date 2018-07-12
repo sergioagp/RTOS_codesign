@@ -39,6 +39,9 @@ task.h is included from an application file. */
 #include "task.h"
 #include "timers.h"
 #include "stack_macros.h"
+#ifdef configRTOS_CODESIGN
+	#include "scheduler.h"
+#endif /* configRTOS_CODESIGN */
 
 /* Lint e961 and e750 are suppressed as a MISRA exception justified because the
 MPU ports require MPU_WRAPPERS_INCLUDED_FROM_API_FILE to be defined for the
@@ -1073,6 +1076,23 @@ static void prvAddNewTaskToReadyList( TCB_t *pxNewTCB )
 
 		uxTaskNumber++;
 
+		#if ( configRTOS_CODESIGN == 1 )
+		{
+			createTask((u8) uxTaskNumber, (u32) pxNewTCB, ( u8 ) pxNewTCB->uxPriority);
+			printf("PRIORITY:  0x%lX\n\r TCB:  0x%lX\n\r\n\r",
+			    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (8)),
+			    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (4)));
+			printf("**CREATE TASK TO RUN: 0x%lX\n\r", TASK_TO_RUN());
+		}
+		#endif /* configRTOS_CODESIGN */
+
+		#if ( configUSE_TRACE_FACILITY == 1 )
+		{
+			/* Add a counter into the TCB for tracing only. */
+			pxNewTCB->uxTCBNumber = uxTaskNumber;
+		}
+		#endif /* configUSE_TRACE_FACILITY */
+
 		#if ( configUSE_TRACE_FACILITY == 1 )
 		{
 			/* Add a counter into the TCB for tracing only. */
@@ -1639,6 +1659,13 @@ static void prvAddNewTaskToReadyList( TCB_t *pxNewTCB )
 
 			traceTASK_SUSPEND( pxTCB );
 
+			#if ( configRTOS_CODESIGN == 1 )
+			{
+				suspendTask( ( u8 ) pxTCB->uxTCBNumber );
+			    printf("**SUSP TASK TO RUN: 0x%lX\n\r", TASK_TO_RUN());
+			}
+			#endif /* configRTOS_CODESIGN */
+
 			/* Remove task from the ready/delayed list and place in the
 			suspended list. */
 			if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )
@@ -1790,7 +1817,12 @@ static void prvAddNewTaskToReadyList( TCB_t *pxNewTCB )
 				if( prvTaskIsTaskSuspended( pxTCB ) != pdFALSE )
 				{
 					traceTASK_RESUME( pxTCB );
-
+					#if ( configRTOS_CODESIGN == 1 )
+					{
+						resumeTask( pxTCB->uxTCBNumber );
+					    printf("**RES TASK TO RUN: 0x%lX\n\r", TASK_TO_RUN());
+					}
+					#endif /* configRTOS_CODESIGN */
 					/* The ready list can be accessed even if the scheduler is
 					suspended because this is inside a critical section. */
 					( void ) uxListRemove(  &( pxTCB->xStateListItem ) );
@@ -1859,6 +1891,13 @@ static void prvAddNewTaskToReadyList( TCB_t *pxNewTCB )
 			if( prvTaskIsTaskSuspended( pxTCB ) != pdFALSE )
 			{
 				traceTASK_RESUME_FROM_ISR( pxTCB );
+
+				#if ( configRTOS_CODESIGN == 1 )
+				{
+					resumeTask( pxTCB->uxTCBNumber );
+				    printf("**RES TASK TO RUN: 0x%lX\n\r", TASK_TO_RUN());
+				}
+				#endif /* configRTOS_CODESIGN */
 
 				/* Check the ready lists can be accessed. */
 				if( uxSchedulerSuspended == ( UBaseType_t ) pdFALSE )
@@ -2219,7 +2258,18 @@ TickType_t xTicks;
 	/* Critical section required if running on a 16 bit processor. */
 	portTICK_TYPE_ENTER_CRITICAL();
 	{
-		xTicks = xTickCount;
+		#if ( configRTOS_CODESIGN == 1 )
+		{
+			xTicks = TICK_VALUE();
+			#ifdef ENABLE_DEBUG
+			printf("TICKS: 0x%X\n\r",xTicks);
+			#endif
+		}
+		#else /* configRTOS_CODESIGN */
+		{
+			xTicks = xTickCount;
+		}
+		#endif /* configRTOS_CODESIGN */
 	}
 	portTICK_TYPE_EXIT_CRITICAL();
 
@@ -2250,7 +2300,18 @@ UBaseType_t uxSavedInterruptStatus;
 
 	uxSavedInterruptStatus = portTICK_TYPE_SET_INTERRUPT_MASK_FROM_ISR();
 	{
-		xReturn = xTickCount;
+		#if ( configRTOS_CODESIGN == 1 )
+		{
+			xReturn = TICK_VALUE();
+			#ifdef ENABLE_DEBUG
+			printf("TICKS: 0x%X\n\r", xReturn);
+			#endif
+		}
+		#else /* configRTOS_CODESIGN */
+		{
+			xReturn = xTickCount;
+		}
+		#endif /* configRTOS_CODESIGN */
 	}
 	portTICK_TYPE_CLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptStatus );
 
@@ -2893,7 +2954,20 @@ void vTaskSwitchContext( void )
 
 		/* Select a new task to run using either the generic C or port
 		optimised asm code. */
-		taskSELECT_HIGHEST_PRIORITY_TASK();
+		#if ( configRTOS_CODESIGN == 1 )
+		{
+			pxCurrentTCB = (TCB_t *)  TASK_TO_RUN();
+		//			taskSELECT_HIGHEST_PRIORITY_TASK();
+		//			if(pxCurrentTCB != (TCB_t *)  axiTCBReady())
+		//			{
+		//				printf("**ERROR** ID: 0x%X AXI ID: 0x%X\n\r", (u32) pxCurrentTCB->uxTCBNumber, (u32) ((TCB_t *)  axiTCBReady())->uxTCBNumber );
+		//			}
+		}
+		#else /* configRTOS_CODESIGN */
+		{
+			taskSELECT_HIGHEST_PRIORITY_TASK();
+		}
+		#endif /* configRTOS_CODESIGN */
 		traceTASK_SWITCHED_IN();
 
 		#if ( configUSE_NEWLIB_REENTRANT == 1 )
@@ -4912,7 +4986,15 @@ TickType_t uxReturn;
 static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait, const BaseType_t xCanBlockIndefinitely )
 {
 TickType_t xTimeToWake;
-const TickType_t xConstTickCount = xTickCount;
+#if ( configRTOS_CODESIGN == 1 )
+
+	const TickType_t xConstTickCount = TICK_VALUE();
+
+#else /* configRTOS_CODESIGN */
+
+	const TickType_t xConstTickCount = xTickCount;
+
+#endif /* configRTOS_CODESIGN */
 
 	#if( INCLUDE_xTaskAbortDelay == 1 )
 	{
@@ -4951,7 +5033,15 @@ const TickType_t xConstTickCount = xTickCount;
 			does not occur.  This may overflow but this doesn't matter, the
 			kernel will manage it correctly. */
 			xTimeToWake = xConstTickCount + xTicksToWait;
-
+			#if ( configRTOS_CODESIGN == 1 )
+			{
+				delayTask(pxCurrentTCB->uxTCBNumber, xTimeToWake);
+				#ifdef ENABLE_DEBUG
+				printf("DLY TCB: 0x%X, VAL: 0x%X\n\r", pxCurrentTCB, xTimeToWake);
+				printf("**TCB** 0x%X \t **Current TCB** 0x%X\n\r", (u32) ((TCB_t *)  axiTCBReady()), (u32) pxCurrentTCB);
+				#endif
+			}
+			#endif /* configRTOS_CODESIGN */
 			/* The list item will be inserted in wake time order. */
 			listSET_LIST_ITEM_VALUE( &( pxCurrentTCB->xStateListItem ), xTimeToWake );
 
@@ -4987,7 +5077,11 @@ const TickType_t xConstTickCount = xTickCount;
 		does not occur.  This may overflow but this doesn't matter, the kernel
 		will manage it correctly. */
 		xTimeToWake = xConstTickCount + xTicksToWait;
-
+		#if ( configRTOS_CODESIGN == 1 )
+		{
+			axiDelayTask(pxCurrentTCB->uxTCBNumber, xTimeToWake);
+		}
+		#endif /* configRTOS_CODESIGN */
 		/* The list item will be inserted in wake time order. */
 		listSET_LIST_ITEM_VALUE( &( pxCurrentTCB->xStateListItem ), xTimeToWake );
 

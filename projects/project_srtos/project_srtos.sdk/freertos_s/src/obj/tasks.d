@@ -16,4 +16,7 @@
  ../baremetal_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
  src/inc/projdefs.h src/inc/portable.h src/inc/deprecated_definitions.h \
  src/inc/portmacro.h src/inc/mpu_wrappers.h src/inc/task.h src/inc/list.h \
- src/inc/timers.h src/inc/task.h src/inc/stack_macros.h
+ src/inc/timers.h src/inc/task.h src/inc/stack_macros.h \
+ src/inc/scheduler.h ../baremetal_bsp/ps7_cortexa9_0/include/xil_io.h \
+ ../baremetal_bsp/ps7_cortexa9_0/include/xil_types.h \
+ ../baremetal_bsp/ps7_cortexa9_0/include/xstatus.h

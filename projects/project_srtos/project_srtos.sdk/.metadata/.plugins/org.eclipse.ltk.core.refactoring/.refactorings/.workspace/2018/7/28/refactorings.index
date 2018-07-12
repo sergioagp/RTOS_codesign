@@ -4,3 +4,6 @@
 1531326488801	Delete resource 'baremetal/Debug/src'
 1531326948410	Delete resource 'baremetal_bsp'
 1531327818522	Delete resource 'freertos_s/src'
+1531331633236	Delete resource 'freertos_s/src/obj/tasks.o'
+1531347286430	Delete resource 'baremetal'
+1531347410460	Delete resource 'bm'

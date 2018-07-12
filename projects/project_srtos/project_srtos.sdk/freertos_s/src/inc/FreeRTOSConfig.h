@@ -66,6 +66,9 @@
  * setting configMAX_API_CALL_INTERRUPT_PRIORITY 255 represents the lowest
  * priority.
  */
+
+#define configRTOS_CODESIGN						1
+
 #define configMAX_API_CALL_INTERRUPT_PRIORITY	1
 
 #define configCPU_CLOCK_HZ						650000000L //100000000UL
@@ -80,7 +83,7 @@
 #define configMINIMAL_STACK_SIZE				( ( unsigned short ) 250 ) /* Large in case configUSE_TASK_FPU_SUPPORT is 2 in which case all tasks have an FPU context. */
 #define configTOTAL_HEAP_SIZE					( 90 * 1024 )
 #define configMAX_TASK_NAME_LEN					( 10 )
-#define configUSE_TRACE_FACILITY				0
+#define configUSE_TRACE_FACILITY				1
 #define configUSE_16_BIT_TICKS					0
 #define configIDLE_SHOULD_YIELD					1
 #define configUSE_MUTEXES						1
@@ -101,7 +104,7 @@
 #define configMAX_CO_ROUTINE_PRIORITIES 		( 2 )
 
 /* Software timer definitions. */
-#define configUSE_TIMERS						1
+#define configUSE_TIMERS						0
 #define configTIMER_TASK_PRIORITY				( configMAX_PRIORITIES - 1 )
 #define configTIMER_QUEUE_LENGTH				5
 #define configTIMER_TASK_STACK_DEPTH			( configMINIMAL_STACK_SIZE * 2 )
@@ -122,7 +125,7 @@ to exclude the API function. */
 #define INCLUDE_vTaskSuspend					1
 #define INCLUDE_vTaskDelayUntil					1
 #define INCLUDE_vTaskDelay						1
-#define INCLUDE_xTimerPendFunctionCall			1
+#define INCLUDE_xTimerPendFunctionCall			0
 #define INCLUDE_eTaskGetState					1
 #define INCLUDE_xTaskAbortDelay					1
 #define INCLUDE_xTaskGetTaskHandle				1
@@ -139,8 +142,8 @@ FreeRTOS/Source/tasks.c for limitations. */
 extern XScuWdt xWatchDogInstance;
 extern void vInitialiseTimerForRunTimeStats( void );
 #define configGENERATE_RUN_TIME_STATS 0
-#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() vInitialiseTimerForRunTimeStats()
-#define portGET_RUN_TIME_COUNTER_VALUE() ( ( 0xffffffffUL - XScuWdt_ReadReg( xWatchDogInstance.Config.BaseAddr, XSCUWDT_COUNTER_OFFSET ) ) >> 1 )
+#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() //vInitialiseTimerForRunTimeStats()
+#define portGET_RUN_TIME_COUNTER_VALUE() //( ( 0xffffffffUL - XScuWdt_ReadReg( xWatchDogInstance.Config.BaseAddr, XSCUWDT_COUNTER_OFFSET ) ) >> 1 )
 
 /* The size of the global output buffer that is available for use when there
 are multiple command interpreters running at once (for example, one on a UART

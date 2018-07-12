@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Jul 11 17:14:11 2018
+| Date             : Thu Jul 12 02:28:58 2018
 | Host             : ASUS-K556URK running 64-bit major release  (build 9200)
 | Command          : report_power -file design_geral_wrapper_power_routed.rpt -pb design_geral_wrapper_power_summary_routed.pb -rpx design_geral_wrapper_power_routed.rpx
 | Design           : design_geral_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.702        |
+| Total On-Chip Power (W)  | 1.701        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.560        |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.010 |        3 |       --- |             --- |
-| Slice Logic              |     0.009 |     5132 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     1573 |     53200 |            2.96 |
-|   LUT as Distributed RAM |     0.003 |      876 |     17400 |            5.03 |
+| Clocks                   |     0.009 |        3 |       --- |             --- |
+| Slice Logic              |     0.010 |     5175 |       --- |             --- |
+|   LUT as Logic           |     0.006 |     1598 |     53200 |            3.00 |
+|   LUT as Distributed RAM |     0.003 |      884 |     17400 |            5.08 |
 |   F7/F8 Muxes            |    <0.001 |      408 |     53200 |            0.77 |
 |   CARRY4                 |    <0.001 |       83 |     13300 |            0.62 |
-|   Register               |    <0.001 |     1461 |    106400 |            1.37 |
+|   Register               |    <0.001 |     1468 |    106400 |            1.38 |
 |   LUT as Shift Register  |    <0.001 |       62 |     17400 |            0.36 |
 |   Others                 |     0.000 |      269 |       --- |             --- |
-| Signals                  |     0.012 |     3166 |       --- |             --- |
+| Signals                  |     0.012 |     3195 |       --- |             --- |
 | PS7                      |     1.529 |        1 |       --- |             --- |
 | Static Power             |     0.142 |          |           |                 |
-| Total                    |     1.702 |          |           |                 |
+| Total                    |     1.701 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -226,7 +226,7 @@ Table of Contents
 |           SEQ_COUNTER                                                       |    <0.001 |
 |     scheduler_0                                                             |     0.022 |
 |       inst                                                                  |     0.022 |
-|         mngr_list                                                           |     0.020 |
+|         mngr_list                                                           |     0.021 |
 |           commands_lists                                                    |    <0.001 |
 |             U0                                                              |    <0.001 |
 |               synth_options.dist_mem_inst                                   |    <0.001 |
@@ -237,8 +237,10 @@ Table of Contents
 |                   ram_reg_0_15_24_29                                        |    <0.001 |
 |                   ram_reg_0_15_30_35                                        |    <0.001 |
 |                   ram_reg_0_15_36_41                                        |    <0.001 |
+|                   ram_reg_0_15_42_47                                        |    <0.001 |
+|                   ram_reg_0_15_48_48                                        |    <0.001 |
 |                   ram_reg_0_15_6_11                                         |    <0.001 |
-|           dlylist_mngr                                                      |     0.006 |
+|           dlylist_mngr                                                      |     0.007 |
 |             delay_list                                                      |     0.003 |
 |               U0                                                            |     0.003 |
 |                 synth_options.dist_mem_inst                                 |     0.003 |
@@ -341,7 +343,7 @@ Table of Contents
 |                     ram_reg_128_255_9_9                                     |    <0.001 |
 |           rdylist_mngr                                                      |     0.013 |
 |             hpriority_module                                                |     0.001 |
-|             item_ins                                                        |     0.002 |
+|             item_ins                                                        |     0.001 |
 |             item_list                                                       |     0.007 |
 |               U0                                                            |     0.007 |
 |                 synth_options.dist_mem_inst                                 |     0.007 |

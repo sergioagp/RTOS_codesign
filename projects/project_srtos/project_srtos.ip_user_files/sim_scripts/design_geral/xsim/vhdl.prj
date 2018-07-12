@@ -1,6 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../bd/design_geral/ip/design_geral_rst_ps7_0_100M_0/sim/design_geral_rst_ps7_0_100M_0.vhd" \
-"../../../bd/design_geral/ip/design_geral_axi_timer_0_0/sim/design_geral_axi_timer_0_0.vhd" \
-"../../../bd/design_geral/ip/design_geral_c_counter_binary_0_0/sim/design_geral_c_counter_binary_0_0.vhd" \
-
-nosort

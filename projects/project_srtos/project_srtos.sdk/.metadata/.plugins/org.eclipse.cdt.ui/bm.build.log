@@ -1,0 +1,79 @@
+23:14:20 **** Auto Build of configuration Debug for project bm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building target: bm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../baremetal_bsp/ps7_cortexa9_0/lib -o "bm.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_intr.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_intr.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_sinit.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_sinit.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(print.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(print.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(vectors.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(vectors.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xil_assert.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xil_assert.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xil_exception.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xil_exception.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtime_l.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtime_l.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_intr.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_intr.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_l.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_l.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_options.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_options.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_sinit.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_sinit.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_g.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xscugic_g.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(outbyte.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(outbyte.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_g.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xtmrctr_g.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xuartps_hw.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(xuartps_hw.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(_exit.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(_exit.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(_sbrk.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(_sbrk.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(close.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(close.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(fstat.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(fstat.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(isatty.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(isatty.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(lseek.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(lseek.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(read.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(read.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(write.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(write.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(errno.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(errno.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: bm.elf uses VFP register arguments, ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(inbyte.o) does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../baremetal_bsp/ps7_cortexa9_0/lib\libxil.a(inbyte.o)
+./src/helloworld.o: In function `Timer_InterruptHandler':
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:126: undefined reference to `TICK_VALUE'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:128: undefined reference to `TASK_TO_RUN'
+./src/helloworld.o: In function `main':
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:246: undefined reference to `TASK_TO_RUN'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:247: undefined reference to `createTask'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:253: undefined reference to `TASK_TO_RUN'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:254: undefined reference to `createTask'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:260: undefined reference to `TASK_TO_RUN'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:261: undefined reference to `createTask'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:267: undefined reference to `TASK_TO_RUN'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:270: undefined reference to `delayTask'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_srtos\project_srtos.sdk\bm\Debug/../src/helloworld.c:271: undefined reference to `TASK_TO_RUN'
+collect2.exe: error: ld returned 1 exit status
+make: *** [bm.elf] Error 1
+
+23:14:21 Build Finished (took 362ms)
+
