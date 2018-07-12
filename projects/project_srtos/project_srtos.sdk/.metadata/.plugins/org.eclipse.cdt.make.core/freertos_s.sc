@@ -847,6 +847,7 @@
 <includePath path="#undef __ARM_FEATURE_IDIV" removed="true"/>
 <includePath path="#undef __ARM_ASM_SYNTAX_UNIFIED__" removed="true"/>
 <includePath path="C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.sdk/freertos_s/src/inc/"/>
+<includePath path="C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.sdk/freertos_s_bsp/ps7_cortexa9_0/include/"/>
 <includePath path="C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.sdk/baremetal_bsp/ps7_cortexa9_0/include/"/>
 <includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/include"/>
 <includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>

@@ -1,1511 +1,14 @@
-02:00:31 **** Incremental Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-make: Nothing to be done for `all'.
-02:30:02 **** Build of configuration Debug for project test ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-02:30:12 **** Clean-only build of project baremetal_bsp ****
+15:49:43 **** Clean-only build of project freertos_s_bsp ****
+15:49:43 **** Clean-only build of configuration Debug for project freertos_s ****
 make -k clean 
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s clean 
-rm: cannot lstat `*.o': Invalid argument
-make[1]: *** [clean] Error 1
-make: *** [ps7_cortexa9_0/libsrc/scheduler_v1_0/src/make.clean] Error 2
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
-make: Target `clean' not remade because of errors.
-02:30:14 **** Clean-only build of project test_bsp ****
-make -k clean 
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s clean 
-rm: cannot lstat `*.o': Invalid argument
-make[1]: *** [clean] Error 1
-make: *** [ps7_cortexa9_0/libsrc/scheduler_v1_0/src/make.clean] Error 2
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
-make: Target `clean' not remade because of errors.
-02:30:15 **** Clean-only build of configuration Debug for project test ****
 make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  test.elf.size  test.elf
-' '
-02:30:16 **** Build of project baremetal_bsp ****
-make -k all 
-"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling coresightps_dcc"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
-"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling cpu_cortexa9"
-"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling ddrps"
-"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling devcfg"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdevcfg_hw.h:68,
-                 from xdevcfg.h:170,
-                 from xdevcfg.c:92:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xdevcfg.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdevcfg_hw.h:68,
-                 from xdevcfg.h:170,
-                 from xdevcfg_g.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xdevcfg_g.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xdevcfg_g.c:74:3: error: 'XPAR_XDCFG_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-   XPAR_XDCFG_0_DEVICE_ID,
-   ^~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_DEVICE_ID
-xdevcfg_g.c:75:3: error: 'XPAR_XDCFG_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   XPAR_XDCFG_0_BASEADDR,
-   ^~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_BASEADDR
-make[1]: *** [xdevcfg_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdevcfg_hw.h:68,
-                 from xdevcfg_hw.c:52:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xdevcfg_hw.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdevcfg_hw.h:68,
-                 from xdevcfg.h:170,
-                 from xdevcfg_intr.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xdevcfg_intr.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdevcfg_hw.h:68,
-                 from xdevcfg.h:170,
-                 from xdevcfg_selftest.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xdevcfg_selftest.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdevcfg_hw.h:68,
-                 from xdevcfg.h:170,
-                 from xdevcfg_sinit.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xdevcfg_sinit.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xdevcfg_sinit.c: In function 'XDcfg_LookupConfig':
-xdevcfg_sinit.c:85:27: error: 'XPAR_XDCFG_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
-  for (Index = 0U; Index < XPAR_XDCFG_NUM_INSTANCES; Index++) {
-                           ^~~~~~~~~~~~~~~~~~~~~~~~
-                           XPAR_XSLCR_NUM_INSTANCES
-xdevcfg_sinit.c:85:27: note: each undeclared identifier is reported only once for each function it appears in
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make[1]: *** [xdevcfg_sinit.o] Error 1
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-make[1]: Target `libs' not remade because of errors.
-make: *** [ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs] Error 2
-"Compiling dmaps"
-In file included from xdmaps.h:99:0,
-                 from xdmaps.c:82:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdmaps_hw.h:68,
-                 from xdmaps.h:104,
-                 from xdmaps.c:82:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xdmaps.o] Error 1
-In file included from xdmaps_g.c:54:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xdmaps.h:99:0,
-                 from xdmaps_g.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdmaps_hw.h:68,
-                 from xdmaps.h:104,
-                 from xdmaps_g.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xdmaps_g.c:76:3: error: 'XPAR_XDMAPS_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-   XPAR_XDMAPS_0_DEVICE_ID,
-   ^~~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_DEVICE_ID
-xdmaps_g.c:77:3: error: 'XPAR_XDMAPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   XPAR_XDMAPS_0_BASEADDR,
-   ^~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_BASEADDR
-make[1]: *** [xdmaps_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdmaps_hw.h:68,
-                 from xdmaps_hw.c:53:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xdmaps_hw.o] Error 1
-In file included from xdmaps.h:99:0,
-                 from xdmaps_selftest.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdmaps_hw.h:68,
-                 from xdmaps.h:104,
-                 from xdmaps_selftest.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xdmaps_selftest.o] Error 1
-In file included from xdmaps_sinit.c:55:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xdmaps.h:99:0,
-                 from xdmaps_sinit.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xdmaps_hw.h:68,
-                 from xdmaps.h:104,
-                 from xdmaps_sinit.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xdmaps_sinit.c: In function 'XDmaPs_LookupConfig':
-"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-xdmaps_sinit.c:95:18: error: 'XPAR_XDMAPS_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-  for (i = 0; i < XPAR_XDMAPS_NUM_INSTANCES; i++) {
-                  ^~~~~~~~~~~~~~~~~~~~~~~~~
-                  XPAR_XSLCR_NUM_INSTANCES
-xdmaps_sinit.c:95:18: note: each undeclared identifier is reported only once for each function it appears in
-make[1]: *** [xdmaps_sinit.o] Error 1
-make[1]: Target `libs' not remade because of errors.
-make: *** [ps7_cortexa9_0/libsrc/dmaps_v2_3/src/make.libs] Error 2
-"Compiling emacps"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xemacps_hw.h:75,
-                 from xemacps.h:350,
-                 from xemacps.c:63:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xemacps.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xemacps_hw.h:75,
-                 from xemacps_bdring.c:70:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xemacps_bdring.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xemacps_hw.h:75,
-                 from xemacps.h:350,
-                 from xemacps_control.c:60:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xemacps_control.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xemacps_hw.h:75,
-                 from xemacps.h:350,
-                 from xemacps_g.c:63:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xemacps_g.c:64:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xemacps_g.c:81:36: error: 'XPAR_XEMACPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- XEmacPs_Config XEmacPs_ConfigTable[XPAR_XEMACPS_NUM_INSTANCES] = {
-                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                    XPAR_XSLCR_NUM_INSTANCES
-xemacps_g.c:83:8: error: 'XPAR_XEMACPS_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-   (u16)XPAR_XEMACPS_0_DEVICE_ID,  /* Device ID */
-        ^~~~~~~~~~~~~~~~~~~~~~~~
-        XPAR_XSLCR_0_DEVICE_ID
-xemacps_g.c:84:12: error: 'XPAR_XEMACPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   (UINTPTR)XPAR_XEMACPS_0_BASEADDR    /* Device base address */
-            ^~~~~~~~~~~~~~~~~~~~~~~
-            XPAR_XSLCR_0_BASEADDR
-make[1]: *** [xemacps_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xemacps_hw.h:75,
-                 from xemacps_hw.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xemacps_hw.c:55:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xemacps_hw.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xemacps_hw.h:75,
-                 from xemacps.h:350,
-                 from xemacps_intr.c:67:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xemacps_intr.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xemacps_hw.h:75,
-                 from xemacps.h:350,
-                 from xemacps_sinit.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xemacps_sinit.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xemacps_sinit.c:64:43: error: 'XPAR_XEMACPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- extern XEmacPs_Config XEmacPs_ConfigTable[XPAR_XEMACPS_NUM_INSTANCES];
-                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                           XPAR_XSLCR_NUM_INSTANCES
-make[1]: *** [xemacps_sinit.o] Error 1
-"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make[1]: Target `libs' not remade because of errors.
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-make: *** [ps7_cortexa9_0/libsrc/emacps_v3_7/src/make.libs] Error 2
-"Compiling gpiops"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xgpiops_hw.h:67,
-                 from xgpiops.h:123,
-                 from xgpiops.c:62:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xgpiops.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xgpiops_hw.h:67,
-                 from xgpiops.h:123,
-                 from xgpiops_g.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xgpiops_g.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xgpiops_g.c:72:36: error: 'XPAR_XGPIOPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- XGpioPs_Config XGpioPs_ConfigTable[XPAR_XGPIOPS_NUM_INSTANCES] = {
-                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                    XPAR_XSLCR_NUM_INSTANCES
-xgpiops_g.c:74:8: error: 'XPAR_XGPIOPS_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-   (u16)XPAR_XGPIOPS_0_DEVICE_ID, /* Unique ID of device */
-        ^~~~~~~~~~~~~~~~~~~~~~~~
-        XPAR_XSLCR_0_DEVICE_ID
-xgpiops_g.c:75:8: error: 'XPAR_XGPIOPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   (u32)XPAR_XGPIOPS_0_BASEADDR  /* Base address of device */
-        ^~~~~~~~~~~~~~~~~~~~~~~
-        XPAR_XSLCR_0_BASEADDR
-make[1]: *** [xgpiops_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xgpiops_hw.h:67,
-                 from xgpiops_hw.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xgpiops_hw.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xgpiops_hw.h:67,
-                 from xgpiops.h:123,
-                 from xgpiops_intr.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xgpiops_intr.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xgpiops_hw.h:67,
-                 from xgpiops.h:123,
-                 from xgpiops_selftest.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xgpiops_selftest.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xgpiops_hw.h:67,
-                 from xgpiops.h:123,
-                 from xgpiops_sinit.c:58:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xgpiops_sinit.c:59:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xgpiops_sinit.c:70:43: error: 'XPAR_XGPIOPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- extern XGpioPs_Config XGpioPs_ConfigTable[XPAR_XGPIOPS_NUM_INSTANCES];
-                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                           XPAR_XSLCR_NUM_INSTANCES
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make[1]: *** [xgpiops_sinit.o] Error 1
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-make[1]: Target `libs' not remade because of errors.
-make: *** [ps7_cortexa9_0/libsrc/gpiops_v3_3/src/make.libs] Error 2
-"Compiling qspips"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xqspips_hw.h:80,
-                 from xqspips.h:298,
-                 from xqspips.c:112:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xqspips_hw.h:81:0,
-                 from xqspips.h:298,
-                 from xqspips.c:112:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xqspips.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xqspips_hw.h:80,
-                 from xqspips.h:298,
-                 from xqspips_g.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xqspips_hw.h:81:0,
-                 from xqspips.h:298,
-                 from xqspips_g.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xqspips_g.c:55:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xqspips_g.c:75:36: error: 'XPAR_XQSPIPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- XQspiPs_Config XQspiPs_ConfigTable[XPAR_XQSPIPS_NUM_INSTANCES] = {
-                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                    XPAR_XSLCR_NUM_INSTANCES
-xqspips_g.c:77:3: error: 'XPAR_XQSPIPS_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-   XPAR_XQSPIPS_0_DEVICE_ID, /* Device ID for instance */
-   ^~~~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_DEVICE_ID
-xqspips_g.c:78:3: error: 'XPAR_XQSPIPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   XPAR_XQSPIPS_0_BASEADDR,  /* Device base address */
-   ^~~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_BASEADDR
-xqspips_g.c:79:3: error: 'XPAR_XQSPIPS_0_QSPI_CLK_FREQ_HZ' undeclared here (not in a function); did you mean 'XPAR_XQSPIPS_0_CLOCK_HZ'?
-   XPAR_XQSPIPS_0_QSPI_CLK_FREQ_HZ,
-   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XQSPIPS_0_CLOCK_HZ
-xqspips_g.c:80:3: error: 'XPAR_XQSPIPS_0_QSPI_MODE' undeclared here (not in a function); did you mean 'XPAR_XQSPIPS_0_BASEADDR'?
-   XPAR_XQSPIPS_0_QSPI_MODE
-   ^~~~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XQSPIPS_0_BASEADDR
-make[1]: *** [xqspips_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xqspips_hw.h:80,
-                 from xqspips_hw.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xqspips_hw.h:81:0,
-                 from xqspips_hw.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xqspips_hw.c: In function 'XQspiPs_LinearInit':
-xqspips_hw.c:195:5: error: 'XPAR_XQSPIPS_0_QSPI_MODE' undeclared (first use in this function); did you mean 'XPAR_XQSPIPS_0_INTR'?
-  if(XPAR_XQSPIPS_0_QSPI_MODE == XQSPIPS_CONNECTION_MODE_SINGLE){
-     ^~~~~~~~~~~~~~~~~~~~~~~~
-     XPAR_XQSPIPS_0_INTR
-xqspips_hw.c:195:5: note: each undeclared identifier is reported only once for each function it appears in
-make[1]: *** [xqspips_hw.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xqspips_hw.h:80,
-                 from xqspips.h:298,
-                 from xqspips_options.c:69:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xqspips_hw.h:81:0,
-                 from xqspips.h:298,
-                 from xqspips_options.c:69:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xqspips_options.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xqspips_hw.h:80,
-                 from xqspips.h:298,
-                 from xqspips_selftest.c:58:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xqspips_hw.h:81:0,
-                 from xqspips.h:298,
-                 from xqspips_selftest.c:58:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xqspips_selftest.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xqspips_hw.h:80,
-                 from xqspips.h:298,
-                 from xqspips_sinit.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xqspips_hw.h:81:0,
-                 from xqspips.h:298,
-                 from xqspips_sinit.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xqspips_sinit.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
-"Running Make libs in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
- 
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-xqspips_sinit.c: In function 'XQspiPs_LookupConfig':
-xqspips_sinit.c:92:26: error: 'XPAR_XQSPIPS_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
-  for (Index = 0; Index < XPAR_XQSPIPS_NUM_INSTANCES; Index++) {
-                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                          XPAR_XSLCR_NUM_INSTANCES
-xqspips_sinit.c:92:26: note: each undeclared identifier is reported only once for each function it appears in
-make[1]: *** [xqspips_sinit.o] Error 1
-"Compiling scheduler..."
-make[1]: Target `libs' not remade because of errors.
-make: *** [ps7_cortexa9_0/libsrc/qspips_v3_4/src/make.libs] Error 2
-In file included from scheduler_selftest.c:4:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from scheduler_selftest.c:6:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-scheduler_selftest.c: In function 'SCHEDULER_Reg_SelfTest':
-scheduler_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-    if ( SCHEDULER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-                                                          ^~
-scheduler_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-make[1]: *** [libs] Error 1
-make: *** [ps7_cortexa9_0/libsrc/scheduler_v1_0/src/make.libs] Error 2
-"Compiling scugic"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscugic.h:198,
-                 from xscugic.c:129:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xscugic.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscugic.h:198,
-                 from xscugic_g.c:63:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xscugic_g.c:64:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xscugic_g.c:88:36: error: 'XPAR_XSCUGIC_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_SCUGIC_NUM_INSTANCES'?
- XScuGic_Config XScuGic_ConfigTable[XPAR_XSCUGIC_NUM_INSTANCES] =
-                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                    XPAR_SCUGIC_NUM_INSTANCES
-xscugic_g.c:91:14: error: 'XPAR_SCUGIC_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_SCUTIMER_DEVICE_ID'?
-         (u16)XPAR_SCUGIC_0_DEVICE_ID, /* Unique ID  of device */
-              ^~~~~~~~~~~~~~~~~~~~~~~
-              XPAR_SCUTIMER_DEVICE_ID
-xscugic_g.c:92:14: error: 'XPAR_SCUGIC_0_CPU_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_SCUGIC_CPU_BASEADDR'?
-         (u32)XPAR_SCUGIC_0_CPU_BASEADDR, /* CPU Interface base address */
-              ^~~~~~~~~~~~~~~~~~~~~~~~~~
-              XPAR_SCUGIC_CPU_BASEADDR
-xscugic_g.c:93:14: error: 'XPAR_SCUGIC_0_DIST_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_SCUGIC_DIST_BASEADDR'?
-         (u32)XPAR_SCUGIC_0_DIST_BASEADDR /* Distributor base address */
-              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-              XPAR_SCUGIC_DIST_BASEADDR
-make[1]: *** [xscugic_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscugic.h:198,
-                 from xscugic_hw.c:82:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xscugic_hw.c:83:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xscugic_hw.c:99:43: error: 'XPAR_XSCUGIC_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_SCUGIC_NUM_INSTANCES'?
- extern XScuGic_Config XScuGic_ConfigTable[XPAR_XSCUGIC_NUM_INSTANCES];
-                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                           XPAR_SCUGIC_NUM_INSTANCES
-make[1]: *** [xscugic_hw.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscugic.h:198,
-                 from xscugic_intr.c:83:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xscugic_intr.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscugic.h:198,
-                 from xscugic_selftest.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xscugic_selftest.o] Error 1
-In file included from xscugic_sinit.c:58:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscugic.h:198,
-                 from xscugic_sinit.c:59:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xscugic_sinit.o] Error 1
-"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make[1]: Target `libs' not remade because of errors.
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-make: *** [ps7_cortexa9_0/libsrc/scugic_v3_9/src/make.libs] Error 2
-"Compiling scutimer"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscutimer_hw.h:66,
-                 from xscutimer.h:117,
-                 from xscutimer.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xscutimer.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscutimer_hw.h:66,
-                 from xscutimer.h:117,
-                 from xscutimer_g.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xscutimer_g.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xscutimer_g.c:72:40: error: 'XPAR_XSCUTIMER_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_SCUGIC_NUM_INSTANCES'?
- XScuTimer_Config XScuTimer_ConfigTable[XPAR_XSCUTIMER_NUM_INSTANCES] = {
-                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                        XPAR_SCUGIC_NUM_INSTANCES
-xscutimer_g.c:74:8: error: 'XPAR_XSCUTIMER_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_SCUTIMER_DEVICE_ID'?
-   (u16)XPAR_XSCUTIMER_0_DEVICE_ID,
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~
-        XPAR_SCUTIMER_DEVICE_ID
-xscutimer_g.c:75:8: error: 'XPAR_XSCUTIMER_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   (u32)XPAR_XSCUTIMER_0_BASEADDR
-        ^~~~~~~~~~~~~~~~~~~~~~~~~
-        XPAR_XSLCR_0_BASEADDR
-make[1]: *** [xscutimer_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscutimer_hw.h:66,
-                 from xscutimer.h:117,
-                 from xscutimer_selftest.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xscutimer_selftest.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscutimer_hw.h:66,
-                 from xscutimer.h:117,
-                 from xscutimer_sinit.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xscutimer_sinit.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xscutimer_sinit.c:65:47: error: 'XPAR_XSCUTIMER_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_SCUGIC_NUM_INSTANCES'?
- extern XScuTimer_Config XScuTimer_ConfigTable[XPAR_XSCUTIMER_NUM_INSTANCES];
-                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                               XPAR_SCUGIC_NUM_INSTANCES
-make[1]: *** [xscutimer_sinit.o] Error 1
-make[1]: Target `libs' not remade because of errors.
-"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make: *** [ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs] Error 2
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scuwdt"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscuwdt_hw.h:69,
-                 from xscuwdt.h:139,
-                 from xscuwdt.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xscuwdt.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscuwdt_hw.h:69,
-                 from xscuwdt.h:139,
-                 from xscuwdt_g.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xscuwdt_g.c:57:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xscuwdt_g.c:73:36: error: 'XPAR_XSCUWDT_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_SCUGIC_NUM_INSTANCES'?
- XScuWdt_Config XScuWdt_ConfigTable[XPAR_XSCUWDT_NUM_INSTANCES] = {
-                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                    XPAR_SCUGIC_NUM_INSTANCES
-xscuwdt_g.c:75:8: error: 'XPAR_SCUWDT_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_SCUWDT_DEVICE_ID'?
-   (u16)XPAR_SCUWDT_0_DEVICE_ID,
-        ^~~~~~~~~~~~~~~~~~~~~~~
-        XPAR_SCUWDT_DEVICE_ID
-xscuwdt_g.c:76:8: error: 'XPAR_SCUWDT_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   (u32)XPAR_SCUWDT_0_BASEADDR
-        ^~~~~~~~~~~~~~~~~~~~~~
-        XPAR_XSLCR_0_BASEADDR
-make[1]: *** [xscuwdt_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscuwdt_hw.h:69,
-                 from xscuwdt.h:139,
-                 from xscuwdt_selftest.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xscuwdt_selftest.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xscuwdt_hw.h:69,
-                 from xscuwdt.h:139,
-                 from xscuwdt_sinit.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xscuwdt_sinit.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xscuwdt_sinit.c:67:43: error: 'XPAR_XSCUWDT_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_SCUGIC_NUM_INSTANCES'?
- extern XScuWdt_Config XScuWdt_ConfigTable[XPAR_XSCUWDT_NUM_INSTANCES];
-                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                           XPAR_SCUGIC_NUM_INSTANCES
-make[1]: *** [xscuwdt_sinit.o] Error 1
-make[1]: Target `libs' not remade because of errors.
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make: *** [ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs] Error 2
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling sdps"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from xsdps.h:165,
-                 from xsdps.c:99:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xsdps_hw.h:80:0,
-                 from xsdps.h:168,
-                 from xsdps.c:99:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xsdps.o] Error 1
-In file included from xsdps_g.c:55:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from xsdps.h:165,
-                 from xsdps_g.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xsdps_hw.h:80:0,
-                 from xsdps.h:168,
-                 from xsdps_g.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xsdps_g.c:65:3: error: 'XPAR_XSDPS_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-   XPAR_XSDPS_0_DEVICE_ID,
-   ^~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_DEVICE_ID
-xsdps_g.c:66:3: error: 'XPAR_XSDPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   XPAR_XSDPS_0_BASEADDR,
-   ^~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_BASEADDR
-xsdps_g.c:67:3: error: 'XPAR_XSDPS_0_SDIO_CLK_FREQ_HZ' undeclared here (not in a function); did you mean 'XPAR_XSDPS_0_DEVICE_ID'?
-   XPAR_XSDPS_0_SDIO_CLK_FREQ_HZ
-   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSDPS_0_DEVICE_ID
-make[1]: *** [xsdps_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from xsdps.h:165,
-                 from xsdps_options.c:84:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xsdps_hw.h:80:0,
-                 from xsdps.h:168,
-                 from xsdps_options.c:84:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xsdps_options.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from xsdps.h:165,
-                 from xsdps_sinit.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xsdps_hw.h:80:0,
-                 from xsdps.h:168,
-                 from xsdps_sinit.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xsdps_sinit.c:57:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-xsdps_sinit.c: In function 'XSdPs_LookupConfig':
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-xsdps_sinit.c:91:32: error: 'XPAR_XSDPS_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
-  for (Index = 0U; Index < (u32)XPAR_XSDPS_NUM_INSTANCES; Index++) {
-                                ^~~~~~~~~~~~~~~~~~~~~~~~
-                                XPAR_XSLCR_NUM_INSTANCES
-xsdps_sinit.c:91:32: note: each undeclared identifier is reported only once for each function it appears in
-make[1]: *** [xsdps_sinit.o] Error 1
-make[1]: Target `libs' not remade because of errors.
-make: *** [ps7_cortexa9_0/libsrc/sdps_v3_5/src/make.libs] Error 2
-"Compiling standalone"
-In file included from inbyte.c:1:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from ../../../include/xuartps_hw.h:75,
-                 from inbyte.c:2:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from outbyte.c:1:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from ../../../include/xuartps_hw.h:75,
-                 from outbyte.c:2:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from print.c:20:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from read.c:36:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from read.c:37:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from sleep.h:56,
-                 from sleep.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xtime_l.h:67:0,
-                 from sleep.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from sleep.c:58:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from sleep.h:56,
-                 from usleep.c:59:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xtime_l.h:67:0,
-                 from usleep.c:60:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from usleep.c:61:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from write.c:36:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from write.c:37:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xil_cache.c:110:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_cache.c:112:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xil_io.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xil_misc_psreset_api.h:58,
-                 from xil_misc_psreset_api.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_printf.c:8:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xil_sleepcommon.c:50:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xil_sleeptimer.c:53:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_sleeptimer.h:57:0,
-                 from xil_sleeptimer.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xtime_l.h:67:0,
-                 from xil_sleeptimer.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xil_testio.c:52:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xil_testmem.c:51:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xplatform_info.c:62:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xtime_l.h:67:0,
-                 from xtime_l.c:53:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xil_printf.h:12:0,
-                 from xil_io.h:65,
-                 from xtime_l.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from boot.S:97:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from translation_table.S:96:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [standalone_libs] Error 1
-make[1]: Target `libs' not remade because of errors.
-make: *** [ps7_cortexa9_0/libsrc/standalone_v6_7/src/make.libs] Error 2
-"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling tmrctr"
-In file included from xtmrctr.c:73:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xtmrctr_l.h:77,
-                 from xtmrctr.h:179,
-                 from xtmrctr.c:74:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xtmrctr_l.h:77,
-                 from xtmrctr.h:179,
-                 from xtmrctr_g.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xtmrctr_g.c:58:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xtmrctr_l.h:77,
-                 from xtmrctr.h:179,
-                 from xtmrctr_intr.c:58:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xtmrctr_l.h:77,
-                 from xtmrctr_l.c:58:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xtmrctr_l.h:77,
-                 from xtmrctr.h:179,
-                 from xtmrctr_options.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xtmrctr_selftest.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xtmrctr_sinit.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xtmrctr_l.h:77,
-                 from xtmrctr.h:179,
-                 from xtmrctr_sinit.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xtmrctr_sinit.c: In function 'XTmrCtr_LookupConfig':
-xtmrctr_sinit.c:93:24: warning: comparison is always false due to limited range of data type [-Wtype-limits]
-  for (Index = 0; Index < XPAR_XTMRCTR_NUM_INSTANCES; Index++) {
-                        ^
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xtmrctr_l.h:77,
-                 from xtmrctr.h:179,
-                 from xtmrctr_stats.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make[1]: *** [libs] Error 1
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-make: *** [ps7_cortexa9_0/libsrc/tmrctr_v4_4/src/make.libs] Error 2
-"Compiling ttcps"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xttcps_hw.h:69,
-                 from xttcps.h:119,
-                 from xttcps.c:67:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xttcps.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xttcps_hw.h:69,
-                 from xttcps.h:119,
-                 from xttcps_g.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xttcps_g.c:57:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xttcps_g.c:77:34: error: 'XPAR_XTTCPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- XTtcPs_Config XTtcPs_ConfigTable[XPAR_XTTCPS_NUM_INSTANCES] = {
-                                  ^~~~~~~~~~~~~~~~~~~~~~~~~
-                                  XPAR_XSLCR_NUM_INSTANCES
-xttcps_g.c:79:9: error: 'XPAR_XTTCPS_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-    (u16)XPAR_XTTCPS_0_DEVICE_ID, /* Device ID for instance */
-         ^~~~~~~~~~~~~~~~~~~~~~~
-         XPAR_XSLCR_0_DEVICE_ID
-xttcps_g.c:80:9: error: 'XPAR_XTTCPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-    (u32)XPAR_XTTCPS_0_BASEADDR, /* Device base address */
-         ^~~~~~~~~~~~~~~~~~~~~~
-         XPAR_XSLCR_0_BASEADDR
-xttcps_g.c:81:9: error: 'XPAR_XTTCPS_0_TTC_CLK_FREQ_HZ' undeclared here (not in a function); did you mean 'XPAR_XTTCPS_0_CLOCK_HZ'?
-    (u32)XPAR_XTTCPS_0_TTC_CLK_FREQ_HZ /* Device input clock frequency */
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-         XPAR_XTTCPS_0_CLOCK_HZ
-make[1]: *** [xttcps_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xttcps_hw.h:69,
-                 from xttcps.h:119,
-                 from xttcps_options.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xttcps_options.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xttcps_hw.h:69,
-                 from xttcps.h:119,
-                 from xttcps_selftest.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xttcps_selftest.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xttcps_hw.h:69,
-                 from xttcps.h:119,
-                 from xttcps_sinit.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xttcps_sinit.c:55:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xttcps_sinit.c:66:41: error: 'XPAR_XTTCPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- extern XTtcPs_Config XTtcPs_ConfigTable[XPAR_XTTCPS_NUM_INSTANCES];
-                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
-                                         XPAR_XSLCR_NUM_INSTANCES
-make[1]: *** [xttcps_sinit.o] Error 1
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make[1]: Target `libs' not remade because of errors.
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-make: *** [ps7_cortexa9_0/libsrc/ttcps_v3_6/src/make.libs] Error 2
-"Compiling uartps"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xuartps_hw.h:75,
-                 from xuartps.h:190,
-                 from xuartps.c:60:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xuartps.o] Error 1
-In file included from xuartps_g.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xuartps_hw.h:75,
-                 from xuartps.h:190,
-                 from xuartps_g.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xuartps_g.c:76:36: error: 'XPAR_XUARTPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- XUartPs_Config XUartPs_ConfigTable[XPAR_XUARTPS_NUM_INSTANCES] = {
-                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                    XPAR_XSLCR_NUM_INSTANCES
-xuartps_g.c:78:8: error: 'XPAR_XUARTPS_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-   (u16)XPAR_XUARTPS_0_DEVICE_ID,
-        ^~~~~~~~~~~~~~~~~~~~~~~~
-        XPAR_XSLCR_0_DEVICE_ID
-xuartps_g.c:79:8: error: 'XPAR_XUARTPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPS_UART0_BASEADDR'?
-   (u32)XPAR_XUARTPS_0_BASEADDR,
-        ^~~~~~~~~~~~~~~~~~~~~~~
-        XPS_UART0_BASEADDR
-xuartps_g.c:80:8: error: 'XPAR_XUARTPS_0_UART_CLK_FREQ_HZ' undeclared here (not in a function); did you mean 'XPAR_XUARTPS_0_CLOCK_HZ'?
-   (u32)XPAR_XUARTPS_0_UART_CLK_FREQ_HZ,
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        XPAR_XUARTPS_0_CLOCK_HZ
-make[1]: *** [xuartps_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xuartps_hw.h:75,
-                 from xuartps_hw.c:53:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xuartps_hw.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xuartps_hw.h:75,
-                 from xuartps.h:190,
-                 from xuartps_intr.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xuartps_intr.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xuartps_hw.h:75,
-                 from xuartps.h:190,
-                 from xuartps_options.c:58:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xuartps_options.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xuartps_hw.h:75,
-                 from xuartps.h:190,
-                 from xuartps_selftest.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xuartps_selftest.o] Error 1
-In file included from xuartps_sinit.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xuartps_hw.h:75,
-                 from xuartps.h:190,
-                 from xuartps_sinit.c:57:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xuartps_sinit.c:66:43: error: 'XPAR_XUARTPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- extern XUartPs_Config XUartPs_ConfigTable[XPAR_XUARTPS_NUM_INSTANCES];
-                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                           XPAR_XSLCR_NUM_INSTANCES
-make[1]: *** [xuartps_sinit.o] Error 1
-"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make[1]: Target `libs' not remade because of errors.
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-make: *** [ps7_cortexa9_0/libsrc/uartps_v3_6/src/make.libs] Error 2
-"Compiling usbps"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xusbps_hw.h:66,
-                 from xusbps.h:203,
-                 from xusbps.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xusbps.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xusbps_hw.h:66,
-                 from xusbps.h:203,
-                 from xusbps_endpoint.c:65:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xusbps_endpoint.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xusbps_hw.h:66,
-                 from xusbps.h:203,
-                 from xusbps_g.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xusbps_g.c:55:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xusbps_g.c:71:6: error: 'XPAR_XUSBPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-      XPAR_XUSBPS_0_BASEADDR
-      ^~~~~~~~~~~~~~~~~~~~~~
-      XPAR_XSLCR_0_BASEADDR
-make[1]: *** [xusbps_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xusbps_hw.h:66,
-                 from xusbps.h:203,
-                 from xusbps_hw.c:54:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xusbps_hw.c:55:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xusbps_hw.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xusbps_hw.h:66,
-                 from xusbps.h:203,
-                 from xusbps_intr.c:56:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xusbps_intr.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xusbps_hw.h:66,
-                 from xusbps.h:203,
-                 from xusbps_sinit.c:55:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xusbps_sinit.c:56:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xusbps_sinit.c: In function 'XUsbPs_LookupConfig':
-xusbps_sinit.c:90:26: error: 'XPAR_XUSBPS_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
-  for (Index = 0; Index < XPAR_XUSBPS_NUM_INSTANCES; Index++) {
-                          ^~~~~~~~~~~~~~~~~~~~~~~~~
-                          XPAR_XSLCR_NUM_INSTANCES
-xusbps_sinit.c:90:26: note: each undeclared identifier is reported only once for each function it appears in
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make[1]: *** [xusbps_sinit.o] Error 1
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-make[1]: Target `libs' not remade because of errors.
-make: *** [ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs] Error 2
-"Compiling xadcps"
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xadcps_hw.h:73,
-                 from xadcps.h:198,
-                 from xadcps.c:66:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xadcps.h:198:0,
-                 from xadcps.c:66:
-xadcps.c: In function 'XAdcPs_CfgInitialize':
-xadcps.c:124:18: error: 'XPAR_XDCFG_0_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-  XAdcPs_WriteReg(XPAR_XDCFG_0_BASEADDR,
-                  ^
-xadcps_hw.h:467:15: note: in definition of macro 'XAdcPs_WriteReg'
-   (Xil_Out32((BaseAddress) + (RegOffset), (Data)))
-               ^~~~~~~~~~~
-xadcps.c:124:18: note: each undeclared identifier is reported only once for each function it appears in
-  XAdcPs_WriteReg(XPAR_XDCFG_0_BASEADDR,
-                  ^
-xadcps_hw.h:467:15: note: in definition of macro 'XAdcPs_WriteReg'
-   (Xil_Out32((BaseAddress) + (RegOffset), (Data)))
-               ^~~~~~~~~~~
-make[1]: *** [xadcps.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xadcps_hw.h:73,
-                 from xadcps.h:198,
-                 from xadcps_g.c:61:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from xadcps_g.c:62:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-xadcps_g.c:78:34: error: 'XPAR_XADCPS_NUM_INSTANCES' undeclared here (not in a function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
- XAdcPs_Config XAdcPs_ConfigTable[XPAR_XADCPS_NUM_INSTANCES] =
-                                  ^~~~~~~~~~~~~~~~~~~~~~~~~
-                                  XPAR_XSLCR_NUM_INSTANCES
-xadcps_g.c:81:3: error: 'XPAR_XADCPS_0_DEVICE_ID' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_DEVICE_ID'?
-   XPAR_XADCPS_0_DEVICE_ID, /**< Unique ID of device */
-   ^~~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_DEVICE_ID
-xadcps_g.c:82:3: error: 'XPAR_XADCPS_0_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_XSLCR_0_BASEADDR'?
-   XPAR_XADCPS_0_BASEADDR  /**< Base address of device */
-   ^~~~~~~~~~~~~~~~~~~~~~
-   XPAR_XSLCR_0_BASEADDR
-make[1]: *** [xadcps_g.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xadcps_hw.h:73,
-                 from xadcps.h:198,
-                 from xadcps_intr.c:67:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xadcps_intr.o] Error 1
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xadcps_hw.h:73,
-                 from xadcps.h:198,
-                 from xadcps_selftest.c:61:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xadcps_selftest.o] Error 1
-In file included from xadcps_sinit.c:58:0:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-In file included from ../../../include/xil_printf.h:12:0,
-                 from ../../../include/xil_io.h:65,
-                 from xadcps_hw.h:73,
-                 from xadcps.h:198,
-                 from xadcps_sinit.c:59:
-../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
-make[1]: *** [xadcps_sinit.o] Error 1
-make[1]: Target `libs' not remade because of errors.
-make: *** [ps7_cortexa9_0/libsrc/xadcps_v2_2/src/make.libs] Error 2
-make: Target `all' not remade because of errors.
-02:30:36 **** Build of project test_bsp ****
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+Cleaning...
+rm -f -r src/obj/
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
+rm -f freertos.elf freertos.bin
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+15:49:44 **** Build of project freertos_s_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -1535,6 +38,8 @@ make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=
 make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
 make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
 make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
@@ -1610,6 +115,16 @@ In file included from xtime_l.c:53:0:
 xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
  #pragma message ("For the sleep routines, Global timer is being used")
          ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling timers_ip..."
+timers_ip_selftest.c: In function 'TIMERS_IP_Reg_SelfTest':
+timers_ip_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( TIMERS_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                          ^~
+timers_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
 "Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
 make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling tmrctr"
@@ -1626,28 +141,592 @@ make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
-02:31:00 **** Build of configuration Debug for project test ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: test.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  78436	   4172	  23360	 105968	  19df0	test.elf
-'Finished building: test.elf.size'
-' '
+15:50:06 **** Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj
+Building dependecy for src/xtime_l.c
+Building dependecy for src/timers.c
+Building dependecy for src/tasks.c
+Building dependecy for src/stream_buffer.c
+Building dependecy for src/queue.c
+Building dependecy for src/portASM.S
+Building dependecy for src/port.c
+Building dependecy for src/main.c
+Building dependecy for src/list.c
+Building dependecy for src/heap_4.c
+Building dependecy for src/FreeRTOS_tick_config.c
+Building dependecy for src/FreeRTOS_asm_vectors.S
+Building dependecy for src/event_groups.c
+Building dependecy for src/croutine.c
+Building dependecy for src/boot.S
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Compiling source src/boot.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/boot.S -o src/obj/boot.o
+Compiling source src/croutine.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/croutine.c -o src/obj/croutine.o
+Compiling source src/event_groups.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/event_groups.c -o src/obj/event_groups.o
+Compiling source src/FreeRTOS_asm_vectors.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_asm_vectors.S -o src/obj/FreeRTOS_asm_vectors.o
+Compiling source src/FreeRTOS_tick_config.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
+src/FreeRTOS_tick_config.c: In function 'vConfigureTickInterrupt':
+src/FreeRTOS_tick_config.c:66:57: error: 'XPAR_FABRIC_TMRCTR_0_VEC_ID' undeclared (first use in this function); did you mean 'XPAR_FABRIC_SCHEDULER_0_VEC_ID'?
+  XScuGic_SetPriorityTriggerType( &xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID,  0x7F & (portLOWEST_USABLE_INTERRUPT_PRIORITY << portPRIORITY_SHIFT), ucRisingEdge );
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                         XPAR_FABRIC_SCHEDULER_0_VEC_ID
+src/FreeRTOS_tick_config.c:66:57: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/obj/FreeRTOS_tick_config.o] Error 1
+15:51:00 **** Auto Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Building dependecy for src/FreeRTOS_tick_config.c
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Compiling source src/FreeRTOS_tick_config.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
+src/FreeRTOS_tick_config.c: In function 'vConfigureTickInterrupt':
+src/FreeRTOS_tick_config.c:94:41: error: 'XPAR_FABRIC_TMRCTR_0_VEC_ID' undeclared (first use in this function); did you mean 'XPAR_FABRIC_SCHEDULER_0_VEC_ID'?
+  XScuGic_Enable( &xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID );
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                         XPAR_FABRIC_SCHEDULER_0_VEC_ID
+src/FreeRTOS_tick_config.c:94:41: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/obj/FreeRTOS_tick_config.o] Error 1
+15:51:18 **** Auto Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Building dependecy for src/FreeRTOS_tick_config.c
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Compiling source src/FreeRTOS_tick_config.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
+Compiling source src/heap_4.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/heap_4.c -o src/obj/heap_4.o
+Compiling source src/list.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/list.c -o src/obj/list.o
+Compiling source src/main.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/main.c -o src/obj/main.o
+src/main.c: In function 'prvSetupHardware':
+src/main.c:198:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  volatile uint32_t* ICCICR = 0xf8f00100;
+                              ^~~~~~~~~~
+Compiling source src/port.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/port.c -o src/obj/port.o
+src/port.c:116:1: warning: multi-line comment [-Wcomment]
+ // #define portCPU_IRQ_DISABLE()          \
+ ^
+src/port.c:121:1: warning: multi-line comment [-Wcomment]
+ // #define portCPU_IRQ_ENABLE()          \
+ ^
+src/port.c: In function 'vPortTaskUsesFPU':
+src/port.c:485:11: warning: unused variable 'ulInitialFPSCR' [-Wunused-variable]
+  uint32_t ulInitialFPSCR = 0;
+           ^~~~~~~~~~~~~~
+Compiling source src/portASM.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/portASM.S -o src/obj/portASM.o
+Compiling source src/queue.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/queue.c -o src/obj/queue.o
+Compiling source src/stream_buffer.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/stream_buffer.c -o src/obj/stream_buffer.o
+Compiling source src/tasks.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
+Compiling source src/timers.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/timers.c -o src/obj/timers.o
+Compiling source src/xtime_l.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/xtime_l.c -o src/obj/xtime_l.o
+Linking freertos.elf
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic_g.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic_g.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic_sinit.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic_sinit.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt_sinit.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt_sinit.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(vectors.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(vectors.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_assert.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_assert.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_exception.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_exception.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_printf.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_printf.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_l.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_l.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_options.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_options.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_sinit.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_sinit.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_sinit.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_sinit.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt_g.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt_g.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(outbyte.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(outbyte.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xplatform_info.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xplatform_info.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_g.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_g.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_g.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_g.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_hw.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_hw.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(_exit.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(_exit.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(_sbrk.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(_sbrk.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(close.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(close.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(fstat.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(fstat.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(isatty.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(isatty.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(lseek.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(lseek.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(read.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(read.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(write.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(write.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(errno.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(errno.o)
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(inbyte.o) uses VFP register arguments, freertos.elf does not
+c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(inbyte.o)
+collect2.exe: error: ld returned 1 exit status
+make: *** [freertos.elf] Error 1
+15:52:04 **** Auto Build of project freertos_s_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling scheduler..."
+scheduler_selftest.c: In function 'SCHEDULER_Reg_SelfTest':
+scheduler_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( SCHEDULER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                          ^~
+scheduler_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling timers_ip..."
+timers_ip_selftest.c: In function 'TIMERS_IP_Reg_SelfTest':
+timers_ip_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( TIMERS_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                          ^~
+timers_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+15:52:33 **** Auto Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Building dependecy for src/xtime_l.c
+Building dependecy for src/timers.c
+Building dependecy for src/tasks.c
+Building dependecy for src/stream_buffer.c
+Building dependecy for src/queue.c
+Building dependecy for src/port.c
+Building dependecy for src/main.c
+Building dependecy for src/list.c
+Building dependecy for src/heap_4.c
+Building dependecy for src/FreeRTOS_tick_config.c
+Building dependecy for src/FreeRTOS_asm_vectors.S
+Building dependecy for src/event_groups.c
+Building dependecy for src/croutine.c
+Building dependecy for src/boot.S
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Compiling source src/boot.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/boot.S -o src/obj/boot.o
+Compiling source src/croutine.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/croutine.c -o src/obj/croutine.o
+Compiling source src/event_groups.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/event_groups.c -o src/obj/event_groups.o
+Compiling source src/FreeRTOS_asm_vectors.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_asm_vectors.S -o src/obj/FreeRTOS_asm_vectors.o
+Compiling source src/FreeRTOS_tick_config.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
+Compiling source src/heap_4.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/heap_4.c -o src/obj/heap_4.o
+Compiling source src/list.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/list.c -o src/obj/list.o
+Compiling source src/main.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/main.c -o src/obj/main.o
+src/main.c: In function 'prvSetupHardware':
+src/main.c:198:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  volatile uint32_t* ICCICR = 0xf8f00100;
+                              ^~~~~~~~~~
+Compiling source src/port.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/port.c -o src/obj/port.o
+src/port.c:116:1: warning: multi-line comment [-Wcomment]
+ // #define portCPU_IRQ_DISABLE()          \
+ ^
+src/port.c:121:1: warning: multi-line comment [-Wcomment]
+ // #define portCPU_IRQ_ENABLE()          \
+ ^
+src/port.c: In function 'vPortTaskUsesFPU':
+src/port.c:485:11: warning: unused variable 'ulInitialFPSCR' [-Wunused-variable]
+  uint32_t ulInitialFPSCR = 0;
+           ^~~~~~~~~~~~~~
+Compiling source src/queue.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/queue.c -o src/obj/queue.o
+Compiling source src/stream_buffer.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/stream_buffer.c -o src/obj/stream_buffer.o
+Compiling source src/tasks.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
+Compiling source src/timers.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/timers.c -o src/obj/timers.o
+Compiling source src/xtime_l.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/xtime_l.c -o src/obj/xtime_l.o
+Linking freertos.elf
+Generating binary freertos.bin
+15:53:02 **** Auto Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+15:54:15 **** Build of project freertos_s_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling scheduler..."
+scheduler_selftest.c: In function 'SCHEDULER_Reg_SelfTest':
+scheduler_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( SCHEDULER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                          ^~
+scheduler_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling timers_ip..."
+timers_ip_selftest.c: In function 'TIMERS_IP_Reg_SelfTest':
+timers_ip_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( TIMERS_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                          ^~
+timers_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+15:54:37 **** Auto Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Building dependecy for src/xtime_l.c
+Building dependecy for src/timers.c
+Building dependecy for src/tasks.c
+Building dependecy for src/stream_buffer.c
+Building dependecy for src/queue.c
+Building dependecy for src/port.c
+Building dependecy for src/main.c
+Building dependecy for src/list.c
+Building dependecy for src/heap_4.c
+Building dependecy for src/FreeRTOS_tick_config.c
+Building dependecy for src/FreeRTOS_asm_vectors.S
+Building dependecy for src/event_groups.c
+Building dependecy for src/croutine.c
+Building dependecy for src/boot.S
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Compiling source src/boot.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/boot.S -o src/obj/boot.o
+Compiling source src/croutine.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/croutine.c -o src/obj/croutine.o
+Compiling source src/event_groups.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/event_groups.c -o src/obj/event_groups.o
+Compiling source src/FreeRTOS_asm_vectors.S
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_asm_vectors.S -o src/obj/FreeRTOS_asm_vectors.o
+Compiling source src/FreeRTOS_tick_config.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
+Compiling source src/heap_4.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/heap_4.c -o src/obj/heap_4.o
+Compiling source src/list.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/list.c -o src/obj/list.o
+Compiling source src/main.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/main.c -o src/obj/main.o
+src/main.c: In function 'prvSetupHardware':
+src/main.c:198:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  volatile uint32_t* ICCICR = 0xf8f00100;
+                              ^~~~~~~~~~
+Compiling source src/port.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/port.c -o src/obj/port.o
+src/port.c:116:1: warning: multi-line comment [-Wcomment]
+ // #define portCPU_IRQ_DISABLE()          \
+ ^
+src/port.c:121:1: warning: multi-line comment [-Wcomment]
+ // #define portCPU_IRQ_ENABLE()          \
+ ^
+src/port.c: In function 'vPortTaskUsesFPU':
+src/port.c:485:11: warning: unused variable 'ulInitialFPSCR' [-Wunused-variable]
+  uint32_t ulInitialFPSCR = 0;
+           ^~~~~~~~~~~~~~
+Compiling source src/queue.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/queue.c -o src/obj/queue.o
+Compiling source src/stream_buffer.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/stream_buffer.c -o src/obj/stream_buffer.o
+Compiling source src/tasks.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
+Compiling source src/timers.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/timers.c -o src/obj/timers.o
+Compiling source src/xtime_l.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/xtime_l.c -o src/obj/xtime_l.o
+Linking freertos.elf
+Generating binary freertos.bin
+15:55:07 **** Incremental Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+make: Nothing to be done for `all'.
+15:57:48 **** Auto Build of configuration Debug for project freertos_s ****
+make all 
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Building dependecy for src/tasks.c
+Creating build directory src/obj/
+A subdirectory or file src/obj/ already exists.
+make: [src/obj/] Error 1 (ignored)
+Compiling source src/tasks.c
+arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
+Linking freertos.elf
+Generating binary freertos.bin

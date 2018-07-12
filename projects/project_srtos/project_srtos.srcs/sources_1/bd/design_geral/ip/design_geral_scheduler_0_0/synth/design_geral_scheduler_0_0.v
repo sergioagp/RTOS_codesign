@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:scheduler:1.0
-// IP Revision: 40
+// IP Revision: 41
 
 (* X_CORE_INFO = "scheduler_v1_0,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "design_geral_scheduler_0_0,scheduler_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_geral_scheduler_0_0,scheduler_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=scheduler,x_ipVersion=1.0,x_ipCoreRevision=40,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
+(* CORE_GENERATION_INFO = "design_geral_scheduler_0_0,scheduler_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=scheduler,x_ipVersion=1.0,x_ipCoreRevision=41,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_geral_scheduler_0_0 (
   resume_tasktimer_in,
@@ -93,6 +93,8 @@ input wire resume_semaphoretask_in;
 input wire [7 : 0] id_semaphoretask_in;
 input wire tick_in;
 input wire [31 : 0] tickval_in;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME tick_out, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 tick_out INTERRUPT" *)
 output wire tick_out;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [4 : 0] s00_axi_awaddr;

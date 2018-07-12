@@ -2,8 +2,8 @@
 # Note:  All dirs must end with /
 
 SRC_DIRS := src/
-INC_DIRS := src/inc/ ../baremetal_bsp/ps7_cortexa9_0/include/
-LIB_DIRS := ../baremetal_bsp/ps7_cortexa9_0/lib/
+INC_DIRS := src/inc/ ../freertos_s_bsp/ps7_cortexa9_0/include/
+LIB_DIRS := ../freertos_s_bsp/ps7_cortexa9_0/lib/
 LDLIBS := xil
 # Target must be a single executable
 TARGET := freertos.elf

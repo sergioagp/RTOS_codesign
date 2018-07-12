@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Jul 12 02:25:14 2018
+| Date         : Thu Jul 12 15:37:35 2018
 | Host         : ASUS-K556URK running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_geral_wrapper_utilization_synth.rpt -pb design_geral_wrapper_utilization_synth.pb
 | Design       : design_geral_wrapper
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 2740 |     0 |     53200 |  5.15 |
-|   LUT as Logic             | 1774 |     0 |     53200 |  3.33 |
-|   LUT as Memory            |  966 |     0 |     17400 |  5.55 |
-|     LUT as Distributed RAM |  900 |     0 |           |       |
+| Slice LUTs*                | 4557 |     0 |     53200 |  8.57 |
+|   LUT as Logic             | 2695 |     0 |     53200 |  5.07 |
+|   LUT as Memory            | 1862 |     0 |     17400 | 10.70 |
+|     LUT as Distributed RAM | 1796 |     0 |           |       |
 |     LUT as Shift Register  |   66 |     0 |           |       |
-| Slice Registers            | 1859 |     0 |    106400 |  1.75 |
-|   Register as Flip Flop    | 1859 |     0 |    106400 |  1.75 |
+| Slice Registers            | 2627 |     0 |    106400 |  2.47 |
+|   Register as Flip Flop    | 2627 |     0 |    106400 |  2.47 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                   |  408 |     0 |     26600 |  1.53 |
+| F7 Muxes                   |  859 |     0 |     26600 |  3.23 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 60    |          Yes |         Set |            - |
-| 1799  |          Yes |       Reset |            - |
+| 63    |          Yes |         Set |            - |
+| 2564  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,18 +148,18 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
-| FDRE     | 1799 |         Flop & Latch |
-| RAMD64E  |  864 |   Distributed Memory |
-| LUT3     |  626 |                  LUT |
-| LUT6     |  590 |                  LUT |
-| LUT4     |  425 |                  LUT |
-| MUXF7    |  408 |                MuxFx |
-| LUT5     |  245 |                  LUT |
-| LUT2     |  173 |                  LUT |
-| LUT1     |  137 |                  LUT |
+| FDRE     | 2564 |         Flop & Latch |
+| RAMD64E  | 1760 |   Distributed Memory |
+| LUT3     | 1005 |                  LUT |
+| LUT4     |  879 |                  LUT |
+| MUXF7    |  859 |                MuxFx |
+| LUT6     |  813 |                  LUT |
+| LUT5     |  278 |                  LUT |
+| LUT2     |  222 |                  LUT |
+| LUT1     |  144 |                  LUT |
 | BIBUF    |  130 |                   IO |
-| CARRY4   |   89 |           CarryLogic |
-| FDSE     |   60 |         Flop & Latch |
+| CARRY4   |  116 |           CarryLogic |
+| FDSE     |   63 |         Flop & Latch |
 | RAMD32   |   54 |   Distributed Memory |
 | SRLC32E  |   47 |   Distributed Memory |
 | SRL16E   |   19 |   Distributed Memory |

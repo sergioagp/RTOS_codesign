@@ -571,7 +571,7 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {2} \
+   CONFIG.NUM_MI {3} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_100M, and set properties
@@ -579,6 +579,9 @@ proc create_root_design { parentCell } {
 
   # Create instance: scheduler_0, and set properties
   set scheduler_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:scheduler:1.0 scheduler_0 ]
+
+  # Create instance: timers_ip_0, and set properties
+  set timers_ip_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:timers_ip:1.0 timers_ip_0 ]
 
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
@@ -605,21 +608,26 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins ps7_0_axi_periph/M00_AXI] [get_bd_intf_pins scheduler_0/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_timer_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins ps7_0_axi_periph/M02_AXI] [get_bd_intf_pins timers_ip_0/S00_AXI]
 
   # Create port connections
-  connect_bd_net -net axi_timer_0_interrupt [get_bd_pins axi_timer_0/interrupt] [get_bd_pins processing_system7_0/Core0_nFIQ] [get_bd_pins scheduler_0/tick_in] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins scheduler_0/tickval_in]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins scheduler_0/s00_axi_aclk]
+  connect_bd_net -net axi_timer_0_interrupt [get_bd_pins axi_timer_0/interrupt] [get_bd_pins scheduler_0/tick_in] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins scheduler_0/tickval_in] [get_bd_pins timers_ip_0/tick_in]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins scheduler_0/s00_axi_aclk] [get_bd_pins timers_ip_0/s00_axi_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_timer_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins scheduler_0/s00_axi_aresetn]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_timer_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins scheduler_0/s00_axi_aresetn] [get_bd_pins timers_ip_0/s00_axi_aresetn]
+  connect_bd_net -net scheduler_0_tick_out [get_bd_pins processing_system7_0/Core0_nFIQ] [get_bd_pins scheduler_0/tick_out]
+  connect_bd_net -net timers_ip_0_resumeTMRTask_out [get_bd_pins scheduler_0/resume_tasktimer_in] [get_bd_pins timers_ip_0/resumeTMRTask_out]
+  connect_bd_net -net timers_ip_0_timerTaskID_out [get_bd_pins scheduler_0/idtasktimer_in] [get_bd_pins timers_ip_0/timerTaskID_out]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins c_counter_binary_0/CLK] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins scheduler_0/resume_semaphoretask_in] [get_bd_pins scheduler_0/resume_tasktimer_in] [get_bd_pins scheduler_0/suspend_semaphoretask_in] [get_bd_pins xlconstant_0/dout]
-  connect_bd_net -net xlconstant_1_dout [get_bd_pins scheduler_0/id_semaphoretask_in] [get_bd_pins scheduler_0/idtasktimer_in] [get_bd_pins xlconstant_1/dout]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins scheduler_0/resume_semaphoretask_in] [get_bd_pins scheduler_0/suspend_semaphoretask_in] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins scheduler_0/id_semaphoretask_in] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x42800000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_timer_0/S_AXI/Reg] SEG_axi_timer_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs scheduler_0/S00_AXI/S00_AXI_reg] SEG_scheduler_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs timers_ip_0/S00_AXI/S00_AXI_reg] SEG_timers_ip_0_S00_AXI_reg
 
 
   # Restore current instance

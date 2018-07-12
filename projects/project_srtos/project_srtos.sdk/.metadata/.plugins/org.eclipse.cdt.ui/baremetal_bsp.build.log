@@ -1,4 +1,4 @@
-02:30:16 **** Build of project baremetal_bsp ****
+15:45:55 **** Build of project baremetal_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
@@ -28,6 +28,8 @@ make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=
 make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
 make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
 make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
@@ -125,10 +127,10 @@ xdevcfg_sinit.c:85:27: error: 'XPAR_XDCFG_NUM_INSTANCES' undeclared (first use i
                            ^~~~~~~~~~~~~~~~~~~~~~~~
                            XPAR_XSLCR_NUM_INSTANCES
 xdevcfg_sinit.c:85:27: note: each undeclared identifier is reported only once for each function it appears in
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
 make[1]: *** [xdevcfg_sinit.o] Error 1
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
 make[1]: Target `libs' not remade because of errors.
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 make: *** [ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs] Error 2
 "Compiling dmaps"
 In file included from xdmaps.h:99:0,
@@ -212,8 +214,8 @@ In file included from ../../../include/xil_printf.h:12:0,
  
 xdmaps_sinit.c: In function 'XDmaPs_LookupConfig':
 "Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-xdmaps_sinit.c:95:18: error: 'XPAR_XDMAPS_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
 make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+xdmaps_sinit.c:95:18: error: 'XPAR_XDMAPS_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
   for (i = 0; i < XPAR_XDMAPS_NUM_INSTANCES; i++) {
                   ^~~~~~~~~~~~~~~~~~~~~~~~~
                   XPAR_XSLCR_NUM_INSTANCES
@@ -392,10 +394,10 @@ xgpiops_sinit.c:70:43: error: 'XPAR_XGPIOPS_NUM_INSTANCES' undeclared here (not 
  extern XGpioPs_Config XGpioPs_ConfigTable[XPAR_XGPIOPS_NUM_INSTANCES];
                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~
                                            XPAR_XSLCR_NUM_INSTANCES
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
 make[1]: *** [xgpiops_sinit.o] Error 1
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
 make[1]: Target `libs' not remade because of errors.
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 make: *** [ps7_cortexa9_0/libsrc/gpiops_v3_3/src/make.libs] Error 2
 "Compiling qspips"
 In file included from ../../../include/xil_printf.h:12:0,
@@ -518,19 +520,19 @@ In file included from xqspips_hw.h:81:0,
 In file included from xqspips_sinit.c:56:0:
 ../../../include/xparameters.h:1:0: error: unterminated #ifndef
  #ifndef XPARAMETERS_H   /* prevent circular inclusions */
-"Running Make libs in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
  
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
 xqspips_sinit.c: In function 'XQspiPs_LookupConfig':
+make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 xqspips_sinit.c:92:26: error: 'XPAR_XQSPIPS_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
   for (Index = 0; Index < XPAR_XQSPIPS_NUM_INSTANCES; Index++) {
                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
                           XPAR_XSLCR_NUM_INSTANCES
 xqspips_sinit.c:92:26: note: each undeclared identifier is reported only once for each function it appears in
 make[1]: *** [xqspips_sinit.o] Error 1
-"Compiling scheduler..."
 make[1]: Target `libs' not remade because of errors.
 make: *** [ps7_cortexa9_0/libsrc/qspips_v3_4/src/make.libs] Error 2
+"Compiling scheduler..."
 In file included from scheduler_selftest.c:4:0:
 ../../../include/xparameters.h:1:0: error: unterminated #ifndef
  #ifndef XPARAMETERS_H   /* prevent circular inclusions */
@@ -543,11 +545,11 @@ In file included from ../../../include/xil_printf.h:12:0,
  
 scheduler_selftest.c: In function 'SCHEDULER_Reg_SelfTest':
 scheduler_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
     if ( SCHEDULER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
                                                           ^~
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
 scheduler_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
   int Index;
       ^~~~~
 make[1]: *** [libs] Error 1
@@ -632,10 +634,10 @@ In file included from ../../../include/xil_printf.h:12:0,
 ../../../include/xparameters.h:1:0: error: unterminated #ifndef
  #ifndef XPARAMETERS_H   /* prevent circular inclusions */
  
-make[1]: *** [xscugic_sinit.o] Error 1
 "Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make[1]: Target `libs' not remade because of errors.
+make[1]: *** [xscugic_sinit.o] Error 1
 make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+make[1]: Target `libs' not remade because of errors.
 make: *** [ps7_cortexa9_0/libsrc/scugic_v3_9/src/make.libs] Error 2
 "Compiling scutimer"
 In file included from ../../../include/xil_printf.h:12:0,
@@ -699,8 +701,8 @@ xscutimer_sinit.c:65:47: error: 'XPAR_XSCUTIMER_NUM_INSTANCES' undeclared here (
                                                XPAR_SCUGIC_NUM_INSTANCES
 make[1]: *** [xscutimer_sinit.o] Error 1
 make[1]: Target `libs' not remade because of errors.
-"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
 make: *** [ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs] Error 2
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
 make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 "Compiling scuwdt"
 In file included from ../../../include/xil_printf.h:12:0,
@@ -764,8 +766,8 @@ xscuwdt_sinit.c:67:43: error: 'XPAR_XSCUWDT_NUM_INSTANCES' undeclared here (not 
                                            XPAR_SCUGIC_NUM_INSTANCES
 make[1]: *** [xscuwdt_sinit.o] Error 1
 make[1]: Target `libs' not remade because of errors.
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
 make: *** [ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs] Error 2
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
 make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 "Compiling sdps"
 In file included from ../../../include/xil_printf.h:12:0,
@@ -839,9 +841,7 @@ In file included from xsdps_sinit.c:57:0:
 ../../../include/xparameters.h:1:0: error: unterminated #ifndef
  #ifndef XPARAMETERS_H   /* prevent circular inclusions */
  
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
 xsdps_sinit.c: In function 'XSdPs_LookupConfig':
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 xsdps_sinit.c:91:32: error: 'XPAR_XSDPS_NUM_INSTANCES' undeclared (first use in this function); did you mean 'XPAR_XSLCR_NUM_INSTANCES'?
   for (Index = 0U; Index < (u32)XPAR_XSDPS_NUM_INSTANCES; Index++) {
                                 ^~~~~~~~~~~~~~~~~~~~~~~~
@@ -849,7 +849,9 @@ xsdps_sinit.c:91:32: error: 'XPAR_XSDPS_NUM_INSTANCES' undeclared (first use in 
 xsdps_sinit.c:91:32: note: each undeclared identifier is reported only once for each function it appears in
 make[1]: *** [xsdps_sinit.o] Error 1
 make[1]: Target `libs' not remade because of errors.
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
 make: *** [ps7_cortexa9_0/libsrc/sdps_v3_5/src/make.libs] Error 2
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
 "Compiling standalone"
 In file included from inbyte.c:1:0:
 ../../../include/xparameters.h:1:0: error: unterminated #ifndef
@@ -1018,8 +1020,30 @@ In file included from translation_table.S:96:0:
 make[1]: *** [standalone_libs] Error 1
 make[1]: Target `libs' not remade because of errors.
 make: *** [ps7_cortexa9_0/libsrc/standalone_v6_7/src/make.libs] Error 2
+"Running Make libs in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+"Compiling timers_ip..."
+In file included from timers_ip_selftest.c:4:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from timers_ip_selftest.c:6:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+timers_ip_selftest.c: In function 'TIMERS_IP_Reg_SelfTest':
+timers_ip_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
 "Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+    if ( TIMERS_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
 make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+                                                          ^~
+timers_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+make[1]: *** [libs] Error 1
+make: *** [ps7_cortexa9_0/libsrc/timers_ip_v1_0/src/make.libs] Error 2
 "Compiling tmrctr"
 In file included from xtmrctr.c:73:0:
 ../../../include/xparameters.h:1:0: error: unterminated #ifndef
@@ -1096,11 +1120,11 @@ In file included from ../../../include/xil_printf.h:12:0,
                  from xtmrctr.h:179,
                  from xtmrctr_stats.c:55:
 ../../../include/xparameters.h:1:0: error: unterminated #ifndef
- #ifndef XPARAMETERS_H   /* prevent circular inclusions */
- 
 "Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make[1]: *** [libs] Error 1
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
 make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+ 
+make[1]: *** [libs] Error 1
 make: *** [ps7_cortexa9_0/libsrc/tmrctr_v4_4/src/make.libs] Error 2
 "Compiling ttcps"
 In file included from ../../../include/xil_printf.h:12:0,
@@ -1350,10 +1374,10 @@ xusbps_sinit.c:90:26: error: 'XPAR_XUSBPS_NUM_INSTANCES' undeclared (first use i
   for (Index = 0; Index < XPAR_XUSBPS_NUM_INSTANCES; Index++) {
                           ^~~~~~~~~~~~~~~~~~~~~~~~~
                           XPAR_XSLCR_NUM_INSTANCES
-xusbps_sinit.c:90:26: note: each undeclared identifier is reported only once for each function it appears in
 "Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make[1]: *** [xusbps_sinit.o] Error 1
+xusbps_sinit.c:90:26: note: each undeclared identifier is reported only once for each function it appears in
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
+make[1]: *** [xusbps_sinit.o] Error 1
 make[1]: Target `libs' not remade because of errors.
 make: *** [ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs] Error 2
 "Compiling xadcps"
@@ -1441,5 +1465,5 @@ make[1]: Target `libs' not remade because of errors.
 make: *** [ps7_cortexa9_0/libsrc/xadcps_v2_2/src/make.libs] Error 2
 make: Target `all' not remade because of errors.
 
-02:30:36 Build Finished (took 20s.52ms)
+15:46:18 Build Finished (took 23s.461ms)
 

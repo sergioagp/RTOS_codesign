@@ -63,12 +63,12 @@ const uint8_t ucRisingEdge = 3;
 	// ( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
 
 	/* The priority must be the lowest possible. */
-	XScuGic_SetPriorityTriggerType( &xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID,  0x7F & (portLOWEST_USABLE_INTERRUPT_PRIORITY << portPRIORITY_SHIFT), ucRisingEdge );
+	XScuGic_SetPriorityTriggerType( &xInterruptController, XPAR_FABRIC_SCHEDULER_0_VEC_ID,  0x7F & (portLOWEST_USABLE_INTERRUPT_PRIORITY << portPRIORITY_SHIFT), ucRisingEdge );
 	XScuGic_SetPriorityTriggerType( &xInterruptController, GTIMER_INT_ID, 0x7F & (portLOWEST_USABLE_INTERRUPT_PRIORITY << portPRIORITY_SHIFT), ucRisingEdge );
 
 
 	/* Install the FreeRTOS tick handler. */
-	xStatus = XScuGic_Connect( &xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID, (Xil_ExceptionHandler) FreeRTOS_Tick_Handler, ( void * ) &tickTimer );
+	xStatus = XScuGic_Connect( &xInterruptController, XPAR_FABRIC_SCHEDULER_0_VEC_ID, (Xil_ExceptionHandler) FreeRTOS_Tick_Handler, ( void * ) &tickTimer );
 	configASSERT( xStatus == XST_SUCCESS );
 	( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
 	XScuGic_Connect( &xInterruptController, GTIMER_INT_ID, (Xil_ExceptionHandler)  vClearSleepInterrupt, ( void * ) NULL );
@@ -91,7 +91,7 @@ const uint8_t ucRisingEdge = 3;
 	XTime_Start();
 
 	/* Enable the interrupt for the tickTimer in the interrupt controller. */
-	XScuGic_Enable( &xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID );
+	XScuGic_Enable( &xInterruptController, XPAR_FABRIC_SCHEDULER_0_VEC_ID );
 	XScuGic_Enable( &xInterruptController, GTIMER_INT_ID );
 
 	/* Enable the interrupt in the tickTimer itself. */

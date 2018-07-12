@@ -7,3 +7,5 @@
 1531331633236	Delete resource 'freertos_s/src/obj/tasks.o'
 1531347286430	Delete resource 'baremetal'
 1531347410460	Delete resource 'bm'
+1531406862090	Delete resource 'baremetal_bsp'
+1531407181882	Delete resource 'freertos_s_bsp'

@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -45,6 +46,8 @@ set_property used_in_implementation false [get_files -all c:/Users/sergiopereira
 set_property used_in_implementation false [get_files -all c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_axi_timer_0_0/design_geral_axi_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_c_counter_binary_0_0/design_geral_c_counter_binary_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xbar_0/design_geral_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_timers/mem_timers_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_info/mem_info_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_auto_pc_0/design_geral_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/design_geral_ooc.xdc]
 

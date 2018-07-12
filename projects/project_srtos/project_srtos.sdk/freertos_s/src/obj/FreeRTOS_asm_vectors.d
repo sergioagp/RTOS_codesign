@@ -1,3 +1,3 @@
  src/obj/FreeRTOS_asm_vectors.o src/obj/FreeRTOS_asm_vectors.d: \
  src/FreeRTOS_asm_vectors.S \
- ../baremetal_bsp/ps7_cortexa9_0/include/xil_errata.h
+ ../freertos_s_bsp/ps7_cortexa9_0/include/xil_errata.h

@@ -46,6 +46,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_geral_c_
 # IP: bd/design_geral/ip/design_geral_xbar_0/design_geral_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_geral_xbar_0 || ORIG_REF_NAME==design_geral_xbar_0} -quiet] -quiet
 
+# IP: bd/design_geral/ip/design_geral_timers_ip_0_0/design_geral_timers_ip_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_geral_timers_ip_0_0 || ORIG_REF_NAME==design_geral_timers_ip_0_0} -quiet] -quiet
+
+# IP: bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_timers/mem_timers.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mem_timers || ORIG_REF_NAME==mem_timers} -quiet] -quiet
+
+# IP: bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_info/mem_info.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mem_info || ORIG_REF_NAME==mem_info} -quiet] -quiet
+
 # IP: bd/design_geral/ip/design_geral_auto_pc_0/design_geral_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_geral_auto_pc_0 || ORIG_REF_NAME==design_geral_auto_pc_0} -quiet] -quiet
 
@@ -74,6 +83,10 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/design_geral/ip/design_geral_c_counter_binary_0_0/design_geral_c_counter_binary_0_0_ooc.xdc
 
 # XDC: bd/design_geral/ip/design_geral_xbar_0/design_geral_xbar_0_ooc.xdc
+
+# XDC: bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_timers/mem_timers_ooc.xdc
+
+# XDC: bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_info/mem_info_ooc.xdc
 
 # XDC: bd/design_geral/ip/design_geral_auto_pc_0/design_geral_auto_pc_0_ooc.xdc
 

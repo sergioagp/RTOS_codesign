@@ -17,12 +17,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7304 
-WARNING: [Synth 8-2306] macro WR_PREV redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/insert_item.v:22]
-WARNING: [Synth 8-2306] macro WR_ADDR redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/insert_item.v:23]
-WARNING: [Synth 8-2306] macro WR_NEXT redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/remove_item.v:24]
+INFO: Helper process launched with PID 4956 
+WARNING: [Synth 8-2306] macro WR_PREV redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/insert_item.v:22]
+WARNING: [Synth 8-2306] macro WR_ADDR redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/insert_item.v:23]
+WARNING: [Synth 8-2306] macro WR_NEXT redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/remove_item.v:24]
+WARNING: [Synth 8-2306] macro WR_NEXT redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/src/timers_module.v:32]
+WARNING: [Synth 8-2306] macro WR_PREV redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/src/timers_module.v:33]
+WARNING: [Synth 8-2306] macro WR_ADDR redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/src/timers_module.v:34]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 400.914 ; gain = 113.895
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 401.836 ; gain = 114.766
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_geral_wrapper' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/hdl/design_geral_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_geral' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:13]
@@ -592,7 +595,7 @@ INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (10#1) [c:/Users
 INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (11#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-256] done synthesizing module 'axi_timer' (12#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/0a2c/hdl/axi_timer_v2_0_vh_rfs.vhd:2141]
 INFO: [Synth 8-256] done synthesizing module 'design_geral_axi_timer_0_0' (13#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_axi_timer_0_0/synth/design_geral_axi_timer_0_0.vhd:90]
-WARNING: [Synth 8-350] instance 'axi_timer_0' of module 'design_geral_axi_timer_0_0' requires 26 connections, but only 23 given [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:162]
+WARNING: [Synth 8-350] instance 'axi_timer_0' of module 'design_geral_axi_timer_0_0' requires 26 connections, but only 23 given [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:184]
 INFO: [Synth 8-638] synthesizing module 'design_geral_c_counter_binary_0_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_c_counter_binary_0_0/synth/design_geral_c_counter_binary_0_0.vhd:66]
 	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
 	Parameter C_VERBOSITY bound to: 0 - type: integer 
@@ -687,13 +690,15 @@ INFO: [Synth 8-6155] done synthesizing module 'PS7' (24#1) [C:/Xilinx/Vivado/201
 INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (25#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
 WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_processing_system7_0_0/synth/design_geral_processing_system7_0_0.v:333]
 INFO: [Synth 8-6155] done synthesizing module 'design_geral_processing_system7_0_0' (26#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_processing_system7_0_0/synth/design_geral_processing_system7_0_0.v:60]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_geral_processing_system7_0_0' requires 69 connections, but only 64 given [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:189]
-INFO: [Synth 8-6157] synthesizing module 'design_geral_ps7_0_axi_periph_0' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:383]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_EQQZJV' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:956]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_EQQZJV' (27#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:956]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_9G1JGB' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1102]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_9G1JGB' (28#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1102]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_B8AKDK' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1234]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_geral_processing_system7_0_0' requires 69 connections, but only 64 given [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:211]
+INFO: [Synth 8-6157] synthesizing module 'design_geral_ps7_0_axi_periph_0' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:452]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_EQQZJV' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1173]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_EQQZJV' (27#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1173]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_9G1JGB' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1319]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_9G1JGB' (28#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1319]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_7M5J3V' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1451]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_7M5J3V' (29#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1451]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_B8AKDK' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1597]
 INFO: [Synth 8-6157] synthesizing module 'design_geral_auto_pc_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_auto_pc_0/synth/design_geral_auto_pc_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_axi_protocol_converter' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4811]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -739,20 +744,20 @@ INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_cmd
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_incr_cmd' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3093]
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter L_AXI_ADDR_LOW_BIT bound to: 12 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_incr_cmd' (29#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3093]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_incr_cmd' (30#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3093]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_wrap_cmd' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2903]
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter L_AXI_ADDR_LOW_BIT bound to: 12 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_wrap_cmd' (30#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2903]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_cmd_translator' (31#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3467]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_wrap_cmd' (31#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2903]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_cmd_translator' (32#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3467]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_wr_cmd_fsm' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3225]
 	Parameter SM_IDLE bound to: 2'b00 
 	Parameter SM_CMD_EN bound to: 2'b01 
 	Parameter SM_CMD_ACCEPTED bound to: 2'b10 
 	Parameter SM_DONE_WAIT bound to: 2'b11 
 INFO: [Synth 8-226] default block is never used [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3279]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_wr_cmd_fsm' (32#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3225]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_aw_channel' (33#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3974]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_wr_cmd_fsm' (33#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3225]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_aw_channel' (34#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3974]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_b_channel' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3609]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter LP_RESP_OKAY bound to: 2'b00 
@@ -773,7 +778,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_sim
 	Parameter C_EMPTY_PRE bound to: 2'b00 
 	Parameter C_FULL bound to: 2'b10 
 	Parameter C_FULL_PRE bound to: 2'b01 
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo' (34#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo' (35#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
 	Parameter C_WIDTH bound to: 2 - type: integer 
 	Parameter C_AWIDTH bound to: 2 - type: integer 
@@ -782,8 +787,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_sim
 	Parameter C_EMPTY_PRE bound to: 2'b00 
 	Parameter C_FULL bound to: 2'b10 
 	Parameter C_FULL_PRE bound to: 2'b01 
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo__parameterized0' (34#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_b_channel' (35#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3609]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo__parameterized0' (35#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_b_channel' (36#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3609]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_ar_channel' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4085]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -795,8 +800,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_rd_
 INFO: [Synth 8-226] default block is never used [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3398]
 WARNING: [Synth 8-6014] Unused sequential element state_r1_reg was removed.  [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3386]
 WARNING: [Synth 8-6014] Unused sequential element s_arlen_r_reg was removed.  [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3387]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_rd_cmd_fsm' (36#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3336]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_ar_channel' (37#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4085]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_rd_cmd_fsm' (37#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3336]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_ar_channel' (38#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4085]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_r_channel' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3814]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
@@ -814,7 +819,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_sim
 	Parameter C_EMPTY_PRE bound to: 5'b00000 
 	Parameter C_FULL bound to: 5'b11110 
 	Parameter C_FULL_PRE bound to: 5'b11010 
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo__parameterized1' (37#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo__parameterized1' (38#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo__parameterized2' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
 	Parameter C_WIDTH bound to: 13 - type: integer 
 	Parameter C_AWIDTH bound to: 5 - type: integer 
@@ -823,8 +828,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_17_b2s_sim
 	Parameter C_EMPTY_PRE bound to: 5'b00000 
 	Parameter C_FULL bound to: 5'b11110 
 	Parameter C_FULL_PRE bound to: 5'b11010 
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo__parameterized2' (37#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_r_channel' (38#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3814]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_simple_fifo__parameterized2' (38#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s_r_channel' (39#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3814]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axi_register_slice' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:2417]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
@@ -940,22 +945,22 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_regist
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 66 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice' (39#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice' (40#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 49 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized0' (39#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized0' (40#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized1' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 14 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized1' (39#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized1' (40#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized2' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 47 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized2' (39#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized2' (40#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
@@ -1048,7 +1053,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_RUSER_INDEX bound to: 47 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (40#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (41#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
@@ -1141,8 +1146,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_RUSER_INDEX bound to: 47 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (41#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axi_register_slice' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:2417]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axi_register_slice' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:2417]
 WARNING: [Synth 8-350] instance 'SI_REG' of module 'axi_register_slice_v2_1_17_axi_register_slice' requires 93 connections, but only 92 given [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4395]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axi_register_slice__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:2417]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
@@ -1259,22 +1264,22 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_regist
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 35 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized3' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized3' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized4' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized4' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized4' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized5' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 2 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized5' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized5' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized6' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 34 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized6' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized6' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
@@ -1367,7 +1372,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
@@ -1460,25 +1465,25 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axi_register_slice__parameterized0' (42#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:2417]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axi_register_slice__parameterized0' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:2417]
 WARNING: [Synth 8-350] instance 'MI_REG' of module 'axi_register_slice_v2_1_17_axi_register_slice' requires 93 connections, but only 92 given [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4650]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s' (43#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4229]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_axi_protocol_converter' (44#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4811]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral_auto_pc_0' (45#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_auto_pc_0/synth/design_geral_auto_pc_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_B8AKDK' (46#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1234]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_b2s' (44#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4229]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_17_axi_protocol_converter' (45#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4811]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_auto_pc_0' (46#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_auto_pc_0/synth/design_geral_auto_pc_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_B8AKDK' (47#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:1597]
 INFO: [Synth 8-6157] synthesizing module 'design_geral_xbar_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xbar_0/synth/design_geral_xbar_0.v:59]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_axi_crossbar' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
-	Parameter C_NUM_MASTER_SLOTS bound to: 2 - type: integer 
+	Parameter C_NUM_MASTER_SLOTS bound to: 3 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
-	Parameter C_M_AXI_BASE_ADDR bound to: 128'b00000000000000000000000000000000010000101000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_M_AXI_ADDR_WIDTH bound to: 64'b0000000000000000000000000001000000000000000000000000000000010000 
+	Parameter C_M_AXI_BASE_ADDR bound to: 192'b000000000000000000000000000000000100001111000001000000000000000000000000000000000000000000000000010000101000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 96'b000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000 
 	Parameter C_S_AXI_BASE_ID bound to: 0 - type: integer 
 	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 0 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -1487,16 +1492,16 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_axi_crossbar' [c:
 	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 64'b1111111111111111111111111111111111111111111111111111111111111111 
-	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 64'b1111111111111111111111111111111111111111111111111111111111111111 
+	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
 	Parameter C_R_REGISTER bound to: 1 - type: integer 
 	Parameter C_S_AXI_SINGLE_THREAD bound to: 1 - type: integer 
 	Parameter C_S_AXI_WRITE_ACCEPTANCE bound to: 1 - type: integer 
 	Parameter C_S_AXI_READ_ACCEPTANCE bound to: 1 - type: integer 
-	Parameter C_M_AXI_WRITE_ISSUING bound to: 64'b0000000000000000000000000000000100000000000000000000000000000001 
-	Parameter C_M_AXI_READ_ISSUING bound to: 64'b0000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_WRITE_ISSUING bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_READ_ISSUING bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
 	Parameter C_S_AXI_ARB_PRIORITY bound to: 0 - type: integer 
-	Parameter C_M_AXI_SECURE bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_SECURE bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_CONNECTIVITY_MODE bound to: 0 - type: integer 
 	Parameter P_ONES bound to: 65'b11111111111111111111111111111111111111111111111111111111111111111 
 	Parameter P_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
@@ -1506,28 +1511,28 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_axi_crossbar' [c:
 	Parameter P_AXILITE bound to: 2 - type: integer 
 	Parameter P_AXILITE_SIZE bound to: 3'b010 
 	Parameter P_INCR bound to: 2'b01 
-	Parameter P_M_AXI_SUPPORTS_WRITE bound to: 2'b11 
-	Parameter P_M_AXI_SUPPORTS_READ bound to: 2'b11 
+	Parameter P_M_AXI_SUPPORTS_WRITE bound to: 3'b111 
+	Parameter P_M_AXI_SUPPORTS_READ bound to: 3'b111 
 	Parameter P_S_AXI_SUPPORTS_WRITE bound to: 1'b1 
 	Parameter P_S_AXI_SUPPORTS_READ bound to: 1'b1 
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_RANGE_CHECK bound to: 1 - type: integer 
 	Parameter P_ADDR_DECODE bound to: 1 - type: integer 
-	Parameter P_M_AXI_ERR_MODE bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter P_M_AXI_ERR_MODE bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter P_LEN bound to: 8 - type: integer 
 	Parameter P_LOCK bound to: 1 - type: integer 
 	Parameter P_FAMILY bound to: zynq - type: string 
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
-	Parameter C_NUM_MASTER_SLOTS bound to: 2 - type: integer 
+	Parameter C_NUM_MASTER_SLOTS bound to: 3 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
-	Parameter C_M_AXI_BASE_ADDR bound to: 128'b00000000000000000000000000000000010000101000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_M_AXI_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000101000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
+	Parameter C_M_AXI_BASE_ADDR bound to: 192'b000000000000000000000000000000000100001111000001000000000000000000000000000000000000000000000000010000101000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_M_AXI_HIGH_ADDR bound to: 192'b000000000000000000000000000000000100001111000001111111111111111100000000000000000000000000000000010000101000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
 	Parameter C_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_S_AXI_HIGH_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -1538,11 +1543,11 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' [c
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_S_AXI_SUPPORTS_WRITE bound to: 1'b1 
 	Parameter C_S_AXI_SUPPORTS_READ bound to: 1'b1 
-	Parameter C_M_AXI_SUPPORTS_WRITE bound to: 2'b11 
-	Parameter C_M_AXI_SUPPORTS_READ bound to: 2'b11 
+	Parameter C_M_AXI_SUPPORTS_WRITE bound to: 3'b111 
+	Parameter C_M_AXI_SUPPORTS_READ bound to: 3'b111 
 	Parameter C_S_AXI_ARB_PRIORITY bound to: 0 - type: integer 
-	Parameter C_M_AXI_SECURE bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_M_AXI_ERR_MODE bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_SECURE bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_ERR_MODE bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_R_REGISTER bound to: 1 - type: integer 
 	Parameter C_RANGE_CHECK bound to: 1 - type: integer 
 	Parameter C_ADDR_DECODE bound to: 1 - type: integer 
@@ -1550,8 +1555,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' [c
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
-	Parameter P_NUM_MASTER_SLOTS_DE bound to: 3 - type: integer 
-	Parameter P_NUM_MASTER_SLOTS_LOG bound to: 1 - type: integer 
+	Parameter P_NUM_MASTER_SLOTS_DE bound to: 4 - type: integer 
+	Parameter P_NUM_MASTER_SLOTS_LOG bound to: 2 - type: integer 
 	Parameter P_NUM_MASTER_SLOTS_DE_LOG bound to: 2 - type: integer 
 	Parameter P_NUM_SLAVE_SLOTS_LOG bound to: 1 - type: integer 
 	Parameter P_AXI_AUSER_WIDTH bound to: 1 - type: integer 
@@ -1562,8 +1567,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' [c
 	Parameter P_WMESG_WIDTH bound to: 39 - type: integer 
 	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
 	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
-	Parameter P_M_SECURE_MASK bound to: 2'b00 
-	Parameter P_M_AXILITE_MASK bound to: 2'b00 
+	Parameter P_M_SECURE_MASK bound to: 3'b000 
+	Parameter P_M_AXILITE_MASK bound to: 3'b000 
 	Parameter P_FIXED bound to: 2'b00 
 	Parameter P_BYPASS bound to: 0 - type: integer 
 	Parameter P_LIGHTWT bound to: 7 - type: integer 
@@ -1572,16 +1577,16 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' [c
 	Parameter P_DECERR bound to: 2'b11 
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_addr_decoder' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_NUM_TARGETS bound to: 2 - type: integer 
-	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
+	Parameter C_NUM_TARGETS bound to: 3 - type: integer 
+	Parameter C_NUM_TARGETS_LOG bound to: 2 - type: integer 
 	Parameter C_NUM_RANGES bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_TARGET_ENC bound to: 1 - type: integer 
 	Parameter C_TARGET_HOT bound to: 1 - type: integer 
 	Parameter C_REGION_ENC bound to: 1 - type: integer 
-	Parameter C_BASE_ADDR bound to: 128'b00000000000000000000000000000000010000101000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000101000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
-	Parameter C_TARGET_QUAL bound to: 3'b011 
+	Parameter C_BASE_ADDR bound to: 192'b000000000000000000000000000000000100001111000001000000000000000000000000000000000000000000000000010000101000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 192'b000000000000000000000000000000000100001111000001111111111111111100000000000000000000000000000000010000101000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
+	Parameter C_TARGET_QUAL bound to: 4'b0111 
 	Parameter C_RESOLUTION bound to: 2 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
@@ -1593,8 +1598,8 @@ INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_s
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
 	Parameter C_FAMILY bound to: rtl - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (47#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (48#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (48#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (49#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010000101000000000000000000000 
@@ -1602,8 +1607,16 @@ INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_s
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (48#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_addr_decoder' (49#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (49#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_VALUE bound to: 30'b010000111100000100000000000000 
+	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
+	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
+	Parameter C_NUM_LUT bound to: 5 - type: integer 
+	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' (49#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_addr_decoder' (50#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_decerr_slave' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -1619,7 +1632,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_decerr_slave' [c:
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_decerr_slave' (50#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_decerr_slave' (51#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_addr_arbiter_sasd' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_S bound to: 1 - type: integer 
@@ -1628,52 +1641,50 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_addr_arbiter_sasd
 	Parameter C_GRANT_ENC bound to: 1 - type: integer 
 	Parameter C_ARB_PRIORITY bound to: 0 - type: integer 
 	Parameter P_PRIO_MASK bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_addr_arbiter_sasd' (51#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_addr_arbiter_sasd' (52#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_splitter' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
 	Parameter C_NUM_M bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_splitter' (52#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_splitter' (53#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_splitter__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
 	Parameter C_NUM_M bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_splitter__parameterized0' (52#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_splitter__parameterized0' (53#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 3 - type: integer 
+	Parameter C_RATIO bound to: 4 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (53#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (54#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 1 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (53#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (54#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 3 - type: integer 
+	Parameter C_RATIO bound to: 4 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (53#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (54#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized7' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized7' (53#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice__parameterized7' (54#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 3 - type: integer 
+	Parameter C_RATIO bound to: 4 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (53#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (54#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_aw_trans_seq_i_reg was removed.  [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:2056]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_ar_trans_seq_i_reg was removed.  [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:2067]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_w_beat_cnt_i_reg was removed.  [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:2078]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_r_beat_cnt_i_reg was removed.  [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:2091]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' (54#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_axi_crossbar' (55#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral_xbar_0' (56#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xbar_0/synth/design_geral_xbar_0.v:59]
-WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (6) of module 'design_geral_xbar_0' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:917]
-WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (6) of module 'design_geral_xbar_0' [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:921]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral_ps7_0_axi_periph_0' (57#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:383]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' (55#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_axi_crossbar' (56#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_xbar_0' (57#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xbar_0/synth/design_geral_xbar_0.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_ps7_0_axi_periph_0' (58#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:452]
 INFO: [Synth 8-638] synthesizing module 'design_geral_rst_ps7_0_100M_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_rst_ps7_0_100M_0/synth/design_geral_rst_ps7_0_100M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -1728,7 +1739,7 @@ INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/sergiopereira/Vivado_pro
 INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (58#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (59#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
@@ -1748,28 +1759,28 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (58#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (59#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (59#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (60#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
 INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (60#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (61#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (62#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'design_geral_rst_ps7_0_100M_0' (63#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_rst_ps7_0_100M_0/synth/design_geral_rst_ps7_0_100M_0.vhd:74]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'design_geral_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:337]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (61#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (62#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (63#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'design_geral_rst_ps7_0_100M_0' (64#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_rst_ps7_0_100M_0/synth/design_geral_rst_ps7_0_100M_0.vhd:74]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'design_geral_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:380]
 INFO: [Synth 8-6157] synthesizing module 'design_geral_scheduler_0_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/synth/design_geral_scheduler_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'scheduler_v1_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/hdl/scheduler_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'scheduler_v1_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/hdl/scheduler_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'scheduler_v1_0_S00_AXI' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/hdl/scheduler_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'scheduler_v1_0_S00_AXI' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/hdl/scheduler_v1_0_S00_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'scheduler_v1_0_S00_AXI' (64#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/hdl/scheduler_v1_0_S00_AXI.v:4]
-WARNING: [Synth 8-689] width (32) of port connection 'tickval_in' does not match port width (8) of module 'scheduler_v1_0_S00_AXI' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/hdl/scheduler_v1_0.v:85]
-INFO: [Synth 8-6157] synthesizing module 'lists_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/listmanager_module.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'scheduler_v1_0_S00_AXI' (65#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/hdl/scheduler_v1_0_S00_AXI.v:4]
+WARNING: [Synth 8-689] width (32) of port connection 'tickval_in' does not match port width (8) of module 'scheduler_v1_0_S00_AXI' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/hdl/scheduler_v1_0.v:85]
+INFO: [Synth 8-6157] synthesizing module 'lists_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/listmanager_module.v:25]
 INFO: [Synth 8-638] synthesizing module 'mem_commandlist' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_commandlist/synth/mem_commandlist.vhd:70]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_ADDR_WIDTH bound to: 4 - type: integer 
@@ -1804,18 +1815,18 @@ INFO: [Synth 8-638] synthesizing module 'mem_commandlist' [c:/Users/sergiopereir
 	Parameter C_WIDTH bound to: 49 - type: integer 
 	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
 INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_commandlist/synth/mem_commandlist.vhd:136]
-INFO: [Synth 8-256] done synthesizing module 'mem_commandlist' (68#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_commandlist/synth/mem_commandlist.vhd:70]
-INFO: [Synth 8-6157] synthesizing module 'readylist_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/readylist_module.v:22]
-INFO: [Synth 8-6157] synthesizing module 'insert_item' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/insert_item.v:25]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/insert_item.v:113]
-INFO: [Synth 8-6155] done synthesizing module 'insert_item' (69#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/insert_item.v:25]
-INFO: [Synth 8-6157] synthesizing module 'remove_item' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/remove_item.v:27]
-INFO: [Synth 8-226] default block is never used [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/remove_item.v:87]
-INFO: [Synth 8-6155] done synthesizing module 'remove_item' (70#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/remove_item.v:27]
-INFO: [Synth 8-6157] synthesizing module 'highpriority_selector' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/highpriority_selector.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mem_commandlist' (69#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_commandlist/synth/mem_commandlist.vhd:70]
+INFO: [Synth 8-6157] synthesizing module 'readylist_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/readylist_module.v:22]
+INFO: [Synth 8-6157] synthesizing module 'insert_item' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/insert_item.v:25]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/insert_item.v:113]
+INFO: [Synth 8-6155] done synthesizing module 'insert_item' (70#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/insert_item.v:25]
+INFO: [Synth 8-6157] synthesizing module 'remove_item' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/remove_item.v:27]
+INFO: [Synth 8-226] default block is never used [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/remove_item.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'remove_item' (71#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/remove_item.v:27]
+INFO: [Synth 8-6157] synthesizing module 'highpriority_selector' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/highpriority_selector.v:36]
 	Parameter N_PRIORITY_MAX bound to: 64 - type: integer 
 	Parameter PRIORITY_WIDTH bound to: 6 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'highpriority_selector' (71#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/highpriority_selector.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'highpriority_selector' (72#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/highpriority_selector.v:36]
 INFO: [Synth 8-638] synthesizing module 'mem_itemlist' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/synth/mem_itemlist.vhd:71]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
@@ -1850,7 +1861,7 @@ INFO: [Synth 8-638] synthesizing module 'mem_itemlist' [c:/Users/sergiopereira/V
 	Parameter C_WIDTH bound to: 54 - type: integer 
 	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
 INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/synth/mem_itemlist.vhd:137]
-INFO: [Synth 8-256] done synthesizing module 'mem_itemlist' (73#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/synth/mem_itemlist.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'mem_itemlist' (74#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/synth/mem_itemlist.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'mem_prioritylist' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_prioritylist/synth/mem_prioritylist.vhd:71]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_ADDR_WIDTH bound to: 6 - type: integer 
@@ -1885,13 +1896,13 @@ INFO: [Synth 8-638] synthesizing module 'mem_prioritylist' [c:/Users/sergioperei
 	Parameter C_WIDTH bound to: 24 - type: integer 
 	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
 INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_prioritylist/synth/mem_prioritylist.vhd:137]
-INFO: [Synth 8-256] done synthesizing module 'mem_prioritylist' (74#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_prioritylist/synth/mem_prioritylist.vhd:71]
-INFO: [Synth 8-6155] done synthesizing module 'readylist_manager' (75#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/readylist_module.v:22]
-INFO: [Synth 8-6157] synthesizing module 'delaylist_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/delaylist_module.v:31]
+INFO: [Synth 8-256] done synthesizing module 'mem_prioritylist' (75#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_prioritylist/synth/mem_prioritylist.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'readylist_manager' (76#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/readylist_module.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delaylist_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/delaylist_module.v:31]
 	Parameter ID_WIDTH bound to: 8 - type: integer 
 	Parameter DELAY_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/delaylist_module.v:156]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/delaylist_module.v:206]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/delaylist_module.v:156]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/delaylist_module.v:206]
 INFO: [Synth 8-638] synthesizing module 'mem_delaylist' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_delaylist/synth/mem_delaylist.vhd:71]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
@@ -1926,16 +1937,113 @@ INFO: [Synth 8-638] synthesizing module 'mem_delaylist' [c:/Users/sergiopereira/
 	Parameter C_WIDTH bound to: 48 - type: integer 
 	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
 INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_delaylist/synth/mem_delaylist.vhd:137]
-INFO: [Synth 8-256] done synthesizing module 'mem_delaylist' (76#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_delaylist/synth/mem_delaylist.vhd:71]
-INFO: [Synth 8-6155] done synthesizing module 'delaylist_manager' (77#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/delaylist_module.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'lists_manager' (78#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/listmanager_module.v:25]
-INFO: [Synth 8-6157] synthesizing module 'scheduler' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/scheduler.v:26]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/scheduler.v:75]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/scheduler.v:95]
-INFO: [Synth 8-6155] done synthesizing module 'scheduler' (79#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/src/scheduler.v:26]
-INFO: [Synth 8-6155] done synthesizing module 'scheduler_v1_0' (80#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2a26/hdl/scheduler_v1_0.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral_scheduler_0_0' (81#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/synth/design_geral_scheduler_0_0.v:57]
-WARNING: [Synth 8-350] instance 'scheduler_0' of module 'design_geral_scheduler_0_0' requires 29 connections, but only 28 given [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:345]
+INFO: [Synth 8-256] done synthesizing module 'mem_delaylist' (77#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_delaylist/synth/mem_delaylist.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'delaylist_manager' (78#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/delaylist_module.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'lists_manager' (79#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/listmanager_module.v:25]
+INFO: [Synth 8-6157] synthesizing module 'scheduler' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/scheduler.v:26]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/scheduler.v:75]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/scheduler.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'scheduler' (80#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/src/scheduler.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'scheduler_v1_0' (81#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/ef77/hdl/scheduler_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_scheduler_0_0' (82#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/synth/design_geral_scheduler_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_geral_timers_ip_0_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/synth/design_geral_timers_ip_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'timers_ip_v1_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/hdl/timers_ip_v1_0.v:4]
+	Parameter C_ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter C_TICK_WIDTH bound to: 32 - type: integer 
+	Parameter C_TIMERID_WIDTH bound to: 8 - type: integer 
+	Parameter C_TASKID_WIDTH bound to: 8 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'timers_ip_v1_0_S00_AXI' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/hdl/timers_ip_v1_0_S00_AXI.v:4]
+	Parameter C_ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter C_TICK_WIDTH bound to: 32 - type: integer 
+	Parameter C_TIMERID_WIDTH bound to: 8 - type: integer 
+	Parameter C_TASKID_WIDTH bound to: 8 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'timers_ip_v1_0_S00_AXI' (83#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/hdl/timers_ip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'timers_module' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/src/timers_module.v:39]
+	Parameter C_ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter C_TICK_WIDTH bound to: 32 - type: integer 
+	Parameter C_TIMERID_WIDTH bound to: 8 - type: integer 
+	Parameter C_TASKID_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/src/timers_module.v:273]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/src/timers_module.v:333]
+INFO: [Synth 8-638] synthesizing module 'mem_timers' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_timers/synth/mem_timers.vhd:71]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 256 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 1 - type: integer 
+	Parameter C_HAS_DPRA bound to: 1 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 48 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_timers/synth/mem_timers.vhd:137]
+INFO: [Synth 8-256] done synthesizing module 'mem_timers' (84#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_timers/synth/mem_timers.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'mem_info' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_info/synth/mem_info.vhd:71]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 256 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 1 - type: integer 
+	Parameter C_HAS_DPRA bound to: 1 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 64 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_info/synth/mem_info.vhd:137]
+INFO: [Synth 8-256] done synthesizing module 'mem_info' (85#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/src/mem_info/synth/mem_info.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'timers_module' (86#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/src/timers_module.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'timers_ip_v1_0' (87#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/hdl/timers_ip_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_timers_ip_0_0' (88#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_timers_ip_0_0/synth/design_geral_timers_ip_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'design_geral_xlconcat_0_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconcat_0_0/synth/design_geral_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -1972,22 +2080,22 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/se
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 1 - type: integer 
 	Parameter NUM_PORTS bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (82#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral_xlconcat_0_0' (83#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconcat_0_0/synth/design_geral_xlconcat_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (89#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_xlconcat_0_0' (90#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconcat_0_0/synth/design_geral_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'design_geral_xlconstant_0_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconstant_0_0/synth/design_geral_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant' (84#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral_xlconstant_0_0' (85#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconstant_0_0/synth/design_geral_xlconstant_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant' (91#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_xlconstant_0_0' (92#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconstant_0_0/synth/design_geral_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'design_geral_xlconstant_1_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconstant_1_0/synth/design_geral_xlconstant_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' (85#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral_xlconstant_1_0' (86#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconstant_1_0/synth/design_geral_xlconstant_1_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral' (87#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_geral_wrapper' (88#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/hdl/design_geral_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' (92#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_xlconstant_1_0' (93#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ip/design_geral_xlconstant_1_0/synth/design_geral_xlconstant_1_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral' (94#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/synth/design_geral.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_wrapper' (95#1) [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/hdl/design_geral_wrapper.v:12]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In1[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3[0]
@@ -2019,78 +2127,78 @@ WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In29[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In30[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In31[0]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[47]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[46]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[45]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[44]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[43]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[42]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[41]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[40]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[39]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[38]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[37]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[36]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[35]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[34]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[33]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[32]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[31]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[30]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[29]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[28]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[27]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[26]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[25]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[24]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[23]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[22]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[21]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[20]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[19]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[18]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[17]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[16]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[15]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[14]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[13]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[12]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[11]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[10]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[9]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[8]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[7]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[6]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[5]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[4]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[3]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[2]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[1]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qspo[0]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[47]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[46]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[45]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[44]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[43]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[42]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[41]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[40]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[39]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[38]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[37]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[36]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[35]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[34]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[33]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[32]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[31]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[30]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[29]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[28]
-WARNING: [Synth 8-3331] design dpram__parameterized3 has unconnected port qdpo[27]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[63]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[62]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[61]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[60]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[59]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[58]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[57]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[56]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[55]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[54]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[53]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[52]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[51]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[50]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[49]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[48]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[47]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[46]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[45]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[44]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[43]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[42]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[41]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[40]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[39]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[38]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[37]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[36]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[35]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[34]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[33]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[32]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[31]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[30]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[29]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[28]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[27]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[26]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[25]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[24]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[23]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[22]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[21]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[20]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[19]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[18]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[17]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[16]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[15]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[14]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[13]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[12]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[11]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[10]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[9]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[8]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[7]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[6]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[5]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[4]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[3]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[2]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[1]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[0]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[63]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[62]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[61]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[60]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[59]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:10 ; elapsed = 00:01:27 . Memory (MB): peak = 593.164 ; gain = 306.145
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 601.652 ; gain = 314.582
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2103,10 +2211,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:10 ; elapsed = 00:01:28 . Memory (MB): peak = 593.164 ; gain = 306.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 601.652 ; gain = 314.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:10 ; elapsed = 00:01:28 . Memory (MB): peak = 593.164 ; gain = 306.145
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 601.652 ; gain = 314.582
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2138,16 +2246,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDRSE => FDRSE (FDRE, LUT4, VCC): 25 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 858.336 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 880.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:25 ; elapsed = 00:01:46 . Memory (MB): peak = 858.336 ; gain = 571.316
+Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 880.355 ; gain = 593.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:25 ; elapsed = 00:01:46 . Memory (MB): peak = 858.336 ; gain = 571.316
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 880.355 ; gain = 593.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -2167,12 +2275,15 @@ Applied set_property DONT_TOUCH = true for design_geral_i/axi_timer_0. (constrai
 Applied set_property DONT_TOUCH = true for design_geral_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_geral_i/c_counter_binary_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_geral_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_geral_i/timers_ip_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_geral_i/timers_ip_0/inst/timers_module_inst/timerslist. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_geral_i/timers_ip_0/inst/timers_module_inst/infolist. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_geral_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_geral_i/processing_system7_0/inst. (constraint file  C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.runs/synth_1/dont_touch.xdc, line 53).
-Applied set_property DONT_TOUCH = true for design_geral_i/rst_ps7_0_100M/U0. (constraint file  C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.runs/synth_1/dont_touch.xdc, line 64).
-Applied set_property DONT_TOUCH = true for design_geral_i/axi_timer_0/U0. (constraint file  C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.runs/synth_1/dont_touch.xdc, line 70).
+Applied set_property DONT_TOUCH = true for design_geral_i/processing_system7_0/inst. (constraint file  C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.runs/synth_1/dont_touch.xdc, line 62).
+Applied set_property DONT_TOUCH = true for design_geral_i/rst_ps7_0_100M/U0. (constraint file  C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.runs/synth_1/dont_touch.xdc, line 73).
+Applied set_property DONT_TOUCH = true for design_geral_i/axi_timer_0/U0. (constraint file  C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.runs/synth_1/dont_touch.xdc, line 79).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:25 ; elapsed = 00:01:46 . Memory (MB): peak = 858.336 ; gain = 571.316
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 880.355 ; gain = 593.285
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/0a2c/hdl/axi_timer_v2_0_vh_rfs.vhd:176]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
@@ -2201,13 +2312,16 @@ INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'gen_axilite.s_axi_wready_i_reg' into 'gen_axilite.s_axi_awready_i_reg' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:3574]
 WARNING: [Synth 8-6014] Unused sequential element gen_axilite.s_axi_wready_i_reg was removed.  [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:3574]
-INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
@@ -2234,6 +2348,25 @@ INFO: [Synth 8-5544] ROM "state0" won't be mapped to Block RAM because address s
 INFO: [Synth 8-5544] ROM "state1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "command1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "byte_index" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_info_reg' in module 'timers_module'
+INFO: [Synth 8-802] inferred FSM for state register 'state_list_reg' in module 'timers_module'
+INFO: [Synth 8-5544] ROM "addrinfonew_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_info2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "nexttimer_reg" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "prevtimer_reg" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "nextadrr_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "changeEnd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "changeStrt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "idTmr_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "expireTime_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state_list" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notEmpty_signal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_list0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_list0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_list1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_list1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_list1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -2275,8 +2408,35 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
                  iSTATE1 |                        000000001 |                            01000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'delaylist_manager'
+WARNING: [Synth 8-327] inferring latch for variable 'byte_index' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.srcs/sources_1/bd/design_geral/ipshared/72b8/hdl/timers_ip_v1_0_S00_AXI.v:233]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE2 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_info_reg' using encoding 'one-hot' in module 'timers_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                     000000100000 |                           000000
+                 iSTATE0 |                     000000000100 |                           000001
+                 iSTATE9 |                     000000010000 |                           000010
+                 iSTATE8 |                     100000000000 |                           000100
+                 iSTATE7 |                     010000000000 |                           000011
+                 iSTATE5 |                     000100000000 |                           000110
+                 iSTATE2 |                     000010000000 |                           000111
+                 iSTATE6 |                     001000000000 |                           000101
+                 iSTATE4 |                     000000001000 |                           001000
+                 iSTATE3 |                     000001000000 |                           001001
+                  iSTATE |                     000000000001 |                           001010
+                iSTATE10 |                     000000000010 |                           001011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_list_reg' using encoding 'one-hot' in module 'timers_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:29 ; elapsed = 00:01:50 . Memory (MB): peak = 858.336 ; gain = 571.316
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 880.355 ; gain = 593.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2427,8 +2587,47 @@ INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_br
 INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_geral_scheduler_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_geral_scheduler_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_geral_scheduler_0_0.
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__0' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__1' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__2' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__3' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__4' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__5' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__6' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__7' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__8' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__9' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__10' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__11' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__12' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__13' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__14' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__15' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__16' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__17' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__18' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__19' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__20' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__21' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__22' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__23' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__24' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__25' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__26' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__27' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30'
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__30' (LD) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/byte_index__29'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_geral_i/timers_ip_0/\inst/timers_ip_v1_0_S00_AXI_inst/byte_index__29 )
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_geral_i/timers_ip_0/\inst/timers_ip_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'design_geral_i/timers_ip_0/inst/timers_ip_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_geral_i/timers_ip_0/\inst/timers_ip_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (inst/timers_ip_v1_0_S00_AXI_inst/byte_index__28) is unused and will be removed from module design_geral_timers_ip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/timers_ip_v1_0_S00_AXI_inst/byte_index__29) is unused and will be removed from module design_geral_timers_ip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/timers_ip_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_geral_timers_ip_0_0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:01:59 . Memory (MB): peak = 858.336 ; gain = 571.316
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:16 . Memory (MB): peak = 880.355 ; gain = 593.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2440,7 +2639,7 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:46 ; elapsed = 00:02:09 . Memory (MB): peak = 980.039 ; gain = 693.020
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:26 . Memory (MB): peak = 991.527 ; gain = 704.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -2461,7 +2660,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[0]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[0]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[0]
-      : design_geral_i/scheduler_0/insti_4/I130[8]
+      : design_geral_i/scheduler_0/insti_4/I148[8]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[8]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[8]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[8]
@@ -2481,7 +2680,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[0]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[0]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[0]
-      : design_geral_i/scheduler_0/insti_4/I130[8]
+      : design_geral_i/scheduler_0/insti_4/I148[8]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[8]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[8]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[8]
@@ -2513,7 +2712,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[1]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[1]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[1]
-      : design_geral_i/scheduler_0/insti_4/I130[9]
+      : design_geral_i/scheduler_0/insti_4/I148[9]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[9]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[9]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[9]
@@ -2533,7 +2732,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[1]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[1]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[1]
-      : design_geral_i/scheduler_0/insti_4/I130[9]
+      : design_geral_i/scheduler_0/insti_4/I148[9]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[9]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[9]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[9]
@@ -2565,7 +2764,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[2]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[2]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[2]
-      : design_geral_i/scheduler_0/insti_4/I130[10]
+      : design_geral_i/scheduler_0/insti_4/I148[10]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[10]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[10]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[10]
@@ -2585,7 +2784,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[2]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[2]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[2]
-      : design_geral_i/scheduler_0/insti_4/I130[10]
+      : design_geral_i/scheduler_0/insti_4/I148[10]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[10]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[10]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[10]
@@ -2617,7 +2816,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[3]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[3]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[3]
-      : design_geral_i/scheduler_0/insti_4/I130[11]
+      : design_geral_i/scheduler_0/insti_4/I148[11]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[11]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[11]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[11]
@@ -2637,7 +2836,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[3]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[3]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[3]
-      : design_geral_i/scheduler_0/insti_4/I130[11]
+      : design_geral_i/scheduler_0/insti_4/I148[11]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[11]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[11]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[11]
@@ -2669,7 +2868,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[4]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[4]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[4]
-      : design_geral_i/scheduler_0/insti_4/I130[12]
+      : design_geral_i/scheduler_0/insti_4/I148[12]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[12]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[12]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[12]
@@ -2689,7 +2888,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[4]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[4]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[4]
-      : design_geral_i/scheduler_0/insti_4/I130[12]
+      : design_geral_i/scheduler_0/insti_4/I148[12]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[12]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[12]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[12]
@@ -2721,7 +2920,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/a[5]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /a[5]
       : design_geral_i/scheduler_0/insti_4/addr_itemlist[5]
-      : design_geral_i/scheduler_0/insti_4/I130[13]
+      : design_geral_i/scheduler_0/insti_4/I148[13]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /spo[13]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/spo[13]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/priority_list /U0/i_0/qspo_int[13]
@@ -2734,7 +2933,7 @@ Start Timing Optimization
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/spo[16]
       : design_geral_i/scheduler_0/\inst/mngr_list/rdylist_mngr/item_list /U0/i_0/qspo_int[16]
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:02:12 . Memory (MB): peak = 1041.168 ; gain = 754.148
+Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:31 . Memory (MB): peak = 1083.809 ; gain = 796.738
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2745,16 +2944,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3332] Sequential element (inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axlen_cnt_reg[8]) is unused and will be removed from module design_geral_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/axlen_cnt_reg[8]) is unused and will be removed from module design_geral_auto_pc_0.
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through design_geral_i/scheduler_0/i_820/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through design_geral_i/scheduler_0/i_821/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through design_geral_i/scheduler_0/i_822/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through design_geral_i/scheduler_0/i_823/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through design_geral_i/scheduler_0/i_824/O'
-WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through design_geral_i/scheduler_0/i_825/O'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:52 ; elapsed = 00:02:15 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 1084.832 ; gain = 797.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2795,7 +2986,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:54 ; elapsed = 00:02:17 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:37 . Memory (MB): peak = 1084.832 ; gain = 797.762
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2808,7 +2999,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:54 ; elapsed = 00:02:17 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:37 . Memory (MB): peak = 1084.832 ; gain = 797.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2820,25 +3011,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:55 ; elapsed = 00:02:17 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1084.832 ; gain = 797.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:55 ; elapsed = 00:02:17 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1084.832 ; gain = 797.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:55 ; elapsed = 00:02:18 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1084.832 ; gain = 797.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:55 ; elapsed = 00:02:18 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1084.832 ; gain = 797.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2856,53 +3047,53 @@ Report Cell Usage:
 +------+----------+------+
 |1     |BIBUF     |   130|
 |2     |BUFG      |     1|
-|3     |CARRY4    |    49|
-|4     |LUT1      |   137|
-|5     |LUT2      |   173|
-|6     |LUT3      |   626|
-|7     |LUT4      |   425|
-|8     |LUT5      |   245|
-|9     |LUT6      |   590|
+|3     |CARRY4    |    76|
+|4     |LUT1      |   144|
+|5     |LUT2      |   222|
+|6     |LUT3      |  1005|
+|7     |LUT4      |   879|
+|8     |LUT5      |   278|
+|9     |LUT6      |   813|
 |10    |MUXCY     |    95|
-|11    |PS7       |     1|
-|12    |RAM128X1D |   204|
-|13    |RAM32M    |     9|
-|14    |RAM64X1D  |    24|
-|15    |SRL16     |     1|
-|16    |SRL16E    |    18|
-|17    |SRLC32E   |    47|
-|18    |XORCY     |    32|
-|19    |FDR       |    20|
-|20    |FDRE      |  1779|
-|21    |FDSE      |    60|
+|11    |MUXF7     |     3|
+|12    |PS7       |     1|
+|13    |RAM128X1D |   428|
+|14    |RAM32M    |     9|
+|15    |RAM64X1D  |    24|
+|16    |SRL16     |     1|
+|17    |SRL16E    |    18|
+|18    |SRLC32E   |    47|
+|19    |XORCY     |    32|
+|20    |FDR       |    20|
+|21    |FDRE      |  2544|
+|22    |FDSE      |    63|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:55 ; elapsed = 00:02:18 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1084.832 ; gain = 797.762
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 609 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:02:03 . Memory (MB): peak = 1051.668 ; gain = 499.477
-Synthesis Optimization Complete : Time (s): cpu = 00:01:55 ; elapsed = 00:02:18 . Memory (MB): peak = 1051.668 ; gain = 764.648
+Synthesis finished with 0 errors, 0 critical warnings and 748 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:26 . Memory (MB): peak = 1084.832 ; gain = 519.059
+Synthesis Optimization Complete : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1084.832 ; gain = 797.762
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 434 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 688 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 298 instances were transformed.
+  A total of 522 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 40 instances
   FDR => FDRE: 20 instances
-  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 204 instances
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 428 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 9 instances
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 24 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-571 Infos, 136 Warnings, 0 Critical Warnings and 0 Errors encountered.
+652 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:10 ; elapsed = 00:02:35 . Memory (MB): peak = 1051.668 ; gain = 771.566
+synth_design: Time (s): cpu = 00:01:35 ; elapsed = 00:01:43 . Memory (MB): peak = 1084.832 ; gain = 804.672
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_srtos/project_srtos.runs/synth_1/design_geral_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1051.668 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_geral_wrapper_utilization_synth.rpt -pb design_geral_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.612 . Memory (MB): peak = 1051.668 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 12 02:25:14 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1084.832 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 12 15:37:35 2018...

@@ -2261,9 +2261,6 @@ TickType_t xTicks;
 		#if ( configRTOS_CODESIGN == 1 )
 		{
 			xTicks = TICK_VALUE();
-			#ifdef ENABLE_DEBUG
-			printf("TICKS: 0x%X\n\r",xTicks);
-			#endif
 		}
 		#else /* configRTOS_CODESIGN */
 		{
@@ -2303,9 +2300,6 @@ UBaseType_t uxSavedInterruptStatus;
 		#if ( configRTOS_CODESIGN == 1 )
 		{
 			xReturn = TICK_VALUE();
-			#ifdef ENABLE_DEBUG
-			printf("TICKS: 0x%X\n\r", xReturn);
-			#endif
 		}
 		#else /* configRTOS_CODESIGN */
 		{
