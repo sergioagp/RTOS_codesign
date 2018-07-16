@@ -1,0 +1,827 @@
+
+*** Running vivado
+    with args -log design_rtos_scheduler_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_rtos_scheduler_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_rtos_scheduler_0_0.tcl -notrace
+Command: synth_design -top design_rtos_scheduler_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12364 
+WARNING: [Synth 8-2306] macro WR_PREV redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/insert_item.v:22]
+WARNING: [Synth 8-2306] macro WR_ADDR redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/insert_item.v:23]
+WARNING: [Synth 8-2306] macro WR_NEXT redefined [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/remove_item.v:24]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 380.500 ; gain = 111.738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_rtos_scheduler_0_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/synth/design_rtos_scheduler_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'scheduler_v1_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/hdl/scheduler_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'scheduler_v1_0_S00_AXI' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/hdl/scheduler_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'scheduler_v1_0_S00_AXI' (1#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/hdl/scheduler_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'lists_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/listmanager_module.v:25]
+INFO: [Synth 8-638] synthesizing module 'mem_commandlist' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_commandlist/synth/mem_commandlist.vhd:71]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 16 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 1 - type: integer 
+	Parameter C_HAS_DPRA bound to: 1 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 49 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_commandlist/synth/mem_commandlist.vhd:137]
+INFO: [Synth 8-256] done synthesizing module 'mem_commandlist' (5#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_commandlist/synth/mem_commandlist.vhd:71]
+WARNING: [Synth 8-350] instance 'commands_lists' of module 'mem_commandlist' requires 7 connections, but only 6 given [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/listmanager_module.v:137]
+INFO: [Synth 8-6157] synthesizing module 'readylist_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/readylist_module.v:22]
+INFO: [Synth 8-6157] synthesizing module 'insert_item' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/insert_item.v:25]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/insert_item.v:114]
+INFO: [Synth 8-6155] done synthesizing module 'insert_item' (6#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/insert_item.v:25]
+INFO: [Synth 8-6157] synthesizing module 'remove_item' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/remove_item.v:27]
+INFO: [Synth 8-226] default block is never used [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/remove_item.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'remove_item' (7#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/remove_item.v:27]
+INFO: [Synth 8-6157] synthesizing module 'highpriority_selector' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/highpriority_selector.v:36]
+	Parameter N_PRIORITY_MAX bound to: 64 - type: integer 
+	Parameter PRIORITY_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'highpriority_selector' (8#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/highpriority_selector.v:36]
+INFO: [Synth 8-638] synthesizing module 'mem_itemlist' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_itemlist/synth/mem_itemlist.vhd:71]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 256 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 1 - type: integer 
+	Parameter C_HAS_DPRA bound to: 1 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 54 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_itemlist/synth/mem_itemlist.vhd:137]
+INFO: [Synth 8-256] done synthesizing module 'mem_itemlist' (9#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_itemlist/synth/mem_itemlist.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'mem_prioritylist' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_prioritylist/synth/mem_prioritylist.vhd:71]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 64 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 1 - type: integer 
+	Parameter C_HAS_DPRA bound to: 1 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 24 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_prioritylist/synth/mem_prioritylist.vhd:137]
+INFO: [Synth 8-256] done synthesizing module 'mem_prioritylist' (10#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_prioritylist/synth/mem_prioritylist.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'readylist_manager' (11#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/readylist_module.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delaylist_manager' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/delaylist_module.v:31]
+	Parameter ID_WIDTH bound to: 8 - type: integer 
+	Parameter DELAY_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/delaylist_module.v:156]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/delaylist_module.v:206]
+INFO: [Synth 8-638] synthesizing module 'mem_delaylist' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_delaylist/synth/mem_delaylist.vhd:71]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 256 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 1 - type: integer 
+	Parameter C_HAS_DPRA bound to: 1 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 48 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_itemlist/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_delaylist/synth/mem_delaylist.vhd:137]
+INFO: [Synth 8-256] done synthesizing module 'mem_delaylist' (12#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/src/mem_delaylist/synth/mem_delaylist.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'delaylist_manager' (13#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/delaylist_module.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'lists_manager' (14#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/listmanager_module.v:25]
+INFO: [Synth 8-6157] synthesizing module 'scheduler' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/scheduler.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'scheduler' (15#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/src/scheduler.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'scheduler_v1_0' (16#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ipshared/7744/hdl/scheduler_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_rtos_scheduler_0_0' (17#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.srcs/sources_1/bd/design_rtos/ip/design_rtos_scheduler_0_0/synth/design_rtos_scheduler_0_0.v:57]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[47]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[46]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[45]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[44]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[43]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[42]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[41]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[40]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[39]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[38]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[37]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[36]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[35]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[34]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[33]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[32]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[31]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[30]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[29]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[28]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[27]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[26]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[25]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[24]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[23]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[22]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[21]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[20]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[19]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[18]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[17]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[16]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[15]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[14]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[13]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[12]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[11]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[10]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[9]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[8]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[7]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[6]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[5]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[4]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[3]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[2]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[1]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo[0]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[47]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[46]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[45]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[44]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[43]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[42]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[41]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[40]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[39]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[38]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[37]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[36]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[35]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[34]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[33]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[32]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[31]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[30]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[29]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[28]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[27]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[26]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[25]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[24]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[23]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[22]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[21]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[20]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[19]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[18]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[17]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[16]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[15]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[14]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[13]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[12]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[11]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[10]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[9]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[8]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[7]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[6]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[5]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[4]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[3]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[2]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[1]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qdpo[0]
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port i_ce
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo_ce
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo_rst
+WARNING: [Synth 8-3331] design dpram__parameterized5 has unconnected port qspo_srst
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 423.004 ; gain = 154.242
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 423.004 ; gain = 154.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 423.004 ; gain = 154.242
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.runs/design_rtos_scheduler_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.runs/design_rtos_scheduler_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 786.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 786.875 ; gain = 518.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 786.875 ; gain = 518.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/mngr_list/rdylist_mngr/item_list. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/mngr_list/commands_lists. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/mngr_list/rdylist_mngr/priority_list. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/mngr_list/dlylist_mngr/delay_list. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 786.875 ; gain = 518.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'insert_item'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addrtcb_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'remove_item'
+INFO: [Synth 8-5544] ROM "previtemlist_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'delaylist_manager'
+INFO: [Synth 8-5546] ROM "valuedelay_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addr_tostrt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addr_toend" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextadrr_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "prevdelaylist_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "nextdelaylist_reg" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "empty_signal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "command1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              010 |                               00
+                 iSTATE1 |                              100 |                               01
+                 iSTATE0 |                              001 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'insert_item'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0010 |                               00
+                  iSTATE |                             1000 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             0001 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'remove_item'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                        000000010 |                            00000
+                 iSTATE7 |                        100000000 |                            00001
+                 iSTATE6 |                        010000000 |                            00010
+                 iSTATE5 |                        000100000 |                            00100
+                 iSTATE4 |                        001000000 |                            00011
+                 iSTATE2 |                        000001000 |                            00110
+                 iSTATE0 |                        000000100 |                            00111
+                 iSTATE3 |                        000010000 |                            00101
+                 iSTATE1 |                        000000001 |                            01000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'delaylist_manager'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 786.875 ; gain = 518.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               54 Bit    Registers := 2     
+	               49 Bit    Registers := 3     
+	               48 Bit    Registers := 2     
+	               32 Bit    Registers := 5     
+	               24 Bit    Registers := 2     
+	                8 Bit    Registers := 21    
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 3     
+	   2 Input     48 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 3     
+	   7 Input     32 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 12    
+	   7 Input      8 Bit        Muxes := 5     
+	   3 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	  65 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   7 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module scheduler_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   7 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   7 Input      1 Bit        Muxes := 1     
+Module dpram 
+Detailed RTL Component Info : 
++---Registers : 
+	               49 Bit    Registers := 2     
+Module insert_item 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module remove_item 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   3 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+Module highpriority_selector 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	  65 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module dpram__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 2     
+Module dpram__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+Module readylist_manager 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module dpram__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 2     
+Module delaylist_manager 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 2     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 5     
+	   7 Input      8 Bit        Muxes := 4     
+	   3 Input      8 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module lists_manager 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               49 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module scheduler 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'inst/scheduler_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/scheduler_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/scheduler_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/scheduler_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/scheduler_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/scheduler_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (inst/mngr_list/rdylist_mngr/hpriority_module/ready_priorities_r_reg[0]) is unused and will be removed from module design_rtos_scheduler_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_rtos_scheduler_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module design_rtos_scheduler_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_rtos_scheduler_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_rtos_scheduler_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_rtos_scheduler_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/scheduler_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_rtos_scheduler_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 786.875 ; gain = 518.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+-------------------+
+|Module Name                                    | RTL Object                                                | Inference      | Size (Depth x Width) | Primitives        | 
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+-------------------+
+|\inst/mngr_list/commands_lists /U0             | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 16 x 49              | RAM16X1D x 49     | 
+|\inst/mngr_list/rdylist_mngr/item_list /U0     | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 256 x 54             | RAM128X1D x 108   | 
+|\inst/mngr_list/rdylist_mngr/priority_list /U0 | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 64 x 24              | RAM64X1D x 24     | 
+|\inst/mngr_list/dlylist_mngr/delay_list /U0    | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 256 x 48             | RAM128X1D x 96    | 
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+-------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:07 . Memory (MB): peak = 786.875 ; gain = 518.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:08 . Memory (MB): peak = 787.543 ; gain = 518.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+-------------------+
+|Module Name                                    | RTL Object                                                | Inference      | Size (Depth x Width) | Primitives        | 
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+-------------------+
+|\inst/mngr_list/commands_lists /U0             | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 16 x 49              | RAM16X1D x 49     | 
+|\inst/mngr_list/rdylist_mngr/item_list /U0     | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 256 x 54             | RAM128X1D x 108   | 
+|\inst/mngr_list/rdylist_mngr/priority_list /U0 | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 64 x 24              | RAM64X1D x 24     | 
+|\inst/mngr_list/dlylist_mngr/delay_list /U0    | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 256 x 48             | RAM128X1D x 96    | 
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+-------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:09 . Memory (MB): peak = 814.617 ; gain = 545.855
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 814.617 ; gain = 545.855
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 814.617 ; gain = 545.855
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 814.617 ; gain = 545.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 814.617 ; gain = 545.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 814.617 ; gain = 545.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 814.617 ; gain = 545.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    15|
+|2     |LUT1      |    12|
+|3     |LUT2      |    44|
+|4     |LUT3      |   274|
+|5     |LUT4      |   294|
+|6     |LUT5      |   152|
+|7     |LUT6      |   253|
+|8     |RAM128X1D |   204|
+|9     |RAM16X1D  |    49|
+|10    |RAM64X1D  |    24|
+|11    |FDRE      |   842|
+|12    |FDSE      |     4|
++------+----------+------+
+
+Report Instance Areas: 
++------+------------------------------------------+-------------------------------------------+------+
+|      |Instance                                  |Module                                     |Cells |
++------+------------------------------------------+-------------------------------------------+------+
+|1     |top                                       |                                           |  2167|
+|2     |  inst                                    |scheduler_v1_0                             |  2167|
+|3     |    mngr_list                             |lists_manager                              |  1881|
+|4     |      commands_lists                      |mem_commandlist                            |   147|
+|5     |        U0                                |dist_mem_gen_v8_0_12                       |   147|
+|6     |          \synth_options.dist_mem_inst    |dist_mem_gen_v8_0_12_synth                 |   147|
+|7     |            \gen_dp_ram.dpram_inst        |dpram                                      |   147|
+|8     |      dlylist_mngr                        |delaylist_manager                          |   699|
+|9     |        delay_list                        |mem_delaylist                              |   290|
+|10    |          U0                              |dist_mem_gen_v8_0_12__parameterized5       |   290|
+|11    |            \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth__parameterized2 |   290|
+|12    |              \gen_dp_ram.dpram_inst      |dpram__parameterized5                      |   290|
+|13    |      rdylist_mngr                        |readylist_manager                          |   965|
+|14    |        item_list                         |mem_itemlist                               |   326|
+|15    |          U0                              |dist_mem_gen_v8_0_12__parameterized1       |   326|
+|16    |            \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth__parameterized0 |   326|
+|17    |              \gen_dp_ram.dpram_inst      |dpram__parameterized1                      |   326|
+|18    |        priority_list                     |mem_prioritylist                           |    72|
+|19    |          U0                              |dist_mem_gen_v8_0_12__parameterized3       |    72|
+|20    |            \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth__parameterized1 |    72|
+|21    |              \gen_dp_ram.dpram_inst      |dpram__parameterized3                      |    72|
+|22    |        hpriority_module                  |highpriority_selector                      |   234|
+|23    |        item_ins                          |insert_item                                |   212|
+|24    |        item_rem                          |remove_item                                |   121|
+|25    |    schdlr                                |scheduler                                  |    45|
+|26    |    scheduler_v1_0_S00_AXI_inst           |scheduler_v1_0_S00_AXI                     |   241|
++------+------------------------------------------+-------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 814.617 ; gain = 545.855
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 388 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:56 . Memory (MB): peak = 814.617 ; gain = 181.984
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:13 . Memory (MB): peak = 814.617 ; gain = 545.855
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 292 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 277 instances were transformed.
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 204 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 49 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 24 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+84 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:18 . Memory (MB): peak = 814.617 ; gain = 552.805
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_rtos/project_rtos.runs/design_rtos_scheduler_0_0_synth_1/design_rtos_scheduler_0_0.dcp' has been generated.

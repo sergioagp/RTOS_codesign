@@ -1,0 +1,4 @@
+NumberHits:1
+Timestamp: Wed Jul 04 16:24:15 UTC 2018
+VLNV: xilinx.com:user:semaphore:1.0
+SynthRuntime: 39

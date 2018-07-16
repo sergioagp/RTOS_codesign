@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_rtos\project_rtos.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied

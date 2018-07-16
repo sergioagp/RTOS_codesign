@@ -1,0 +1,113 @@
+13:03:16 **** Incremental Build of configuration Debug for project baremetal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building target: baremetal.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../baremetal_bsp/ps7_cortexa9_0/lib -o "baremetal.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `Timer_InterruptHandler':
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_rtos\project_rtos.sdk\baremetal\Debug/../src/helloworld.c:126: undefined reference to `getTickValue'
+C:\Users\sergiopereira\Vivado_projects\RTOS_codesign\projects\project_rtos\project_rtos.sdk\baremetal\Debug/../src/helloworld.c:128: undefined reference to `getTCBReady'
+collect2.exe: error: ld returned 1 exit status
+make: *** [baremetal.elf] Error 1
+13:03:49 **** Auto Build of configuration Debug for project baremetal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../baremetal_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/scheduler.h:63:1: warning: multi-line comment [-Wcomment]
+ //#define SCHEDULER_mWriteReg(BaseAddress, RegOffset, Data) \
+ ^
+../src/scheduler.h:83:1: warning: multi-line comment [-Wcomment]
+ //#define SCHEDULER_mReadReg(BaseAddress, RegOffset) \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: baremetal.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../baremetal_bsp/ps7_cortexa9_0/lib -o "baremetal.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: baremetal.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size baremetal.elf  |tee "baremetal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78196	   4172	  23360	 105728	  19d00	baremetal.elf
+'Finished building: baremetal.elf.size'
+' '
+13:04:00 **** Incremental Build of configuration Debug for project baremetal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:04:35 **** Incremental Build of configuration Debug for project baremetal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:07:24 **** Incremental Build of configuration Debug for project baremetal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:09:07 **** Auto Build of configuration Debug for project baremetal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../baremetal_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/scheduler.h:63:1: warning: multi-line comment [-Wcomment]
+ //#define SCHEDULER_mWriteReg(BaseAddress, RegOffset, Data) \
+ ^
+../src/scheduler.h:83:1: warning: multi-line comment [-Wcomment]
+ //#define SCHEDULER_mReadReg(BaseAddress, RegOffset) \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: baremetal.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../baremetal_bsp/ps7_cortexa9_0/lib -o "baremetal.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: baremetal.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size baremetal.elf  |tee "baremetal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78132	   4172	  23360	 105664	  19cc0	baremetal.elf
+'Finished building: baremetal.elf.size'
+' '
+13:10:07 **** Auto Build of configuration Debug for project baremetal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../baremetal_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/scheduler.h:63:1: warning: multi-line comment [-Wcomment]
+ //#define SCHEDULER_mWriteReg(BaseAddress, RegOffset, Data) \
+ ^
+../src/scheduler.h:83:1: warning: multi-line comment [-Wcomment]
+ //#define SCHEDULER_mReadReg(BaseAddress, RegOffset) \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: baremetal.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../baremetal_bsp/ps7_cortexa9_0/lib -o "baremetal.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: baremetal.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size baremetal.elf  |tee "baremetal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78164	   4172	  23360	 105696	  19ce0	baremetal.elf
+'Finished building: baremetal.elf.size'
+' '
+13:10:12 **** Incremental Build of configuration Debug for project baremetal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

@@ -327,7 +327,7 @@ static void CPUInitialize(XScuGic *InstancePtr)
 	 * 2. Set EnableS=1, to enable the CPU interface to signal secure interrupts.
 	 * Only enable the IRQ output unless secure interrupts are needed.
 	 */
-	XScuGic_CPUWriteReg(InstancePtr, XSCUGIC_CONTROL_OFFSET, 0x07U);
+	XScuGic_CPUWriteReg(InstancePtr, XSCUGIC_CONTROL_OFFSET, 0x09U);
 
 }
 

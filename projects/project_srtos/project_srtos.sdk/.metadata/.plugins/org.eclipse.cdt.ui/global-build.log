@@ -1,14 +1,269 @@
-15:49:43 **** Clean-only build of project freertos_s_bsp ****
-15:49:43 **** Clean-only build of configuration Debug for project freertos_s ****
-make -k clean 
-make clean 
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
-Cleaning...
-rm -f -r src/obj/
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
-rm -f freertos.elf freertos.bin
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
-15:49:44 **** Build of project freertos_s_bsp ****
+02:35:53 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+02:37:22 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+02:37:26 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+02:37:58 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:157:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:161:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:168:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77724	   4172	  23392	 105288	  19b48	test.elf
+'Finished building: test.elf.size'
+' '
+02:38:48 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+02:39:07 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:157:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:161:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:168:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77812	   4172	  23392	 105376	  19ba0	test.elf
+'Finished building: test.elf.size'
+' '
+02:39:11 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+02:41:14 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:157:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:161:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:168:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77812	   4172	  23392	 105376	  19ba0	test.elf
+'Finished building: test.elf.size'
+' '
+02:41:34 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:157:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:161:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:168:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77812	   4172	  23392	 105376	  19ba0	test.elf
+'Finished building: test.elf.size'
+' '
+02:41:41 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+03:38:17 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:157:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:161:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:168:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77812	   4172	  23392	 105376	  19ba0	test.elf
+'Finished building: test.elf.size'
+' '
+13:30:03 **** Build of project test_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -141,592 +396,112 @@ make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
-15:50:06 **** Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj
-Building dependecy for src/xtime_l.c
-Building dependecy for src/timers.c
-Building dependecy for src/tasks.c
-Building dependecy for src/stream_buffer.c
-Building dependecy for src/queue.c
-Building dependecy for src/portASM.S
-Building dependecy for src/port.c
-Building dependecy for src/main.c
-Building dependecy for src/list.c
-Building dependecy for src/heap_4.c
-Building dependecy for src/FreeRTOS_tick_config.c
-Building dependecy for src/FreeRTOS_asm_vectors.S
-Building dependecy for src/event_groups.c
-Building dependecy for src/croutine.c
-Building dependecy for src/boot.S
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Compiling source src/boot.S
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/boot.S -o src/obj/boot.o
-Compiling source src/croutine.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/croutine.c -o src/obj/croutine.o
-Compiling source src/event_groups.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/event_groups.c -o src/obj/event_groups.o
-Compiling source src/FreeRTOS_asm_vectors.S
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_asm_vectors.S -o src/obj/FreeRTOS_asm_vectors.o
-Compiling source src/FreeRTOS_tick_config.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
-src/FreeRTOS_tick_config.c: In function 'vConfigureTickInterrupt':
-src/FreeRTOS_tick_config.c:66:57: error: 'XPAR_FABRIC_TMRCTR_0_VEC_ID' undeclared (first use in this function); did you mean 'XPAR_FABRIC_SCHEDULER_0_VEC_ID'?
-  XScuGic_SetPriorityTriggerType( &xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID,  0x7F & (portLOWEST_USABLE_INTERRUPT_PRIORITY << portPRIORITY_SHIFT), ucRisingEdge );
-                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                                         XPAR_FABRIC_SCHEDULER_0_VEC_ID
-src/FreeRTOS_tick_config.c:66:57: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/obj/FreeRTOS_tick_config.o] Error 1
-15:51:00 **** Auto Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Building dependecy for src/FreeRTOS_tick_config.c
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Compiling source src/FreeRTOS_tick_config.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
-src/FreeRTOS_tick_config.c: In function 'vConfigureTickInterrupt':
-src/FreeRTOS_tick_config.c:94:41: error: 'XPAR_FABRIC_TMRCTR_0_VEC_ID' undeclared (first use in this function); did you mean 'XPAR_FABRIC_SCHEDULER_0_VEC_ID'?
-  XScuGic_Enable( &xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID );
-                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                         XPAR_FABRIC_SCHEDULER_0_VEC_ID
-src/FreeRTOS_tick_config.c:94:41: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/obj/FreeRTOS_tick_config.o] Error 1
-15:51:18 **** Auto Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Building dependecy for src/FreeRTOS_tick_config.c
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Compiling source src/FreeRTOS_tick_config.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
-Compiling source src/heap_4.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/heap_4.c -o src/obj/heap_4.o
-Compiling source src/list.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/list.c -o src/obj/list.o
-Compiling source src/main.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/main.c -o src/obj/main.o
-src/main.c: In function 'prvSetupHardware':
-src/main.c:198:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
-  volatile uint32_t* ICCICR = 0xf8f00100;
-                              ^~~~~~~~~~
-Compiling source src/port.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/port.c -o src/obj/port.o
-src/port.c:116:1: warning: multi-line comment [-Wcomment]
- // #define portCPU_IRQ_DISABLE()          \
- ^
-src/port.c:121:1: warning: multi-line comment [-Wcomment]
- // #define portCPU_IRQ_ENABLE()          \
- ^
-src/port.c: In function 'vPortTaskUsesFPU':
-src/port.c:485:11: warning: unused variable 'ulInitialFPSCR' [-Wunused-variable]
-  uint32_t ulInitialFPSCR = 0;
-           ^~~~~~~~~~~~~~
-Compiling source src/portASM.S
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/portASM.S -o src/obj/portASM.o
-Compiling source src/queue.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/queue.c -o src/obj/queue.o
-Compiling source src/stream_buffer.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/stream_buffer.c -o src/obj/stream_buffer.o
-Compiling source src/tasks.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
-Compiling source src/timers.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/timers.c -o src/obj/timers.o
-Compiling source src/xtime_l.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/xtime_l.c -o src/obj/xtime_l.o
-Linking freertos.elf
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic_g.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic_g.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic_sinit.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscugic_sinit.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt_sinit.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt_sinit.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(vectors.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(vectors.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_assert.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_assert.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_exception.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_exception.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_printf.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xil_printf.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_l.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_l.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_options.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_options.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_sinit.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_sinit.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_sinit.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_sinit.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt_g.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xscuwdt_g.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(outbyte.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(outbyte.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xplatform_info.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xplatform_info.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_g.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xtmrctr_g.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_g.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_g.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_hw.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(xuartps_hw.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(_exit.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(_exit.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(_sbrk.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(_sbrk.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(close.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(close.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(fstat.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(fstat.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(isatty.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(isatty.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(lseek.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(lseek.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(read.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(read.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(write.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(write.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(errno.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(errno.o)
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(inbyte.o) uses VFP register arguments, freertos.elf does not
-c:/xilinx/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../freertos_s_bsp/ps7_cortexa9_0/lib/\libxil.a(inbyte.o)
-collect2.exe: error: ld returned 1 exit status
-make: *** [freertos.elf] Error 1
-15:52:04 **** Auto Build of project freertos_s_bsp ****
-make -k all 
-"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling coresightps_dcc"
-"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling cpu_cortexa9"
-"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling ddrps"
-"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling devcfg"
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling dmaps"
-"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling emacps"
-"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling gpiops"
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling qspips"
-"Running Make libs in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scheduler..."
-scheduler_selftest.c: In function 'SCHEDULER_Reg_SelfTest':
-scheduler_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( SCHEDULER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                          ^~
-scheduler_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scugic"
-"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scutimer"
-"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scuwdt"
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling sdps"
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling standalone"
-In file included from sleep.c:57:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from usleep.c:60:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xil_sleeptimer.c:55:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xtime_l.c:53:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling timers_ip..."
-timers_ip_selftest.c: In function 'TIMERS_IP_Reg_SelfTest':
-timers_ip_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( TIMERS_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                          ^~
-timers_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling tmrctr"
-"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling ttcps"
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling uartps"
-"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling usbps"
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling xadcps"
-'Finished building libraries'
-15:52:33 **** Auto Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Building dependecy for src/xtime_l.c
-Building dependecy for src/timers.c
-Building dependecy for src/tasks.c
-Building dependecy for src/stream_buffer.c
-Building dependecy for src/queue.c
-Building dependecy for src/port.c
-Building dependecy for src/main.c
-Building dependecy for src/list.c
-Building dependecy for src/heap_4.c
-Building dependecy for src/FreeRTOS_tick_config.c
-Building dependecy for src/FreeRTOS_asm_vectors.S
-Building dependecy for src/event_groups.c
-Building dependecy for src/croutine.c
-Building dependecy for src/boot.S
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Compiling source src/boot.S
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/boot.S -o src/obj/boot.o
-Compiling source src/croutine.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/croutine.c -o src/obj/croutine.o
-Compiling source src/event_groups.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/event_groups.c -o src/obj/event_groups.o
-Compiling source src/FreeRTOS_asm_vectors.S
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_asm_vectors.S -o src/obj/FreeRTOS_asm_vectors.o
-Compiling source src/FreeRTOS_tick_config.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
-Compiling source src/heap_4.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/heap_4.c -o src/obj/heap_4.o
-Compiling source src/list.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/list.c -o src/obj/list.o
-Compiling source src/main.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/main.c -o src/obj/main.o
-src/main.c: In function 'prvSetupHardware':
-src/main.c:198:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
-  volatile uint32_t* ICCICR = 0xf8f00100;
-                              ^~~~~~~~~~
-Compiling source src/port.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/port.c -o src/obj/port.o
-src/port.c:116:1: warning: multi-line comment [-Wcomment]
- // #define portCPU_IRQ_DISABLE()          \
- ^
-src/port.c:121:1: warning: multi-line comment [-Wcomment]
- // #define portCPU_IRQ_ENABLE()          \
- ^
-src/port.c: In function 'vPortTaskUsesFPU':
-src/port.c:485:11: warning: unused variable 'ulInitialFPSCR' [-Wunused-variable]
-  uint32_t ulInitialFPSCR = 0;
-           ^~~~~~~~~~~~~~
-Compiling source src/queue.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/queue.c -o src/obj/queue.o
-Compiling source src/stream_buffer.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/stream_buffer.c -o src/obj/stream_buffer.o
-Compiling source src/tasks.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
-Compiling source src/timers.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/timers.c -o src/obj/timers.o
-Compiling source src/xtime_l.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/xtime_l.c -o src/obj/xtime_l.o
-Linking freertos.elf
-Generating binary freertos.bin
-15:53:02 **** Auto Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-15:54:15 **** Build of project freertos_s_bsp ****
-make -k all 
-"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling coresightps_dcc"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
-"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling cpu_cortexa9"
-"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling ddrps"
-"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling devcfg"
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling dmaps"
-"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling emacps"
-"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling gpiops"
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling qspips"
-"Running Make libs in ps7_cortexa9_0/libsrc/scheduler_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/scheduler_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scheduler..."
-scheduler_selftest.c: In function 'SCHEDULER_Reg_SelfTest':
-scheduler_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( SCHEDULER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                          ^~
-scheduler_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scugic"
-"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scutimer"
-"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling scuwdt"
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling sdps"
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling standalone"
-In file included from sleep.c:57:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from usleep.c:60:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xil_sleeptimer.c:55:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xtime_l.c:53:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/timers_ip_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/timers_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling timers_ip..."
-timers_ip_selftest.c: In function 'TIMERS_IP_Reg_SelfTest':
-timers_ip_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( TIMERS_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                          ^~
-timers_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling tmrctr"
-"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling ttcps"
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling uartps"
-"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling usbps"
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=softfp -nostartfiles -g -Wall -Wextra"
-"Compiling xadcps"
-'Finished building libraries'
-15:54:37 **** Auto Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Building dependecy for src/xtime_l.c
-Building dependecy for src/timers.c
-Building dependecy for src/tasks.c
-Building dependecy for src/stream_buffer.c
-Building dependecy for src/queue.c
-Building dependecy for src/port.c
-Building dependecy for src/main.c
-Building dependecy for src/list.c
-Building dependecy for src/heap_4.c
-Building dependecy for src/FreeRTOS_tick_config.c
-Building dependecy for src/FreeRTOS_asm_vectors.S
-Building dependecy for src/event_groups.c
-Building dependecy for src/croutine.c
-Building dependecy for src/boot.S
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Compiling source src/boot.S
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/boot.S -o src/obj/boot.o
-Compiling source src/croutine.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/croutine.c -o src/obj/croutine.o
-Compiling source src/event_groups.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/event_groups.c -o src/obj/event_groups.o
-Compiling source src/FreeRTOS_asm_vectors.S
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_asm_vectors.S -o src/obj/FreeRTOS_asm_vectors.o
-Compiling source src/FreeRTOS_tick_config.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/FreeRTOS_tick_config.c -o src/obj/FreeRTOS_tick_config.o
-Compiling source src/heap_4.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/heap_4.c -o src/obj/heap_4.o
-Compiling source src/list.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/list.c -o src/obj/list.o
-Compiling source src/main.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/main.c -o src/obj/main.o
-src/main.c: In function 'prvSetupHardware':
-src/main.c:198:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
-  volatile uint32_t* ICCICR = 0xf8f00100;
-                              ^~~~~~~~~~
-Compiling source src/port.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/port.c -o src/obj/port.o
-src/port.c:116:1: warning: multi-line comment [-Wcomment]
- // #define portCPU_IRQ_DISABLE()          \
- ^
-src/port.c:121:1: warning: multi-line comment [-Wcomment]
- // #define portCPU_IRQ_ENABLE()          \
- ^
-src/port.c: In function 'vPortTaskUsesFPU':
-src/port.c:485:11: warning: unused variable 'ulInitialFPSCR' [-Wunused-variable]
-  uint32_t ulInitialFPSCR = 0;
-           ^~~~~~~~~~~~~~
-Compiling source src/queue.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/queue.c -o src/obj/queue.o
-Compiling source src/stream_buffer.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/stream_buffer.c -o src/obj/stream_buffer.o
-Compiling source src/tasks.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
-Compiling source src/timers.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/timers.c -o src/obj/timers.o
-Compiling source src/xtime_l.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/xtime_l.c -o src/obj/xtime_l.o
-Linking freertos.elf
-Generating binary freertos.bin
-15:55:07 **** Incremental Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-make: Nothing to be done for `all'.
-15:57:48 **** Auto Build of configuration Debug for project freertos_s ****
-make all 
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Building dependecy for src/tasks.c
-Creating build directory src/obj/
-A subdirectory or file src/obj/ already exists.
-make: [src/obj/] Error 1 (ignored)
-Compiling source src/tasks.c
-arm-none-eabi-gcc -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -Wall -O0 -g3  -Isrc/inc/ -I../freertos_s_bsp/ps7_cortexa9_0/include/ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=soft  -c src/tasks.c -o src/obj/tasks.o
-Linking freertos.elf
-Generating binary freertos.bin
+13:30:28 **** Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:157:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:161:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:168:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77812	   4172	  23392	 105376	  19ba0	test.elf
+'Finished building: test.elf.size'
+' '
+13:32:50 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:34:46 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:157:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:161:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:24: warning: format '%hX' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                      ~~^
+                      %lX
+       Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:164:79: warning: format '%hX' expects argument of type 'int', but argument 5 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+                                                                             ~~^
+                                                                             %lX
+../src/helloworld.c:168:4:
+    Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77788	   4172	  23392	 105352	  19b88	test.elf
+'Finished building: test.elf.size'
+' '
+13:35:08 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

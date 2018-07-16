@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Jul 12 15:40:44 2018
+| Date             : Fri Jul 13 02:28:35 2018
 | Host             : ASUS-K556URK running 64-bit major release  (build 9200)
 | Command          : report_power -file design_geral_wrapper_power_routed.rpt -pb design_geral_wrapper_power_summary_routed.pb -rpx design_geral_wrapper_power_routed.rpx
 | Design           : design_geral_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.717        |
+| Total On-Chip Power (W)  | 1.721        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.575        |
+| Dynamic (W)              | 1.579        |
 | Device Static (W)        | 0.142        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 65.2         |
-| Junction Temperature (C) | 44.8         |
+| Max Ambient (C)          | 65.1         |
+| Junction Temperature (C) | 44.9         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |        3 |       --- |             --- |
-| Slice Logic              |     0.016 |     8202 |       --- |             --- |
-|   LUT as Logic           |     0.008 |     2499 |     53200 |            4.70 |
-|   LUT as Distributed RAM |     0.007 |     1780 |     17400 |           10.23 |
+| Clocks                   |     0.013 |        3 |       --- |             --- |
+| Slice Logic              |     0.018 |     8212 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     2501 |     53200 |            4.70 |
+|   LUT as Distributed RAM |     0.008 |     1780 |     17400 |           10.23 |
 |   F7/F8 Muxes            |    <0.001 |      859 |     53200 |            1.61 |
 |   CARRY4                 |    <0.001 |      110 |     13300 |            0.83 |
-|   Register               |    <0.001 |     2013 |    106400 |            1.89 |
+|   Register               |    <0.001 |     2017 |    106400 |            1.90 |
 |   LUT as Shift Register  |    <0.001 |       62 |     17400 |            0.36 |
 |   Others                 |     0.000 |      272 |       --- |             --- |
-| Signals                  |     0.016 |     4630 |       --- |             --- |
+| Signals                  |     0.018 |     4646 |       --- |             --- |
 | PS7                      |     1.529 |        1 |       --- |             --- |
 | Static Power             |     0.142 |          |           |                 |
-| Total                    |     1.717 |          |           |                 |
+| Total                    |     1.721 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.061 |       0.046 |      0.015 |
+| Vccint    |       1.000 |     0.065 |       0.050 |      0.015 |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -87,7 +87,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.749 |       0.718 |      0.030 |
+| Vccpint   |       1.000 |     0.749 |       0.718 |      0.031 |
 | Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
@@ -150,8 +150,8 @@ Table of Contents
 +-----------------------------------------------------------------------------+-----------+
 | Name                                                                        | Power (W) |
 +-----------------------------------------------------------------------------+-----------+
-| design_geral_wrapper                                                        |     1.575 |
-|   design_geral_i                                                            |     1.575 |
+| design_geral_wrapper                                                        |     1.579 |
+|   design_geral_i                                                            |     1.579 |
 |     axi_timer_0                                                             |     0.002 |
 |       U0                                                                    |     0.002 |
 |         AXI4_LITE_I                                                         |    <0.001 |
@@ -341,7 +341,7 @@ Table of Contents
 |                     ram_reg_128_255_7_7                                     |    <0.001 |
 |                     ram_reg_128_255_8_8                                     |    <0.001 |
 |                     ram_reg_128_255_9_9                                     |    <0.001 |
-|           rdylist_mngr                                                      |     0.013 |
+|           rdylist_mngr                                                      |     0.012 |
 |             hpriority_module                                                |     0.002 |
 |             item_ins                                                        |     0.001 |
 |             item_list                                                       |     0.007 |
@@ -487,14 +487,14 @@ Table of Contents
 |                     ram_reg_0_63_9_9                                        |    <0.001 |
 |         schdlr                                                              |    <0.001 |
 |         scheduler_v1_0_S00_AXI_inst                                         |    <0.001 |
-|     timers_ip_0                                                             |     0.017 |
-|       inst                                                                  |     0.017 |
+|     timers_ip_0                                                             |     0.022 |
+|       inst                                                                  |     0.022 |
 |         timers_ip_v1_0_S00_AXI_inst                                         |    <0.001 |
-|         timers_module_inst                                                  |     0.017 |
-|           infolist                                                          |     0.004 |
-|             U0                                                              |     0.004 |
-|               synth_options.dist_mem_inst                                   |     0.004 |
-|                 gen_dp_ram.dpram_inst                                       |     0.004 |
+|         timers_module_inst                                                  |     0.021 |
+|           infolist                                                          |     0.005 |
+|             U0                                                              |     0.005 |
+|               synth_options.dist_mem_inst                                   |     0.005 |
+|                 gen_dp_ram.dpram_inst                                       |     0.005 |
 |                   ram_reg_0_127_0_0                                         |    <0.001 |
 |                   ram_reg_0_127_10_10                                       |    <0.001 |
 |                   ram_reg_0_127_11_11                                       |    <0.001 |
@@ -623,10 +623,10 @@ Table of Contents
 |                   ram_reg_128_255_7_7                                       |    <0.001 |
 |                   ram_reg_128_255_8_8                                       |    <0.001 |
 |                   ram_reg_128_255_9_9                                       |    <0.001 |
-|           timerslist                                                        |     0.007 |
-|             U0                                                              |     0.007 |
-|               synth_options.dist_mem_inst                                   |     0.007 |
-|                 gen_dp_ram.dpram_inst                                       |     0.007 |
+|           timerslist                                                        |     0.008 |
+|             U0                                                              |     0.008 |
+|               synth_options.dist_mem_inst                                   |     0.008 |
+|                 gen_dp_ram.dpram_inst                                       |     0.008 |
 |                   ram_reg_0_127_0_0                                         |    <0.001 |
 |                   ram_reg_0_127_10_10                                       |    <0.001 |
 |                   ram_reg_0_127_11_11                                       |    <0.001 |

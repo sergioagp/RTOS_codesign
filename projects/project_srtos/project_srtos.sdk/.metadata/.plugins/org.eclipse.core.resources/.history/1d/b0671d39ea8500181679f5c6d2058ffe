@@ -1,0 +1,197 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "scheduler.h"
+#include "xparameters.h"
+#include <stdio.h>
+#include "platform.h"
+#include "xil_types.h"
+
+#include "xtmrctr.h"
+#include "xparameters.h"
+
+#include "xil_io.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+
+//#include "secsirtos.h"
+
+static XTmrCtr xTimer;
+XScuGic xInterruptController; 	/* Interrupt controller instance */
+
+
+//void print(char *str);
+extern char inbyte(void);
+void Timer_InterruptHandler()
+{
+	XTmrCtr_SetControlStatusReg(XPAR_AXI_TIMER_0_BASEADDR, 0, XTmrCtr_GetControlStatusReg(XPAR_AXI_TIMER_0_BASEADDR, 0));
+	//u32 tick = getTickValue();
+
+	//if(tick == 0x10)
+	//	XTmrCtr_Stop(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID);
+
+   // printf("Tick Value: 0x%lX\t", tick);
+	printf("ISR\n\r");
+
+
+}
+
+void vConfigureTickInterrupt( void )
+{
+//BaseType_t xStatus;
+int xStatus;
+XScuGic_Config *pxGICConfig;
+
+	( void ) xStatus;
+	/* This function is called with the IRQ interrupt disabled, and the IRQ
+	interrupt should be left disabled.  It is enabled automatically when the
+	scheduler is started. */
+
+	/* Initialise the timer. */
+	xStatus = XTmrCtr_Initialize(&xTimer,XPAR_AXI_TIMER_0_DEVICE_ID);
+	//configASSERT( xStatus == XST_SUCCESS );
+	( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
+
+	/* Enable Auto reload mode. */
+	XTmrCtr_SetResetValue(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID,  0xf80000);
+
+	/* Ensure there is no prescale. */
+	XTmrCtr_SetOptions(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID,
+	(XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION));
+
+	/* Ensure XScuGic_CfgInitialize() has been called.  In this demo it has
+	already been called from prvSetupHardware() in main(). */
+	pxGICConfig = XScuGic_LookupConfig( XPAR_PS7_SCUGIC_0_DEVICE_ID );
+	xStatus = XScuGic_CfgInitialize( &xInterruptController, pxGICConfig, pxGICConfig->CpuBaseAddress );
+	//configASSERT( xStatus == XST_SUCCESS );
+	( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
+
+	/*
+	 * Connect the interrupt controller interrupt handler to the hardware
+	 * interrupt handling logic in the ARM processor.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_FIQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &xInterruptController);
+	//Xil_ExceptionEnable();
+	Xil_ExceptionEnableMask(XIL_EXCEPTION_FIQ);
+
+	/* Install the FreeRTOS tick handler. */
+	xStatus = XScuGic_Connect( &xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID, (Xil_ExceptionHandler) Timer_InterruptHandler, ( void * ) &xTimer );
+	//configASSERT( xStatus == XST_SUCCESS );
+	( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
+
+	/* Enable the interrupt for the xTimer in the interrupt controller. */
+	XScuGic_Enable(&xInterruptController, XPAR_FABRIC_TMRCTR_0_VEC_ID);
+
+	/* Start the timer counter and then wait for it to timeout a number of
+	times. */
+	XTmrCtr_Start(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID);
+}
+
+int main()
+{
+    init_platform();
+    vConfigureTickInterrupt();
+
+    print("Test FIQ\n\r");
+    createTask(0x00, 0xAAAAAA, 0x6);
+//    printf("ID New Task Insert: %d\n\r", insertNewTask(0xAAAAAA, 0x6));
+//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
+//    printf("ID New Task Insert: %d\n\r", insertNewTask(0xBBBBBB, 0x7));
+//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
+//    printf("ID New Task Insert: %d\n\r", insertNewTask(0xCCCCCC, 0x8));
+//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
+//    printf("ID New Task Insert: %d\n\r", insertNewTask(0xDDDDDD, 0x9));
+//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
+//    printf("ID New Task Insert: %d\n\r", insertNewTask(0xEEEEEE, 0xA));
+//    printf("TCB to Run: 0x%lX\n\r\n\r", getTCBReady());
+
+//    for(int i= 0; i < 10; i++) {
+//    suspendTask(0x04);
+//    printf("S4 - TCB to Run: 0x%lX\n\r", getTCBReady());
+//    suspendTask(0x03);
+//    printf("S3 - TCB to Run: 0x%lX\n\r", getTCBReady());
+//    suspendTask(0x02);
+//    printf("S2 - TCB to Run: 0x%lX\n\r", getTCBReady());
+//    suspendTask(0x01);
+//    printf("S1 - TCB to Run: 0x%lX\n\r\n\r", getTCBReady());
+//
+//    resumeTask(0x01);
+//    printf("R1 - TCB to Run: 0x%lX\n\r", getTCBReady());
+//    resumeTask(0x02);
+//    printf("R2 -TCB to Run: 0x%lX\n\r", getTCBReady());
+//    resumeTask(0x03);
+//    printf("R3 -TCB to Run: 0x%lX\n\r", getTCBReady());
+//    resumeTask(0x04);
+//    printf("R4 -TCB to Run: 0x%lX\n\r\n\r", getTCBReady());
+//    }
+//    suspendTask(0x03);
+//   delayTask(0x03, 0x05);
+//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
+ //   printf("Delay to Ins: 0x%lX\n\r",  Xil_In32((XPAR_AXI_INTERFACE_0_S00_AXI_BASEADDR) + (AXI_INTERFACE_S00_AXI_SLV_REG2_OFFSET)));
+
+//    suspendTask(0x01);
+//    //delayTask(0x00, 0x0f);
+//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
+
+//    //printf("Tick Value: 0x%lX\n\r", getTickValue());
+//    resumeTask(0x01);
+//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
+
+
+	//Start Timer
+	XTmrCtr_Start(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID);
+	//Wait For interrupt;
+	while(1)
+	{
+	}
+    cleanup_platform();
+    return 0;
+}

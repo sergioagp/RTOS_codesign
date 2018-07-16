@@ -1,0 +1,552 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 13:45:57 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 21) to (Rev. 23)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 13:15:32 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 11:56:31 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 11:50:12 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 18) to (Rev. 19)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_rtos_scheduler_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'tick_out'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 11:34:36 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0 (Rev. 18)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 11:30:19 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 11:12:40 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 10:52:35 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jul 10 10:36:31 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  9 23:23:23 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  9 22:33:52 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  9 22:27:58 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_rtos_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_rtos_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  9 18:34:52 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  9 18:31:17 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  9 18:00:21 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  9 17:41:41 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  9 13:55:02 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Jul  5 15:35:01 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_timers_ip_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_timers_ip_0_0 (xilinx.com:user:timers_ip:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Jul  5 15:35:01 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Jul  5 15:32:17 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_semaphore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_semaphore_0_0 (xilinx.com:user:semaphore:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  4 18:35:23 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_semaphore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_semaphore_0_0 (xilinx.com:user:semaphore:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  4 18:11:01 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  4 18:10:55 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_timers_ip_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_geral_timers_ip_0_0 (xilinx.com:user:timers_ip:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  4 17:49:41 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_timers_ip_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_timers_ip_0_0 (xilinx.com:user:timers_ip:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  4 16:24:01 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_semaphore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_semaphore_0_0 (xilinx.com:user:semaphore:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jul  4 16:09:30 2018
+| Host         : ASUS-K556URK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_geral_scheduler_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_geral_scheduler_0_0 (xilinx.com:user:scheduler:1.0) from (Rev. 3) to (Rev. 4)
+

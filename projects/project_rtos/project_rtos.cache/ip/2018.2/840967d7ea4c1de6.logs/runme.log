@@ -1,0 +1,939 @@
+
+*** Running vivado
+    with args -log design_geral_semaphore_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_geral_semaphore_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_geral_semaphore_0_0.tcl -notrace
+Command: synth_design -top design_geral_semaphore_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7340 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 369.242 ; gain = 102.703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_geral_semaphore_0_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/synth/design_geral_semaphore_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'semaphore_v1_0' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/hdl/semaphore_v1_0.v:4]
+	Parameter C_ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter C_SEMAPHORE_WIDTH bound to: 8 - type: integer 
+	Parameter C_SEMAPHOREID_WIDTH bound to: 8 - type: integer 
+	Parameter C_TASKID_WIDTH bound to: 8 - type: integer 
+	Parameter C_PRIORITY_WIDTH bound to: 8 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'semaphore_v1_0_S00_AXI' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/hdl/semaphore_v1_0_S00_AXI.v:4]
+	Parameter C_ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter C_SEMAPHORE_WIDTH bound to: 8 - type: integer 
+	Parameter C_SEMAPHOREID_WIDTH bound to: 8 - type: integer 
+	Parameter C_TASKID_WIDTH bound to: 8 - type: integer 
+	Parameter C_PRIORITY_WIDTH bound to: 8 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'semaphore_v1_0_S00_AXI' (1#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/hdl/semaphore_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'semaphore_module' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:36]
+	Parameter C_ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter C_SEMAPHORE_WIDTH bound to: 8 - type: integer 
+	Parameter C_SEMAPHOREID_WIDTH bound to: 8 - type: integer 
+	Parameter C_TASKID_WIDTH bound to: 8 - type: integer 
+	Parameter C_PRIORITY_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:172]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:247]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:291]
+INFO: [Synth 8-638] synthesizing module 'mem_task' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/src/mem_task/synth/mem_task.vhd:71]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 256 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 1 - type: integer 
+	Parameter C_HAS_DPRA bound to: 1 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 24 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/src/mem_semaphore/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/src/mem_task/synth/mem_task.vhd:137]
+INFO: [Synth 8-256] done synthesizing module 'mem_task' (5#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/src/mem_task/synth/mem_task.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'mem_semaphore' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/src/mem_semaphore/synth/mem_semaphore.vhd:69]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 256 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 0 - type: integer 
+	Parameter C_HAS_DPRA bound to: 0 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 32 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/src/mem_semaphore/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/src/mem_semaphore/synth/mem_semaphore.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'mem_semaphore' (7#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/src/mem_semaphore/synth/mem_semaphore.vhd:69]
+INFO: [Synth 8-6155] done synthesizing module 'semaphore_module' (8#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:36]
+WARNING: [Synth 8-3848] Net create_in in module/entity semaphore_v1_0 does not have driver. [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/hdl/semaphore_v1_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'semaphore_v1_0' (9#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/hdl/semaphore_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_geral_semaphore_0_0' (10#1) [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ip/design_geral_semaphore_0_0/synth/design_geral_semaphore_0_0.v:57]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[31]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[30]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[29]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[28]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[27]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[26]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[25]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[24]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[23]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[22]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[21]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[20]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[19]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[18]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[17]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[16]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[15]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[14]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[13]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[12]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[11]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[10]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[9]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[8]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[7]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[6]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[5]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[4]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[3]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[2]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[1]
+WARNING: [Synth 8-3331] design spram has unconnected port qspo[0]
+WARNING: [Synth 8-3331] design spram has unconnected port i_ce
+WARNING: [Synth 8-3331] design spram has unconnected port qspo_ce
+WARNING: [Synth 8-3331] design spram has unconnected port qspo_rst
+WARNING: [Synth 8-3331] design spram has unconnected port qspo_srst
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[31]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[30]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[29]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[28]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[27]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[26]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[25]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[24]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[23]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[22]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[21]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[20]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[19]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[18]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[17]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[16]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[15]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[14]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[13]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[12]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[11]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[10]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[9]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[8]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[7]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[6]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[5]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[4]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[3]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[2]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[1]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port dpo[0]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[31]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[30]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[29]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[28]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[27]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[26]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[25]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[24]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[23]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[22]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[21]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[20]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[19]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[18]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[17]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[16]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[15]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[14]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[13]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[12]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[11]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[10]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[9]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[8]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[7]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[6]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[5]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[4]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[3]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[2]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[1]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth__parameterized0 has unconnected port qdpo[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 426.418 ; gain = 159.879
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin module_semaphore_inst:create_in to constant 0 [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/hdl/semaphore_v1_0.v:109]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 426.418 ; gain = 159.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 426.418 ; gain = 159.879
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.runs/design_geral_semaphore_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.runs/design_geral_semaphore_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 776.984 ; gain = 0.754
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 776.984 ; gain = 510.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 776.984 ; gain = 510.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/module_semaphore_inst/semaphore_list. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/module_semaphore_inst/tasklist. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 776.984 ; gain = 510.445
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_semaphore_reg' in module 'semaphore_module'
+INFO: [Synth 8-802] inferred FSM for state register 'state_list_reg' in module 'semaphore_module'
+INFO: [Synth 8-5544] ROM "addrsemaphore_reg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_semaphore" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_semaphore3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "nexttask_reg" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "prevtask_reg" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "nextadrr_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state_list" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_list0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_list0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_list1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_list1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                        000000010 |                           000000
+                  iSTATE |                        100000000 |                           000001
+                 iSTATE7 |                        010000000 |                           000010
+                 iSTATE6 |                        000100000 |                           000100
+                 iSTATE5 |                        001000000 |                           000011
+                 iSTATE3 |                        000001000 |                           000110
+                 iSTATE1 |                        000000100 |                           000111
+                 iSTATE4 |                        000010000 |                           000101
+                 iSTATE2 |                        000000001 |                           001000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_list_reg' using encoding 'one-hot' in module 'semaphore_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                            00010 |                              000
+                  iSTATE |                            10000 |                              001
+                 iSTATE0 |                            01000 |                              010
+                 iSTATE1 |                            00100 |                              011
+                 iSTATE3 |                            00001 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_semaphore_reg' using encoding 'one-hot' in module 'semaphore_module'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 776.984 ; gain = 510.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
+	                8 Bit    Registers := 14    
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 2     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 5     
+	   8 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
+	  10 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   4 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module semaphore_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 5     
+Module dpram 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+Module spram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module semaphore_module 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	                8 Bit    Registers := 8     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 2     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 5     
+	   8 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
+	  10 Input      5 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[31] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[30] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[29] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[28] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[27] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[26] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[25] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[24] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[23] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[22] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[21] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[20] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[19] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[18] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[17] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[16] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[15] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[14] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[13] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[12] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[11] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[10] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[9] driven by constant 0
+INFO: [Synth 8-3917] design design_geral_semaphore_0_0 has port s00_axi_rdata[8] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'inst/semaphore_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/semaphore_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/semaphore_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/semaphore_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/semaphore_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/semaphore_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (inst/semaphore_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_geral_semaphore_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/semaphore_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module design_geral_semaphore_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/semaphore_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_geral_semaphore_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/semaphore_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_geral_semaphore_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/semaphore_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_geral_semaphore_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/semaphore_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_geral_semaphore_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[255]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[255]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[254]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[254]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[253]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[253]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[252]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[252]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[251]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[251]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[250]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[250]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[249]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[249]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[248]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[248]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[247]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[247]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[246]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[246]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[245]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[245]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[244]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[244]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[243]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[243]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[242]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[242]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[241]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[241]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[240]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[240]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[239]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[239]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[238]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[238]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[237]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[237]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[236]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[236]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[235]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[235]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[234]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[234]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[233]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[233]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[232]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[232]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[231]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[231]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[230]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[230]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[229]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[229]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[228]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[228]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[227]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[227]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[226]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[226]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[225]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[225]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[224]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[224]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[223]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[223]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[222]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[222]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[221]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[221]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[220]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[220]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[219]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[219]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[218]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[218]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[217]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[217]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[216]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[216]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[215]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[215]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[214]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[214]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[213]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[213]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[212]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[212]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[211]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[211]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[210]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[210]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[209]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[209]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[208]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[208]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[207]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[207]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[206]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/module_semaphore_inst/notEmpty_signal_reg[206]/Q' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[205]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[204]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[203]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[202]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[201]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[200]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[199]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[198]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[197]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[196]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[195]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[194]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[193]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[192]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[191]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[190]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[189]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[188]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[187]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[186]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[185]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[184]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[183]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[182]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[181]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[180]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[179]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[178]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[177]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[176]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[175]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[174]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[173]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[172]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[171]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[170]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[169]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[168]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[167]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[166]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[165]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[164]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[163]) is unused and will be removed from module design_geral_semaphore_0_0.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Synth 8-3332] Sequential element (inst/module_semaphore_inst/notEmpty_signal_reg[162]) is unused and will be removed from module design_geral_semaphore_0_0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.srcs/sources_1/bd/design_geral/ipshared/e888/src/semaphore_module.v:286]
+INFO: [Common 17-14] Message 'Synth 8-5559' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 776.984 ; gain = 510.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+------------------+
+|Module Name                                    | RTL Object                                                | Inference      | Size (Depth x Width) | Primitives       | 
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+------------------+
+|\inst/module_semaphore_inst/tasklist /U0       | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 256 x 24             | RAM128X1D x 48   | 
+|\inst/module_semaphore_inst/semaphore_list /U0 | synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg | User Attribute | 256 x 32             | RAM256X1S x 32   | 
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 782.156 ; gain = 515.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 782.527 ; gain = 515.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+------------------+
+|Module Name                                    | RTL Object                                                | Inference      | Size (Depth x Width) | Primitives       | 
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+------------------+
+|\inst/module_semaphore_inst/tasklist /U0       | synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg | User Attribute | 256 x 24             | RAM128X1D x 48   | 
+|\inst/module_semaphore_inst/semaphore_list /U0 | synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg | User Attribute | 256 x 32             | RAM256X1S x 32   | 
++-----------------------------------------------+-----------------------------------------------------------+----------------+----------------------+------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 803.367 ; gain = 536.828
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 803.367 ; gain = 536.828
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 803.367 ; gain = 536.828
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 803.367 ; gain = 536.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 803.367 ; gain = 536.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 803.367 ; gain = 536.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 803.367 ; gain = 536.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |     2|
+|2     |LUT1      |     2|
+|3     |LUT2      |    22|
+|4     |LUT3      |    81|
+|5     |LUT4      |    33|
+|6     |LUT5      |    33|
+|7     |LUT6      |   104|
+|8     |RAM128X1D |    48|
+|9     |RAM256X1S |    32|
+|10    |FDRE      |   216|
+|11    |FDSE      |     3|
++------+----------+------+
+
+Report Instance Areas: 
++------+----------------------------------------+-------------------------------------------+------+
+|      |Instance                                |Module                                     |Cells |
++------+----------------------------------------+-------------------------------------------+------+
+|1     |top                                     |                                           |   576|
+|2     |  inst                                  |semaphore_v1_0                             |   576|
+|3     |    module_semaphore_inst               |semaphore_module                           |   459|
+|4     |      tasklist                          |mem_task                                   |   146|
+|5     |        U0                              |dist_mem_gen_v8_0_12                       |   146|
+|6     |          \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth                 |   146|
+|7     |            \gen_dp_ram.dpram_inst      |dpram                                      |   146|
+|8     |      semaphore_list                    |mem_semaphore                              |    64|
+|9     |        U0                              |dist_mem_gen_v8_0_12__parameterized1       |    64|
+|10    |          \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth__parameterized0 |    64|
+|11    |            \gen_sp_ram.spram_inst      |spram                                      |    64|
+|12    |    semaphore_v1_0_S00_AXI_inst         |semaphore_v1_0_S00_AXI                     |   117|
++------+----------------------------------------+-------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 803.367 ; gain = 536.828
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 768 critical warnings and 183 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 803.367 ; gain = 186.262
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 803.367 ; gain = 536.828
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 80 instances were transformed.
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 48 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+175 Infos, 102 Warnings, 200 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 806.473 ; gain = 545.203
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sergiopereira/Vivado_projects/RTOS_codesign/projects/project_RTOS/project_RTOS.runs/design_geral_semaphore_0_0_synth_1/design_geral_semaphore_0_0.dcp' has been generated.

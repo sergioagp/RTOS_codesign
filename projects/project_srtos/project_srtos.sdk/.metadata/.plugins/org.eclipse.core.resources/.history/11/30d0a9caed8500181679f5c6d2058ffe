@@ -1,0 +1,30 @@
+
+#ifndef TIMERS_IP_H
+#define TIMERS_IP_H
+
+
+/****************** Include Files ********************/
+#include "xil_types.h"
+#include "xstatus.h"
+
+#define XPAR_TIMERS_IP_0_S00_AXI_BASEADDR 0x43C10000
+
+#define TIMERS_TIMERTASK_ID_OFFSET 0
+#define TIMERS_START_TIMER_ID_OFFSET 4
+#define TIMERS_STOP_TIMER_ID_OFFSET 8
+#define TIMERS_CHANGE_PERIOD_OFFSET 12
+#define TIMERS_CREATE_FUNCTION_OFFSET 16
+#define TIMERS_CREATE_PERIOD_NORELOAD_OFFSET 20
+#define TIMERS_CREATE_PERIOD_RELOAD_OFFSET 24
+
+#define TIMERS_TIMER_ID_OUT_OFFSET 20
+#define TIMERS_TIMER_FUNCTION_OUT_OFFSET 24
+#define TIMERS_TIMER_EXPIRE_TIME_OFFSET 28
+
+/**************************** Inline Functions Definitions *****************************/
+
+static INLINE void setTimerTask(u8 idtask) {
+	Xil_Out32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (TIMERS_TIMERTASK_ID_OFFSET), (u32)(addrtcb));
+}
+
+#endif // TIMERS_IP_H

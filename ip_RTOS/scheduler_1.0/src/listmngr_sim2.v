@@ -53,11 +53,11 @@ initial begin
 #20		aresetn <= 'b0;
 #15		aresetn <= 'b1;
 	
-#250	createTask_in <= 'b1;
-		id_task_in = 'h0;
-		tcb_task_in = 'h01234567;
-		pri_task_in = 'h02;
-#10		createTask_in <= 'b0;
+//#250	createTask_in <= 'b1;
+//		id_task_in = 'h0;
+//		tcb_task_in = 'h01234567;
+//		pri_task_in = 'h02;
+//#10		createTask_in <= 'b0;
 
 #10		createTask_in <= 'b1;
 		id_task_in = 'h1;

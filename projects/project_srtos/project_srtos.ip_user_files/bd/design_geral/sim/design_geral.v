@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Jul 12 15:33:23 2018
+//Date        : Fri Jul 13 02:20:19 2018
 //Host        : ASUS-K556URK running 64-bit major release  (build 9200)
 //Command     : generate_target design_geral.bd
 //Design      : design_geral
@@ -174,6 +174,7 @@ module design_geral
   wire ps7_0_axi_periph_M02_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_interconnect_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
+  wire scheduler_0_tick_out;
   wire timers_ip_0_resumeTMRTask_out;
   wire [7:0]timers_ip_0_timerTaskID_out;
   wire [0:0]xlconcat_0_dout;
@@ -208,7 +209,7 @@ module design_geral
        (.CLK(xlconcat_0_dout),
         .Q(c_counter_binary_0_Q));
   design_geral_processing_system7_0_0 processing_system7_0
-       (.Core0_nFIQ(axi_timer_0_interrupt),
+       (.Core0_nFIQ(scheduler_0_tick_out),
         .DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
         .DDR_CAS_n(DDR_cas_n),
@@ -412,6 +413,7 @@ module design_geral
         .s00_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
         .suspend_semaphoretask_in(xlconstant_0_dout),
         .tick_in(axi_timer_0_interrupt),
+        .tick_out(scheduler_0_tick_out),
         .tickval_in(c_counter_binary_0_Q));
   design_geral_timers_ip_0_0 timers_ip_0
        (.resumeTMRTask_out(timers_ip_0_resumeTMRTask_out),

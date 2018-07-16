@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:scheduler:1.0
-// IP Revision: 41
+// IP Revision: 47
 
 `timescale 1ns/1ps
 

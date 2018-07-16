@@ -1,3 +1,0 @@
-axi interface + scheduler + listmanager
-with changes on names
-Without automatically chosse ID.

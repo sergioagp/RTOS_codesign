@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Wed Jul 04 15:19:57 UTC 2018
+VLNV: xilinx.com:user:timers_ip:1.0
+SynthRuntime: 74

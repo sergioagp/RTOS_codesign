@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:timers_ip:1.0
-// IP Revision: 6
+// IP Revision: 8
 
 (* X_CORE_INFO = "timers_ip_v1_0,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "design_geral_timers_ip_0_0,timers_ip_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_geral_timers_ip_0_0,timers_ip_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=timers_ip,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=6,C_ADDRESS_WIDTH=32,C_TICK_WIDTH=32,C_TIMERID_WIDTH=8,C_TASKID_WIDTH=8}" *)
+(* CORE_GENERATION_INFO = "design_geral_timers_ip_0_0,timers_ip_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=timers_ip,x_ipVersion=1.0,x_ipCoreRevision=8,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=6,C_ADDRESS_WIDTH=32,C_TICK_WIDTH=32,C_TIMERID_WIDTH=8,C_TASKID_WIDTH=8}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_geral_timers_ip_0_0 (
   tick_in,

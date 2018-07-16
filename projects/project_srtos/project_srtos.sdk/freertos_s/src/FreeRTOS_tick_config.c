@@ -64,14 +64,14 @@ const uint8_t ucRisingEdge = 3;
 
 	/* The priority must be the lowest possible. */
 	XScuGic_SetPriorityTriggerType( &xInterruptController, XPAR_FABRIC_SCHEDULER_0_VEC_ID,  0x7F & (portLOWEST_USABLE_INTERRUPT_PRIORITY << portPRIORITY_SHIFT), ucRisingEdge );
-	XScuGic_SetPriorityTriggerType( &xInterruptController, GTIMER_INT_ID, 0x7F & (portLOWEST_USABLE_INTERRUPT_PRIORITY << portPRIORITY_SHIFT), ucRisingEdge );
+	//XScuGic_SetPriorityTriggerType( &xInterruptController, GTIMER_INT_ID, 0x7F & (portLOWEST_USABLE_INTERRUPT_PRIORITY << portPRIORITY_SHIFT), ucRisingEdge );
 
 
 	/* Install the FreeRTOS tick handler. */
 	xStatus = XScuGic_Connect( &xInterruptController, XPAR_FABRIC_SCHEDULER_0_VEC_ID, (Xil_ExceptionHandler) FreeRTOS_Tick_Handler, ( void * ) &tickTimer );
 	configASSERT( xStatus == XST_SUCCESS );
 	( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
-	XScuGic_Connect( &xInterruptController, GTIMER_INT_ID, (Xil_ExceptionHandler)  vClearSleepInterrupt, ( void * ) NULL );
+	//XScuGic_Connect( &xInterruptController, GTIMER_INT_ID, (Xil_ExceptionHandler)  vClearSleepInterrupt, ( void * ) NULL );
 
 	/* Initialise the timer. */
 	xStatus = XTmrCtr_Initialize( &tickTimer, XPAR_AXI_TIMER_0_DEVICE_ID );
@@ -92,7 +92,7 @@ const uint8_t ucRisingEdge = 3;
 
 	/* Enable the interrupt for the tickTimer in the interrupt controller. */
 	XScuGic_Enable( &xInterruptController, XPAR_FABRIC_SCHEDULER_0_VEC_ID );
-	XScuGic_Enable( &xInterruptController, GTIMER_INT_ID );
+	//XScuGic_Enable( &xInterruptController, GTIMER_INT_ID );
 
 	/* Enable the interrupt in the tickTimer itself. */
 	vClearTickInterrupt();

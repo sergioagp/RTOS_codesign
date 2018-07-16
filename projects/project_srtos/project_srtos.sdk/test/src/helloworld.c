@@ -45,57 +45,8 @@
  *   ps7_uart    115200 (configured by bootrom/bsp)
  */
 
-#include <stdio.h>
-#include "platform.h"
-#include "xil_printf.h"
 #include "scheduler.h"
-
-/******************************************************************************
-*
-* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* Use of the Software is limited solely to applications:
-* (a) running on a Xilinx device, or
-* (b) that interact with a Xilinx device through a bus or interconnect.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
-* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-* SOFTWARE.
-*
-* Except as contained in this notice, the name of the Xilinx shall not be used
-* in advertising or otherwise to promote the sale, use or other dealings in
-* this Software without prior written authorization from Xilinx.
-*
-******************************************************************************/
-
-/*
- * helloworld.c: simple test application
- *
- * This application configures UART 16550 to baud rate 9600.
- * PS7 UART (Zynq) is not initialized by this application, since
- * bootrom/bsp configures it to baud rate 115200
- *
- * ------------------------------------------------
- * | UART TYPE   BAUD RATE                        |
- * ------------------------------------------------
- *   uartns550   9600
- *   uartlite    Configurable only in HW design
- *   ps7_uart    115200 (configured by bootrom/bsp)
- */
+#include "timers_ip.h"
 
 #include <stdio.h>
 #include "platform.h"
@@ -113,177 +64,111 @@
 #include "xil_exception.h"
 #include "xscugic.h"
 
+//#include "secsirtos.h"
 
+static XTmrCtr xTimer;
+XScuGic xInterruptController; 	/* Interrupt controller instance */
 
-XScuGic InterruptController; /* Instance of the Interrupt Controller */
-static XScuGic_Config *GicConfig;/* The configuration parameters of the
-controller */
 
 //void print(char *str);
 extern char inbyte(void);
-void Timer_InterruptHandler(void *data, u8 TmrCtrNumber)
+void Timer_InterruptHandler()
 {
 	u32 tick = TICK_VALUE();
-    printf("Tick Value: 0x%lX\n\r", tick);
-	printf("ISR - TCB to Run: 0x%lX\n\r", TASK_TO_RUN());
+	u32 task_run = TASK_TO_RUN();
+	if(tick == 0x30) {
+		XTmrCtr_Stop(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID);
+	}
+    printf("Tick Value: 0x%2lX\t", tick);
+	printf("TCB: 0x%lX\n\r", task_run);
+	if(task_run == 0xBBBBBBBB) {
+	    printf("TIMER: 0x%lX\n\r", TIMER_ACTIVE());
+	    suspendTask(0x01);
+	}
 
-	XTmrCtr_Stop(data,TmrCtrNumber);
-	XTmrCtr_Reset(data,TmrCtrNumber);
-	XTmrCtr_Start(data,TmrCtrNumber);
-
+	XTmrCtr_SetControlStatusReg(XPAR_AXI_TIMER_0_BASEADDR, 0, XTmrCtr_GetControlStatusReg(XPAR_AXI_TIMER_0_BASEADDR, 0));
 }
 
-int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
+void vConfigureTickInterrupt( void )
 {
+//BaseType_t xStatus;
+int xStatus;
+XScuGic_Config *pxGICConfig;
+
+	( void ) xStatus;
+	/* This function is called with the IRQ interrupt disabled, and the IRQ
+	interrupt should be left disabled.  It is enabled automatically when the
+	scheduler is started. */
+
+	/* Initialise the timer. */
+	xStatus = XTmrCtr_Initialize(&xTimer,XPAR_AXI_TIMER_0_DEVICE_ID);
+	//configASSERT( xStatus == XST_SUCCESS );
+	( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
+
+	/* Enable Auto reload mode. */
+	XTmrCtr_SetResetValue(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID,  0xf80000);
+
+	/* Ensure there is no prescale. */
+	XTmrCtr_SetOptions(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID,
+	(XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION));
+
+	/* Ensure XScuGic_CfgInitialize() has been called.  In this demo it has
+	already been called from prvSetupHardware() in main(). */
+	pxGICConfig = XScuGic_LookupConfig( XPAR_PS7_SCUGIC_0_DEVICE_ID );
+	xStatus = XScuGic_CfgInitialize( &xInterruptController, pxGICConfig, pxGICConfig->CpuBaseAddress );
+	//configASSERT( xStatus == XST_SUCCESS );
+	( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
+
 	/*
-	* Connect the interrupt controller interrupt handler to the hardware
-	* interrupt handling logic in the ARM processor.
-	*/
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-								(Xil_ExceptionHandler) XScuGic_InterruptHandler,
-								XScuGicInstancePtr);
-	/*
-	* Enable interrupts in the ARM
-	*/
-	Xil_ExceptionEnable();
-	return XST_SUCCESS;
+	 * Connect the interrupt controller interrupt handler to the hardware
+	 * interrupt handling logic in the ARM processor.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_FIQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &xInterruptController);
+	//Xil_ExceptionEnable();
+	Xil_ExceptionEnableMask(XIL_EXCEPTION_FIQ);
+
+	/* Install the FreeRTOS tick handler. */
+	xStatus = XScuGic_Connect( &xInterruptController, XPAR_FABRIC_SCHEDULER_0_VEC_ID, (Xil_ExceptionHandler) Timer_InterruptHandler, ( void * ) &xTimer );
+	//configASSERT( xStatus == XST_SUCCESS );
+	( void ) xStatus; /* Remove compiler warning if configASSERT() is not defined. */
+
+	/* Enable the interrupt for the xTimer in the interrupt controller. */
+	XScuGic_Enable(&xInterruptController, XPAR_FABRIC_SCHEDULER_0_VEC_ID);
+
+	/* Start the timer counter and then wait for it to timeout a number of
+	times. */
+	//XTmrCtr_Start(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID);
 }
 
-int ScuGicInterrupt_Init(u16 DeviceId, XTmrCtr *TimerInstancePtr)
-{
-	int Status;
-	/*
-	* Initialize the interrupt controller driver so that it is ready to
-	* use.
-	* */
-	GicConfig = XScuGic_LookupConfig(DeviceId);
-	if (NULL == GicConfig) {
-		return XST_FAILURE;
-	}
-	Status = XScuGic_CfgInitialize(&InterruptController, GicConfig,
-									GicConfig->CpuBaseAddress);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-	/*
-	* Setup the Interrupt System
-	* */
-	Status = SetUpInterruptSystem(&InterruptController);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-	/*
-	* Connect a device driver handler that will be called when an
-	* interrupt for the device occurs, the device driver handler performs
-	* the specific interrupt processing for the device
-	*/
-	Status = XScuGic_Connect(&InterruptController,
-	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR,
-	(Xil_ExceptionHandler)XTmrCtr_InterruptHandler,
-	(void *)TimerInstancePtr);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-	/*
-	* Enable the interrupt for the device and then cause (simulate) an
-	* interrupt so the handlers will be called
-	*/
-	XScuGic_Enable(&InterruptController, XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR);
-	return XST_SUCCESS;
-}
-
-int main( void )
+int main()
 {
     init_platform();
-	XTmrCtr TimerInstancePtr;
-	int xStatus;
+    vConfigureTickInterrupt();
 
-	print("##### Application Starts #####\n\r");
-	print("\r\n");
-	xStatus = XTmrCtr_Initialize(&TimerInstancePtr,XPAR_AXI_TIMER_0_DEVICE_ID);
-	if(XST_SUCCESS != xStatus)
-		print("TIMER INIT FAILED \n\r");
-
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	//Set Timer Handler
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-	XTmrCtr_SetHandler(&TimerInstancePtr,
-						Timer_InterruptHandler,
-						&TimerInstancePtr);
-
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	//Setting timer Reset Value
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-	XTmrCtr_SetResetValue(&TimerInstancePtr,
-							0, //Change with generic value
-							0xf8000000);
-
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	//Setting timer Option (Interrupt Mode And Auto Reload )
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-	XTmrCtr_SetOptions(&TimerInstancePtr,
-						XPAR_AXI_TIMER_0_DEVICE_ID,
-						(XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION ));
-
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	//SCUGIC interrupt controller Intialization
-	//Registration of the Timer ISR
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-	xStatus=ScuGicInterrupt_Init(XPAR_PS7_SCUGIC_0_DEVICE_ID,&TimerInstancePtr);
-	if(XST_SUCCESS != xStatus)
-		print(" :( SCUGIC INIT FAILED \n\r");
-
-	print("Wait for the Timer interrupt to tigger \r\n");
-	print("########################################\r\n");
-	print(" \r\n");
-
-    print("Test HW Modules\n\r");
-    print("Hello World\n\r");
-    printf("TASK (none) TO RUN: 0x%lX\n\r", TASK_TO_RUN());
-    createTask(0x00, 0x040203f0, 0x02);
-    printf("CREATE ID: 0x%lX PRIORITY:  0x%lX\n\r TCB:  0x%lX\n\r ID OUT:  0x%lX\n\r",
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (12)),
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (8)),
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (4)),
-			Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (20)));
-    printf("**TASK TO RUN: 0x%lX\n\r", TASK_TO_RUN());
-    createTask(0x01, 0x04020840, 0x02);
-    printf("CREATE ID: 0x%lX PRIORITY:  0x%lX\n\r TCB:  0x%lX\n\r ID OUT:  0x%lX\n\r",
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (12)),
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (8)),
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (4)),
-			Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (20)));
-    printf("**TASK (AA) TO RUN: 0x%lX\n\r", TASK_TO_RUN());
-    createTask(0x02, 0x04036c58, 0x0);
-    printf("CREATE ID: 0x%lX PRIORITY:  0x%lX\n\r TCB:  0x%lX\n\r ID OUT:  0x%lX\n\r",
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (12)),
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (8)),
-    		Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (4)),
-			Xil_In32((XPAR_SCHEDULER_0_S00_AXI_BASEADDR) + (20)));
-    printf("**TASK (AA) TO RUN: 0x%lX\n\r", TASK_TO_RUN());
-
-    //suspendTask(0x03);
-    delayTask(0x00, 0x09);
-    printf("**TASK TO RUN: 0x%lX\n\r", TASK_TO_RUN());
-
- //   printf("Delay to Ins: 0x%lX\n\r",  Xil_In32((XPAR_AXI_INTERFACE_0_S00_AXI_BASEADDR) + (AXI_INTERFACE_S00_AXI_SLV_REG2_OFFSET)));
-
-//    suspendTask(0x01);
-//    //delayTask(0x00, 0x0f);
-//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
-
-//    //printf("Tick Value: 0x%lX\n\r", getTickValue());
-//    resumeTask(0x01);
-//    printf("TCB to Run: 0x%lX\n\r", getTCBReady());
-	//Start Timer
-
-	XTmrCtr_Start(&TimerInstancePtr,0);
-    print("timer start \n\r");
-
+    print("Test FIQ\n\r");
+    createTask(0x00, 0xAAAAAAAA, 0x6);
+    createTask(0x01, 0xBBBBBBBB, 0x0F);
+    createTask(0x02, 0xCCCCCCCC, 0x6);
+    printf("TCB to Run: 0x%2lX\n\r", TASK_TO_RUN());
+    suspendTask(0x01);
+    setTimerTask(0x01);
+    printf("**\n\rSET TIMER TASK**\n\r");
+    printf("SET TIMER(0): %hX\n\r", createTimer(0x11111111, 0x10, 0));
+    printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+    		Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+			Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_POINTER_IN_OFFSET)),
+			Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_PERIOD_IN_OFFSET)),
+			Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    printf("**STR** EXPIRE TIME: %lX\n\r", startTimer(0x00));
+    printf("SET TIMER(1): %hX\n\r", createTimer(0x22222222, 0x05, 0));
+    printf("ID IN: 0x%hX\t TIMER ADDR: 0x%lX\n\r PERIOD: 0x%lX\t RELOAD:  0x%hX\n\r",
+    		Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_ID_IN_OFFSET)),
+			Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_POINTER_IN_OFFSET)),
+			Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_PERIOD_IN_OFFSET)),
+			Xil_In32((XPAR_TIMERS_IP_0_S00_AXI_BASEADDR + TIMERS_IP_AUTORELOAD_IN_OFFSET)));
+    printf("**STR** EXPIRE TIME: %lX\n\r", startTimer(0x01));
+    //Start Timer
+	XTmrCtr_Start(&xTimer, XPAR_AXI_TIMER_0_DEVICE_ID);
 	//Wait For interrupt;
 	while(1)
 	{
@@ -291,4 +176,3 @@ int main( void )
     cleanup_platform();
     return 0;
 }
-
